@@ -5,9 +5,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+color:blanchedalmond;
+
+
+}
+button:hover {
+	opacity: 0.5;
+  }
+button{
+	padding: 15px 100px;
+	margin: 10px 4px;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+background-color:aliceblue;
+color:black;
+
 }
 
+h1{
+color:gold; 
+	font-family: 'Oleo Script', cursive;
+	font-size:50px;
+	
+	height:auto;
+	
+	
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+select{
+
+  scrollbar-width: none; 
+	  scrollbar-width: none; 
+		
+	text-decoration:uppercase;
+	
+	padding:10px;
+	padding-left:10px;
+	
+	font-size:30px;
+border:0px;
+
+	color:gold;
+	background-color:transparent;
+	text-align:center;
+	overflow:hidden;
+
+	left:50%;
+	vertical-align:center;
+	
+	
+}
+option:hover{
+color:blue;
+text-transform: uppercase;
+
+}
+option{
+	 box-shadow: 11px 11px 11px  black;
+	padding:15px;
+color:black;
+text-align:center;
+
+	
+}
+option:onClick{
+	padding:0px;
+	
+	
+}
+
+div{
+	height: 50px;
+    left: 50%;
+    position: absolute;
+padding:10px;
+margin: 5%;
+    transform: translate(-50%, -50%);
+ 
+
 }
