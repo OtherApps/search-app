@@ -88,15 +88,7 @@ return (
 
 
   }
-  
-function showstart(){
-console.log("Has been clicked")
-var seriesShow =document.getElementById('series')
-	seriesShow.style.display="block"
-	var rootsHide =document.getElementById('root')
-	rootsHide.style.display="none"
 
-}
 
 function handleChange2(e){
 // Go to  selected  subtitle	
@@ -191,5 +183,13 @@ class RowData{
 }	
 
 
-
+  
+function showstart(){
+	console.log("Has been clicked")
+	var seriesShow =document.getElementById('series')
+		seriesShow.style.display="block"
+		var rootsHide =document.getElementById('root')
+		rootsHide.style.display="none"
+	
+	}
 export default GetData
