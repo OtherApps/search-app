@@ -79,6 +79,9 @@ function test2(jsonStuff){
 return (
 <div>
 
+<h1  className="logos">LVE APP </h1>
+<button onDoubleClick={showstart()}>Enter</button>
+
 </div>
 
 )
@@ -86,7 +89,14 @@ return (
 
   }
   
+function showstart(){
+console.log("Has been clicked")
+var seriesShow =document.getElementById('series')
+	seriesShow.style.display="block"
+	var rootsHide =document.getElementById('root')
+	rootsHide.style.display="none"
 
+}
 
 function handleChange2(e){
 // Go to  selected  subtitle	
@@ -131,24 +141,17 @@ function handleChange(e){
 }
 
 function goB(){
-
-	var subtitlesHide =document.getElementById('subtitles')
-	
+	var subtitlesHide =document.getElementById('subtitles');
 	subtitlesHide.style.display="none"
-	
-
 	var seriesShow =document.getElementById('series')
-	
 	seriesShow.style.display="block"
 
 }
 		function showSeries()
 		{
 			
-//ReactDOM.render(seriesList, document.getElementById('subtitles'));
 	var seriesShow =document.getElementById('series')
 	seriesShow.style.display="block"
-	
 	var sublinks =document.getElementById('subtitles')
 	sublinks.style.display="none";
 	

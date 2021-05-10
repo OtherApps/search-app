@@ -94,3 +94,9 @@ margin: 20px;
 
 display:block;
 }
+.logos{
+display: inline;
+color:chocolate;
+text-align: center;
+text-transform: uppercase;
+}
