@@ -2,18 +2,24 @@
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom'
-import fs from 'fs'
+//import fs from 'fs'
+
 var howmanytimes=0; 
 var outPut;
 const SearchF = () => { 
 var SearchV
 
+const handleChange = e =>{
+
+console.log(e.target.value)
+//search_forme(e.target.value)
+}
  
 return (
 <div style={{color:"gold"}}><h1>Search form</h1>
 
 
-<table><tr><td>Search For </td><td><input name="TextboxSearch" id ="searchText" type="text"  onChange={displayStuff} ></input></td></tr></table>
+<table><tr><td>Search For </td><td><input name="TextboxSearch"  id ="searchText" type="textbox"  onMouseOut={handleChange} /></td></tr></table>
 <button name="">test</button>
 </div>
 )
@@ -21,28 +27,34 @@ return (
 
 }
 
-function displayStuff(e){
 
-      
-        
-        }
 function search_forme(searchfor1){
-	
+
 	//console.log("With in function \r");
 	var results=0; 
 	// open dir
-	fs.readdirSync("./.../closeCaption/").forEach(file => {
+
+fs.readdirSync('./closeCpation/').forEach(file=>{
+
+
+
+})
+
+/*
+
+	fs.readdirSync("./closeCaption/").forEach(file => {
  
 
-findme(file,searchfor1);
+//findme(file,searchfor1);
 
 
 	
 	});
 	
+	*/
+
 	
-	
-	return results; 
+	return 0;
 }
 
 function occurrences(string, subString, allowOverlapping) {
@@ -83,7 +95,7 @@ outPut += "<div style= '" + style_single  +"'><center>" +file_name +  "\t ocurri
 howmanytimes=howmanytimes+ occurrences(data,find_string) ;
 
 }
-
+ReactDOM.render(outPut, document.getElementById('root'));
 	
 }
 
