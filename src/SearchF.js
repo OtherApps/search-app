@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom'
+import SearchParts from './SearchParts';
 //import fs from 'fs'
 
 var howmanytimes=0; 
@@ -17,6 +18,7 @@ console.log(e.target.value)
  
 return (
 <div style={{color:"gold"}}><h1>Search form</h1>
+
 
 
 <table><tr><td>Search For </td><td><input name="TextboxSearch"  id ="searchText" type="textbox"  onMouseOut={handleChange} /></td></tr></table>

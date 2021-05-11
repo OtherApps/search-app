@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import SearchF from './SearchF'
+import SearchParts from './SearchParts'
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,13 +20,20 @@ ReactDOM.render(
       
 
         <Switch>
-          
+            <Route extact path="/list">
+
+          <SearchParts /></Route>
           <Route extact path="/search">
             <SearchF />
           </Route>
           <Route extac path="/">
             <App />
           </Route>
+
+        
+
+
+          
         </Switch>
     
     </Router>

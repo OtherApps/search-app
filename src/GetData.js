@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import fs from 'fs'
+
 
 import SearchF from './SearchF';
 
@@ -10,10 +10,6 @@ var outstuff="";
 var seriesindex;
 var isFinished= false; 
 var ListOfData = {};
-
-
-
-
 
 const GetData = () => {
 
