@@ -33,14 +33,14 @@ function search_forme(searchfor1){
 	//console.log("With in function \r");
 	var results=0; 
 	// open dir
-
+/*
 fs.readdirSync('./closeCpation/').forEach(file=>{
 
 
 
 })
 
-/*
+
 
 	fs.readdirSync("./closeCaption/").forEach(file => {
  
