@@ -13,18 +13,16 @@ return (
 <div style={{color:"gold"}}><h1>Search form</h1>
 
 
-<table><tr><td>Search For </td><td><input  id ="searchText" type="textbox" ></input></td></tr></table>
-<button name="" onClick={displayStuff}>test</button>
+<table><tr><td>Search For </td><td><input name="TextboxSearch" id ="searchText" type="text"  onChange={displayStuff} ></input></td></tr></table>
+<button name="">test</button>
 </div>
 )
    
 
 }
 
-function displayStuff(){
-    var textBoxText=document.getElementById('searchText').textContent
-console.log(textBoxText)
-	
+function displayStuff(e){
+
       
         
         }
