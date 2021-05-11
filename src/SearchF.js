@@ -6,18 +6,28 @@ import fs from 'fs'
 var howmanytimes=0; 
 var outPut;
 const SearchF = () => { 
-	console.log("Within search");
+var SearchV
 
+ 
 return (
 <div style={{color:"gold"}}><h1>Search form</h1>
 
-<form method="post">
-<table><tr><td>Search For </td><td><input type="textbox"></input></td></tr></table>
-<button name="">Submit</button>
-</form>
+
+<table><tr><td>Search For </td><td><input  id ="searchText" type="textbox" ></input></td></tr></table>
+<button name="" onClick={displayStuff}>test</button>
 </div>
 )
+   
+
 }
+
+function displayStuff(){
+    var textBoxText=document.getElementById('searchText').textContent
+console.log(textBoxText)
+	
+      
+        
+        }
 function search_forme(searchfor1){
 	
 	//console.log("With in function \r");
