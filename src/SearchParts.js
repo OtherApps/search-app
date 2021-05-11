@@ -13,15 +13,17 @@ function listAllfiles(){
 
 var outPut; 
 
-    listReactFiles(__dirname).then(files =>
+    listReactFiles("./closeCaption/").then(files =>
         
-        outPut = outPut + files
+        outPut = outPut + files);
+        
 
         
+
+
+
 
 }
 
-
 }
-
 export default SearchParts
