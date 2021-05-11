@@ -14,7 +14,7 @@ border-bottom: 12px solid black;
 button:hover {
 	opacity: 0.5;
   }
-button{
+button,input{
 	padding: 15px 100px;
 	margin: 10px 4px;
 	cursor: pointer;
@@ -69,8 +69,8 @@ color:blue;
 
 
 }
-option{
-	 box-shadow: 11px 11px 11px  black;
+option {
+box-shadow: 11px 11px 11px  black;
 	padding:15px;
 color:black;
 text-align:center;
@@ -97,7 +97,9 @@ display:block;
 
 
 }
-.logos{
+.logos,tr,input{
+	size:20px;
+
 display: inline;
 color:chocolate;
 text-align: center;

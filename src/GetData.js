@@ -1,12 +1,20 @@
 
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+import fs from 'fs'
+
+import SearchF from './SearchF';
 
 var results; 
 var outstuff="";
 var seriesindex;
 var isFinished= false; 
 var ListOfData = {};
+
+
+
+
+
 const GetData = () => {
 
 
@@ -78,6 +86,7 @@ function test2(jsonStuff){
 	
 return (
 <div>
+
 
 <h1  className="logos">LVE APP </h1>
 <button onDoubleClick={showstart()}>Enter</button>

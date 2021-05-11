@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 
 import './App.css';
+import searchstuff from './searchstuff';
 
 import GetData from './GetData';
+
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
     <div className="App">
 
 <GetData/>
+
+
 
     </div>
   );
