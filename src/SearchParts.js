@@ -2,10 +2,10 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-var howmanyTimes; 
+const howmanyTimes=0; 
 const cache = {};
 
-function SearchParts() {
+const  SearchParts = () => {
     //listAllfiles()
 var outPut =""; 
 
@@ -57,8 +57,8 @@ fetch(filename)
             }).then(function (data) {
            // console.log(data);
 		  // console.log(howmanytimes);
-		   var foundme = occurrences(data,findme)
-		 howmanyTimes = howmanyTimes+ foundme
+		 const foundme = occurrences(data,findme)
+		 howmanyTimes = howmanyTimes + foundme
 			
         })
 
@@ -81,9 +81,10 @@ var done=false
 	
 	
 
-outPut=  <b>  {howmanyTimes }</b>
+outPut=   howmanyTimes 
+console.log( outPut)
 
-		ReactDOM.render(outPut, document.getElementById('root'));
+		//ReactDOM.render(outPut, document.getElementById('root'));
 	
 	
 
