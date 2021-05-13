@@ -1,10 +1,14 @@
 
+import { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 
-
-var outPut =""; 
+var howmanyTimes; 
 const cache = {};
+
 function SearchParts() {
     //listAllfiles()
+var outPut =""; 
+
 
 	function importAll(r) {
     r.keys().forEach((key) => (cache[key] = r(key)
@@ -13,11 +17,13 @@ function SearchParts() {
 		
 		importAll(require.context("../closeCaption", false, /\.(txt)$/));
 		const textFiles = Object.entries(cache).map(module => module[1].default);
-		
+		main("2021")
     return (
         <div>
     <h1>Will display files here.</h1>
-	{displayAFile(textFiles[0])}
+
+	
+	
         </div>
     )
 
@@ -43,18 +49,47 @@ function occurrences(string, subString, allowOverlapping) {
     return n;
 }
 
-function displayAFile(filename){
+function displayAFile(filename,findme){
 
 fetch(filename)
             .then(function(response){
                 return response.text();
             }).then(function (data) {
-            console.log(data);
+           // console.log(data);
+		  // console.log(howmanytimes);
+		   var foundme = occurrences(data,findme)
+		 howmanyTimes = howmanyTimes+ foundme
+			
         })
 
  
 
 
 }
+
+function main(searchfor){
+	
+	var totalSize=Object.keys(textFiles).length;
+var done=false 	
+	var start=0;
+	while(start<totalSize){
+		
+		displayAFile(textFiles[start],searchfor)
+		start++
+
+	}
+	
+	
+
+outPut=  <b>  {howmanyTimes }</b>
+
+		ReactDOM.render(outPut, document.getElementById('root'));
+	
+	
+
+
+}
+
+
 }
 export default SearchParts
