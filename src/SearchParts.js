@@ -6,9 +6,10 @@ import ReactDOM from 'react-dom'
 
 const cache = {};
 var outPut =""; 
+var isloading = true;
 
 var  howmany=0 ;
-const  SearchParts = () => {
+const  SearchParts = (props) => {
     //listAllfiles()
 
 
@@ -19,11 +20,7 @@ importAll(require.context("../closeCaption", false, /\.(txt)$/));
     r.keys().forEach((key) => (cache[key] = r(key)
 	));
 }	
-		
-		
-   
-
-
+// end of getting a list of files
 
 
 function occurrences(string, subString, allowOverlapping) {
@@ -43,8 +40,12 @@ function occurrences(string, subString, allowOverlapping) {
             pos += step;
         } else break;
     }
+	 isloading= false
     return n;
 }
+
+// function works fine  above  will search for  a string 
+
 function displayAFile(filename,findme){
 var test1=0;
 
@@ -54,40 +55,51 @@ var test1=0;
                 return response.text();
             }).then(function (data) {
       
-		test1=  occurrences(data,findme)
-
-		return  <div><h1>Found {findme} {filename} {test1}</h1> </div>	
+		howmany= howmany+ occurrences(data,findme)
 		
-	
-        })
+		//outPut = howmany
 
- 
+
+        })
 
 
 		
 
 }
+ 
+Finalstage("jacobo");
 
-
+	   delayState: {
+        setTimeout(() => {
+       
+if(!isloading){
+			
+	displayResults();
 	
+			
+		   }
+        }, 11200);
+    }
 	
  return (
         <div>
     <h1>Will display files here.</h1>
-	{textFiles.join("<br>")}
+	{isloading? "Still loading":"Results are"  }
 	
 	
         </div>
     )
 
+
+
 function Finalstage(searchfor){
 	
-		var totalSize=Object.keys(textFiles).length;
+var totalSize=Object.keys(textFiles).length;
 	var done=false 	
 	var start=0;
 	while(start<totalSize){
 		
-		displayAFile(textFiles[start],searchfor)
+	displayAFile(textFiles[start],searchfor)
 		start++
 
 
@@ -95,11 +107,16 @@ function Finalstage(searchfor){
 
 
 	}
+	isloading=false; 
 	
 	
 }
-
+	
+	 function displayResults(){
+ const displayResultsHTML= <div><h1>Results are {howmany}</h1></div>
+	 ReactDOM.render(displayResultsHTML, document.getElementById('root'))
+ }
 }
-
+		
 
 export default SearchParts
