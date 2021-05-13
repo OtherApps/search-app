@@ -68,28 +68,9 @@ var test1=0;
 
 }
 
-	var totalSize=Object.keys(textFiles).length;
-	var done=false 	
-	var start=0;
-	/*while(start<totalSize){
-		
-		displayAFile(textFiles[start],searchfor)
-		start++
 
-
-
-
-	}
-	*/
 	
-
-	var displayout= displayAFile(textFiles[0],"2021")
 	
-if(displayout !=null)
-{	ReactDOM.render( displayout,document.getElementById('root'));}
-
-else{
-
  return (
         <div>
     <h1>Will display files here.</h1>
@@ -99,6 +80,23 @@ else{
         </div>
     )
 
+function Finalstage(searchfor){
+	
+		var totalSize=Object.keys(textFiles).length;
+	var done=false 	
+	var start=0;
+	while(start<totalSize){
+		
+		displayAFile(textFiles[start],searchfor)
+		start++
+
+
+
+
+
+	}
+	
+	
 }
 
 }
