@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 
-
-const  SearchParts = () => {
-    //listAllfiles()
 var howmanyTimes=0; 
 const cache = {};
 var outPut =""; 
+
+var  howmany=0 ;
+const  SearchParts = () => {
+    //listAllfiles()
 
 
 importAll(require.context("../closeCaption", false, /\.(txt)$/));
@@ -50,11 +51,10 @@ fetch(filename)
             .then(function(response){
                 return response.text();
             }).then(function (data) {
-           // console.log(data);
-		  // console.log(howmanytimes);
-		 var foundme = occurrences(data,findme)
-	 howmanyTimes = howmanyTimes+ foundme
-			console.log(foundme); 
+      
+		howmany = occurrences(data,findme)
+
+	
 			
         })
 
@@ -62,10 +62,9 @@ fetch(filename)
 
 
 }
-function main(searchfor){
-	
+
 	var totalSize=Object.keys(textFiles).length;
-var done=false 	
+	var done=false 	
 	var start=0;
 	/*while(start<totalSize){
 		
@@ -78,24 +77,21 @@ var done=false
 	}
 	*/
 	
-	displayAFile(textFiles[0], "2021");
+
 	
 	
 
-outPut=   howmanyTimes 
-console.log( outPut)
+
+//console.log(howmany )
 
 		//ReactDOM.render(outPut, document.getElementById('root'));
 	
-	
 
-
-}
 
  return (
         <div>
     <h1>Will display files here.</h1>
-	{main("amigos")}
+	{howmany}
 	
 	
         </div>
