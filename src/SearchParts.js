@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 
-var howmanyTimes=0; 
+
 const cache = {};
 var outPut =""; 
 
@@ -46,20 +46,25 @@ function occurrences(string, subString, allowOverlapping) {
     return n;
 }
 function displayAFile(filename,findme){
+var test1=0;
 
-fetch(filename)
+
+			fetch(filename)
             .then(function(response){
                 return response.text();
             }).then(function (data) {
       
-		howmany = occurrences(data,findme)
+		test1=  occurrences(data,findme)
 
+		return  <div><h1>Found {findme} {filename} {test1}</h1> </div>	
+		
 	
-			
         })
 
  
 
+
+		
 
 }
 
@@ -78,26 +83,23 @@ fetch(filename)
 	*/
 	
 
+	var displayout= displayAFile(textFiles[0],"2021")
 	
-	
+if(displayout !=null)
+{	ReactDOM.render( displayout,document.getElementById('root'));}
 
-
-//console.log(howmany )
-
-		//ReactDOM.render(outPut, document.getElementById('root'));
-	
-
+else{
 
  return (
         <div>
     <h1>Will display files here.</h1>
-	{howmany}
+	{textFiles.join("<br>")}
 	
 	
         </div>
     )
 
-
+}
 
 }
 
