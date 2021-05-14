@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import Welcome from './Welcome'
+import ShowBar from './ShowBar'
 
 var runonces = false; 
 const cache = {};
