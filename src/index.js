@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import SearchF from './SearchF'
 import SearchParts from './SearchParts'
+import Welcome from './Welcome'
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,Componente
 } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
@@ -21,7 +23,7 @@ ReactDOM.render(
 
         <Switch>
             <Route extact path="/list">
-
+	<Welcome/>
           <SearchParts /></Route>
           <Route extact path="/search">
             <SearchF />
@@ -37,6 +39,7 @@ ReactDOM.render(
         </Switch>
     
     </Router>
+	
   </React.StrictMode>,
   document.getElementById('root')
 );

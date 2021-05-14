@@ -55,9 +55,12 @@ var test1=0;
                 return response.text();
             }).then(function (data) {
       
-		howmany= howmany+ occurrences(data,findme)
 		
-		//outPut = howmany
+		const onlythis = occurrences(data,findme)
+		howmany= howmany+ onlythis
+		const currentFiles = <span style={{padding:"20px;"}}>{onlythis}<br/></span> 
+		
+		outPut =[...outPut, currentFiles]; 
 
 
         })
@@ -83,8 +86,7 @@ if(!isloading){
 	
  return (
         <div>
-    <h1>Will display files here.</h1>
-	{isloading? "Still loading":"Results are"  }
+
 	
 	
         </div>
@@ -113,7 +115,7 @@ var totalSize=Object.keys(textFiles).length;
 }
 	
 	 function displayResults(){
- const displayResultsHTML= <div><h1>Results are {howmany}</h1></div>
+ const displayResultsHTML= <span><h1>Results are {howmany}</h1> {outPut}</span>
 	 ReactDOM.render(displayResultsHTML, document.getElementById('root'))
  }
 }
