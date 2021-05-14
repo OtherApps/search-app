@@ -5,7 +5,7 @@ import App from './App';
 import SearchF from './SearchF'
 import SearchParts from './SearchParts'
 import Welcome from './Welcome'
-
+import ShowBar from './ShowBar'
 import {
   BrowserRouter as Router,
   Switch,
@@ -37,7 +37,8 @@ ReactDOM.render(
 
           
         </Switch>
-    
+    <ShowBar/>
+	
     </Router>
 	
   </React.StrictMode>,
