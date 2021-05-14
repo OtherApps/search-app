@@ -60,7 +60,7 @@ var test1=0;
 		howmany= howmany+ onlythis
 		
 		if(onlythis >=1){
-		const currentFiles = <span>{filename}{onlythis}<br/></span> 
+		const currentFiles = <span>{filename} <i>{onlythis}</i><br/></span> 
 		
 		outPut =[...outPut, currentFiles]; 
 		}
