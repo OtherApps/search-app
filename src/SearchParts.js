@@ -7,11 +7,20 @@ var runonces = false;
 const cache = {};
 var outPut =""; 
 var isloading = true;
-
+var SearchForMe=""
 var  howmany=0 ;
 const  SearchParts = (props) => {
     //listAllfiles()
-
+if(props.searchme >""){
+	SearchForMe=props.searchme
+	//console.log(SearchForMe)
+	
+	
+}
+else{
+	SearchForMe="jacobo"
+	
+}
 
 importAll(require.context("../closeCaption", false, /\.(txt)$/));
 		const textFiles = Object.entries(cache).map(module => module[1].default);
@@ -76,7 +85,7 @@ var test1=0;
 
 }
  
-Finalstage("jacobo");
+Finalstage(SearchForMe);
 
 	   delayState: {
         setTimeout(() => {
