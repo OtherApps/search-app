@@ -98,6 +98,12 @@ bottom-padding:20px;
 
 
 }
+span{
+	width:100%;
+	color:white;
+	background-color:green;
+	
+}
 textarea{
 	display:block;
 
