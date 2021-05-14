@@ -60,8 +60,10 @@ var test1=0;
 		howmany= howmany+ onlythis
 		const nameOnly= filename.split('/media/');
 		const removeEnd = nameOnly[1].split(".txt");
+		const finalfix = removeEnd[0].split("."); 
+		
 		if(onlythis >=1){
-		const currentFiles = <span>{removeEnd[0]} <i><b>{onlythis}</b></i><br/></span> 
+		const currentFiles = <span>{finalfix[0]} <i><b>{onlythis}</b></i><br/></span> 
 		
 		outPut =[...outPut, currentFiles]; 
 		}

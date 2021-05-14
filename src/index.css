@@ -100,13 +100,16 @@ display:inline;
 
 }
 span{
+
 	font-size:25px;
 
 	color:black;
-	background-color:teal;
-	font-family: 'Pangolin', cursive;
-	padding-bottom:15px;
 
+	font-family: 'Pangolin', cursive;
+ item-gap: 10px;
+ text-transform: uppercase;
+  text-justify: inter-word;
+ text-align:center;
 	
 	
 }
