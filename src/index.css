@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body {
  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -99,9 +100,14 @@ bottom-padding:20px;
 
 }
 span{
+	font-size:25px;
 	width:100%;
-	color:white;
-	background-color:green;
+	color:black;
+	background-color:teal;
+	font-family: 'Pangolin', cursive;
+	padding-bottom:15px;
+
+	
 	
 }
 textarea{

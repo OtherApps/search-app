@@ -58,9 +58,10 @@ var test1=0;
 		
 		const onlythis = occurrences(data,findme)
 		howmany= howmany+ onlythis
-		
+		const nameOnly= filename.split('/media/');
+		const removeEnd = nameOnly[1].split(".txt");
 		if(onlythis >=1){
-		const currentFiles = <span>{filename} <i>{onlythis}</i><br/></span> 
+		const currentFiles = <span>{removeEnd[0]} <i><b>{onlythis}</b></i><br/></span> 
 		
 		outPut =[...outPut, currentFiles]; 
 		}
