@@ -58,10 +58,13 @@ var test1=0;
 		
 		const onlythis = occurrences(data,findme)
 		howmany= howmany+ onlythis
-		const currentFiles = <span style={{padding:"20px;"}}>{onlythis}<br/></span> 
+		
+		if(onlythis >=1){
+		const currentFiles = <span>{filename}{onlythis}<br/></span> 
 		
 		outPut =[...outPut, currentFiles]; 
-
+		}
+		
 
         })
 
