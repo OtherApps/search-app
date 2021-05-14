@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+import Welcome from './Welcome'
 
-
-
+var runonces = false; 
 const cache = {};
 var outPut =""; 
 var isloading = true;
@@ -80,10 +80,15 @@ Finalstage("jacobo");
         setTimeout(() => {
        
 if(!isloading){
-			
+
+			if(runonces ===false){
 	displayResults();
+	runonces=true; 
+	clearInterval();
 	
-			
+			}
+
+	
 		   }
         }, 11200);
     }
@@ -91,7 +96,7 @@ if(!isloading){
  return (
         <div>
 
-	
+	<Welcome/>
 	
         </div>
     )

@@ -87,21 +87,21 @@ option:onClick{
 div{
 	top:10px;
 	height: 50px;
-    left: 50%;
+
     position: absolute;
 padding:10px;
 margin: 20px;
-    transform: translate(-50%, -50%);
 
-display:block;
-bottom-padding:20px;
+
+display:inline;
+
 
 
 
 }
 span{
 	font-size:25px;
-	width:100%;
+
 	color:black;
 	background-color:teal;
 	font-family: 'Pangolin', cursive;

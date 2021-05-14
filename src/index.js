@@ -23,7 +23,7 @@ ReactDOM.render(
 
         <Switch>
             <Route extact path="/list">
-	<Welcome/>
+	
           <SearchParts /></Route>
           <Route extact path="/search">
             <SearchF />
