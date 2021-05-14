@@ -15,7 +15,7 @@ const handleChange = e =>{
 console.log(e.target.value)
 //search_forme(e.ta<SearchParts searchme="jacobo" />/return rr
 
-return <SearchParts searchme={e.target.value} />
+
 }
  
 return (
