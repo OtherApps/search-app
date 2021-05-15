@@ -35,6 +35,6 @@ if(this.state.count >90)
 render()
 {
 	
-return <h1> Now loading data {this.state.counter}'s</h1>
+return <h1> LVE 2021 APP. {this.state.counter}'s</h1>
 }
 }
