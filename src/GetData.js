@@ -72,9 +72,7 @@ function test2(jsonStuff){
 		
 	}
 	
-
-	// Display the list box with the series list
-	const seriesList = <div ><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div>;
+	const seriesList = <div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div>;
 	ReactDOM.render(seriesList, document.getElementById('series'));
 }
 
@@ -125,7 +123,7 @@ function handleChange(e){
 	
 	
 	seriesindex= e.target.selectedIndex;
-	const seriesList = <div ><select size="8" style={{overflow:"auto"}} className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><button>Back</button></div>
+	const seriesList = <div className="divCenter" ><select size="8" style={{overflow:"auto"}} className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button>Back</button></div>
 ;
 
 
