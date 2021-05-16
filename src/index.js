@@ -37,7 +37,7 @@ ReactDOM.render(
 
           
         </Switch>
-    <ShowBar/>
+
 	
     </Router>
 	

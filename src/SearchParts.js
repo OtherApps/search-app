@@ -14,13 +14,13 @@ const  SearchParts = (props) => {
     //listAllfiles()
 if(props.searchme >""){
 	SearchForMe=props.searchme
-	//console.log(SearchForMe)
+	console.log("In the second stage "+ SearchForMe)
 	
 	
 }
 else{
 	SearchForMe="jacobo"
-	
+	console.log("In the second stage!")
 }
 
 importAll(require.context("../closeCaption", false, /\.(txt)$/));
@@ -137,7 +137,7 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
  const displayResultsHTML= <span><h1>Results are {howmany}</h1> {outPut}</span>
-	 ReactDOM.render(displayResultsHTML, document.getElementById('root'))
+	 ReactDOM.render(displayResultsHTML, document.getElementById('series'))
  }
 }
 		
