@@ -72,7 +72,7 @@ function SaveData(jsonStuff){
 		
 	}
 	
-	const seriesList = <div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div>;
+	const seriesList = <center><div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
 	ReactDOM.render(seriesList, document.getElementById('series'));
 }
 
@@ -123,7 +123,7 @@ function handleChange(e){
 	
 	
 	seriesindex= e.target.selectedIndex;
-	const seriesList = <div className="divCenter" ><select size="9" style={{overflow:"auto"}} className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div>
+	const seriesList = <center><div className="divCenter" ><select size="9" style={{overflow:"auto"}} className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center>
 ;
 
 
@@ -131,7 +131,8 @@ function handleChange(e){
 	ReactDOM.render(seriesList, document.getElementById('subtitles'));
 	var seriesShow =document.getElementById('series')
 	seriesShow.style.display="none"
-	
+	var subtitlesHide =document.getElementById('subtitles');
+	subtitlesHide.style.display="block"
 	
 }
 

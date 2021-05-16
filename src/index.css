@@ -8,7 +8,7 @@ body {
 
 color:blanchedalmond;
 display: inline;
-background-color:teal;
+background-color:#912F95;
 
 
 }
@@ -21,10 +21,11 @@ button,input,textbox{
 	cursor: pointer;
 	text-transform: uppercase;
 	text-align: center;
-	position: relative;
-background-color:aliceblue;
-color:black;
+	position: absolute;
 
+color:black;
+float:center;
+background-color:#912F95;
 }
 
 h1{
