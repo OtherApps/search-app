@@ -48,15 +48,20 @@ select{
   transition:background .4s ease-in-out;
   display:flex;
   align-items:center;
-   border:1px solid #ccc;
+
   background-color:aliceblue;
-color:black;
+color:black; 
+
+ border-radius: 25px;
 }
 option{
+	
+margin:15px;
+  border-radius: 25px;
  font-size:20px;
- padding:10px;
- box-sizing:border-box;
- border:1px solid #ccc;
+
+ 
+
 }
 
 option:hover{
