@@ -19,6 +19,7 @@ const https = require('https');
 https.get('data.json', (resp) => {
   let data = '';
 
+
   // A chunk of data has been received.
   resp.on('data', (chunk) => {
     data += chunk;
@@ -27,8 +28,7 @@ https.get('data.json', (resp) => {
   // The whole response has been received. Print out the result.
   resp.on('end', () => {
   // displayStuff(data);
-   
-   test2(data)
+  SaveData(data)
    
    
   });
@@ -45,7 +45,7 @@ function listsubtitles(ids,strList){
 }
 
 
-function test2(jsonStuff){
+function SaveData(jsonStuff){
 // Work the  json data  and save it  to array 
 	var newstuff = JSON.parse(jsonStuff); 
 	var start=0; 
