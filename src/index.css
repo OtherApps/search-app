@@ -41,43 +41,29 @@ code {
     monospace;
 }
 
-
 select{
-
-  scrollbar-width: none; 
-	  scrollbar-width: none; 
-		
-	text-decoration:uppercase;
-	
-	padding:10px;
-	padding-left:10px;
-	
-	font-size:20px;
-border:0px;
-
-	color:gold;
-	background-color:transparent;
-	text-align:center;
-	overflow:hidden;
-
-	left:50%;
-	vertical-align:center;
-	
-	
+  background-color:gray;
+  color:blue;
+  text-align:center;
+  transition:background .4s ease-in-out;
+  display:flex;
+  align-items:center;
 }
+option{
+ font-size:20px;
+ padding:10px;
+ box-sizing:border-box;
+  font-family: 'Oleo Script', cursive;
+}
+
 option:hover{
-color:blue;
-
-
+  color:red; 
+ 
+  
 }
-option {
-box-shadow: 11px 11px 11px  black;
-	padding:15px;
-color:black;
-text-align:center;
 
-	
-}
+
+
 option:onClick{
 	padding:0px;
 	
