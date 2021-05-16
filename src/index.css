@@ -42,18 +42,20 @@ code {
 }
 
 select{
-  background-color:gray;
-  color:blue;
+ 
+  color:black;
   text-align:center;
   transition:background .4s ease-in-out;
   display:flex;
   align-items:center;
+   border:1px solid #ccc;
+  
 }
 option{
  font-size:20px;
  padding:10px;
  box-sizing:border-box;
-
+ border:1px solid #ccc;
 }
 
 option:hover{
@@ -71,15 +73,16 @@ option:onClick{
 }
 
 div{
-	top:10px;
-	height: 50px;
-
-    position: absolute;
+  top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+	width:100%;
+	
 padding:10px;
 margin: 20px;
 
 
-display:inline;
 
 
 
@@ -97,6 +100,11 @@ span{
   text-justify: inter-word;
  text-align:center;
 	
+	top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+	width:100%;
 	
 }
 textarea{
