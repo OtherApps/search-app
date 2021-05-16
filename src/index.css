@@ -42,21 +42,26 @@ code {
 }
 
 select{
- 
+   line-height: 1.8;
   color:black;
   text-align:center;
   transition:background .4s ease-in-out;
-  display:flex;
-  align-items:center;
 
-  background-color:aliceblue;
+
 color:black; 
 
- border-radius: 25px;
+
+border:0px;
+
+ 
 }
 option{
+
+padding:10px;
+
 	
-margin:15px;
+	   box-shadow: 5px 5px;
+margin:5px;
   border-radius: 25px;
  font-size:20px;
 
