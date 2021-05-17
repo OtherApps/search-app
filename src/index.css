@@ -8,7 +8,9 @@ body {
 
 color:blanchedalmond;
 display: inline;
-background-color:#912F95;
+
+background-color:purple;
+
 
 
 }
@@ -51,10 +53,13 @@ line-height: 1.8;
 text-align:center;
 
 color:white; 
-background-color:#912F95;
+
 border:1px;
 
+background-image:url(http://localhost:3000/logos.png);
 
+background-repeat:none;
+background-color:purple;
 
 }
 
@@ -67,7 +72,7 @@ option,button{
 	font-size:20px;
 
  color:white;
-background-color:purple;
+
 
 }
 button{
