@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-
+import ShowBar from './ShowBar';
 import SearchF from './SearchF';
 
 var results; 
@@ -72,7 +72,7 @@ function SaveData(jsonStuff){
 		
 	}
 	
-	const seriesList = <center><div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
+	const seriesList = <center><div className="divCenter"><ShowBar/><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
 	ReactDOM.render(seriesList, document.getElementById('series'));
 }
 

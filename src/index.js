@@ -19,7 +19,8 @@ ReactDOM.render(
 	
    <Router>
    
-      
+      <ShowBar/>
+	  
 
         <Switch>
             <Route extact path="/list">
@@ -29,7 +30,9 @@ ReactDOM.render(
             <SearchF />
           </Route>
           <Route extac path="/">
-            <App />
+		
+		    
+            <App/> 
           </Route>
 
         
