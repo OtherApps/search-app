@@ -61,6 +61,8 @@ background-image:url(http://localhost:3000/logos.png);
 
 background-color:#6b00ed;
    background-repeat: no-repeat;
+    box-shadow: 5px 10px 10px black;
+	
 }
 
 
