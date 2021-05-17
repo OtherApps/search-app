@@ -167,13 +167,18 @@ text-align: center;
 
 select::-webkit-scrollbar {
     width: 2em;
+	 opacity:.3;
+	color:white;
+	 
 }
  
 select::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	 opacity:.5;
 }
  
 select::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+  opacity:.5;
 }
