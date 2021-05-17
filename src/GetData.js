@@ -130,6 +130,8 @@ function handleChange(e){
 //Display the subtitles
 	ReactDOM.render(seriesList, document.getElementById('subtitles'));
 	var seriesShow =document.getElementById('series')
+	
+	seriesShow.classList.add="fadeout"
 	seriesShow.style.display="none"
 	var subtitlesHide =document.getElementById('subtitles');
 	subtitlesHide.style.display="block"
