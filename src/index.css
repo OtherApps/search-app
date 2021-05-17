@@ -9,7 +9,7 @@ body {
 color:blanchedalmond;
 display: inline;
 
-background-color:purple;
+background-color:#6b00ed;
 
 
 
@@ -58,9 +58,9 @@ border:1px;
 
 background-image:url(http://localhost:3000/logos.png);
 
-background-repeat:none;
-background-color:purple;
 
+background-color:#6b00ed;
+   background-repeat: no-repeat;
 }
 
 
@@ -77,6 +77,7 @@ option,button{
 }
 button{
 	color:gold;
+	background-color:#6b00ed;
 	
 	box-shadow:1px 1px black;
 	
