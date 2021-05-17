@@ -102,14 +102,13 @@ if(!isloading){
 
 	
 		   }
-        }, 11200);
+        }, 1200);
     }
 	
  return (
         <div>
-
-	<Welcome/>
-	
+		<h1>Results</h1>
+		
         </div>
     )
 
@@ -136,10 +135,14 @@ var totalSize=Object.keys(textFiles).length;
 }
 	
 	 function displayResults(){
- const displayResultsHTML= <span><h1>Results are {howmany}</h1> {outPut}</span>
+ const displayResultsHTML= <span> <button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut}</span>
 	 ReactDOM.render(displayResultsHTML, document.getElementById('series'))
  }
 }
-		
+function goB(){
+	
+	window.location = "http://localhost:3000/search";
+	
+}		
 
 export default SearchParts

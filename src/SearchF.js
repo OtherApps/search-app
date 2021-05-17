@@ -57,7 +57,7 @@ return (
 <td style={{padding:"40px"}}>
 
 
-<button  onClick={searchFun}style={{color:"blue",backgroundColor:"#2196F3"}}>
+<button  onClick={searchFun}style={{color:"white",backgroundColor:"transparent"}}>
 <i class="fa fa-search"></i></button>
 </td>
 <td style={{padding:"5px"}}>
@@ -88,7 +88,7 @@ if(searchText !="")
 ReactDOM.render(<SearchParts searchme={searchText}/>, document.getElementById('root'));
 }
 else{
-	
+	alert("Must fill out everything.")
 	
 }
 
