@@ -54,26 +54,11 @@ background-color:#912F95;
 
 border:1px;
 
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ 
 
-   box-shadow: 10px 10px 10px 10px black
-}
-#style-3::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
+
 }
 
-#style-3::-webkit-scrollbar
-{
-  width: 6px;
-  background-color: #F5F5F5;
-}
-
-#style-3::-webkit-scrollbar-thumb
-{
-  background-color: #000000;
-}
 
 option,button{
 	padding:10px;
@@ -178,4 +163,17 @@ text-align: center;
      height:0;
      transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
 
+}
+
+select::-webkit-scrollbar {
+    width: 2em;
+}
+ 
+select::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+select::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
