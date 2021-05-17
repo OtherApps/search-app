@@ -48,19 +48,31 @@ if(searchText !="" ){
 
 return (
 
-<div>
-
+<div style={{align:"center"}}>
 
 
 <table>
 <tr>
-<td style={{padding:"40px"}}>
 
 
-<button  onClick={searchFun}style={{color:"white",backgroundColor:"transparent"}}>
+<th colspan="2">
+<h1>
+Formulario de búsqueda
+</h1>
+
+</th>
+
+</tr>
+
+
+<tr>
+<td>
+
+
+<button  onClick={searchFun}>
 <i class="fa fa-search"></i></button>
 </td>
-<td style={{padding:"5px"}}>
+<td style={{padding:"40px",align:"top"}}>
 
  <input name="TextboxSearch" id ="searchText" type="textbox"  onMouseOut={handleChange} /> 
 
