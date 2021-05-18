@@ -6,6 +6,7 @@ import SearchF from './SearchF'
 import SearchParts from './SearchParts'
 import Welcome from './Welcome'
 import ShowBar from './ShowBar'
+import ShowCount from './ShowCount'
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,7 +26,7 @@ ReactDOM.render(
         <Switch>
             <Route extact path="/list">
 	
-          <SearchParts /></Route>
+          <ShowCount /></Route>
           <Route extact path="/search">
             <SearchF />
           </Route>
@@ -35,7 +36,11 @@ ReactDOM.render(
             <App/> 
           </Route>
 
-        
+        <Route extac path="/count">
+		
+		    
+            <ShowCount/> 
+          </Route>
 
 
           

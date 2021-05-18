@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
+
 const  ShowCount = (props) => {
 
 
@@ -28,7 +31,7 @@ var my_date ;
 
 
 
-my_date= "<br>"+my_months[0]+" " + ((number_of_days_in_month + current_day)+1); 
+my_date= my_months[0]+" " + ((number_of_days_in_month + current_day)+1); 
 
 
 
@@ -41,7 +44,6 @@ function hideintro(){
 	
 }
 // Update the count down every 1 second
-var x = setInterval(function() {
 
   // Get today's date and time
   var now = new Date().getTime();
@@ -53,20 +55,16 @@ var x = setInterval(function() {
 var weeks = Math.ceil(((50-days)-1)/7);
 var display_days = (50-days)+1;
 
-var outPut = " Conteo del Ómer<br> Semana # " +  weeks +" <br> Día # "+ display_days+ " " + my_date  + "<br><a onclick='hideintro()' style='font-size:20px' class='button'>Close</a>"   ;
 
 
 
 
-  if (distance < 0) {
-   clearInterval(x);
-    
-  }
-}, 1000);
 
 return(
-<div>
-{outPut}
+<div style={{width:"300px",height:"200px",fontSize:"30px",backgroundColor:"purple",boxShadow:"2px 1px white",borderradius: "10px"}} >
+Conteo del Ómer Semana #{weeks}<br/>
+Fecha #{my_date} <br/>
+Día #{display_days} <br/>
 </div>
 
 )
