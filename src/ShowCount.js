@@ -62,12 +62,12 @@ var display_days = (50-days)+1;
 
 return(
 <center>
-<div style={{backgroundImage: `url(${bgimage})`,backgroundAttachment: "fixed",backgroundPosition:"cover",backgroundPosition: "center",color:"black",boxShadow: "10px 10px 8px #888888"}}>
-<div style={{width:"300px",height:"200px",fontSize:"30px",textAlign:"center"}} >
+<div style={{backgroundImage: `url(${bgimage})`,backgroundAttachment: "fixed",backgroundPosition:"cover",backgroundPosition: "center",color:"black",boxShadow: "10px 10px 8px #888888",borderRadius: "34px",width:"400px",height:"400px",fontSize:"40px",textAlign:"center",transform: "translate(120%, 20%)"}}>
+
 Conteo del Ómer Semana #{weeks}<br/>
 Fecha #{my_date} <br/>
 Día #{display_days} <br/>
-</div>
+
 </div>
 </center>
 )
