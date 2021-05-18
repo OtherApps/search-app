@@ -21,7 +21,9 @@ ReactDOM.render(
    <Router>
    
       <ShowBar/>
-	  
+
+
+
 
         <Switch>
             <Route extact path="/list">
@@ -30,16 +32,16 @@ ReactDOM.render(
           <Route extact path="/search">
             <SearchF />
           </Route>
-          <Route extac path="/">
+          <Route extact path="/">
 		
 		    
             <App/> 
           </Route>
 
-        <Route extac path="/count">
+        <Route extact path="/count">
 		
 		    
-            <ShowCount/> 
+            
           </Route>
 
 
@@ -48,7 +50,7 @@ ReactDOM.render(
 
 	
     </Router>
-	
+
   </React.StrictMode>,
   document.getElementById('root')
 );
