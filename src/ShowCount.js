@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-
+import bgimage from './wheat.jpg'
 const  ShowCount = (props) => {
 
 
@@ -61,12 +61,15 @@ var display_days = (50-days)+1;
 
 
 return(
-<div style={{width:"300px",height:"200px",fontSize:"30px",backgroundColor:"purple",boxShadow:"2px 1px white",borderradius: "10px"}} >
+<center>
+<div style={{backgroundImage: `url(${bgimage})`,backgroundAttachment: "fixed",backgroundPosition:"cover",backgroundPosition: "center",color:"black",boxShadow: "10px 10px 8px #888888"}}>
+<div style={{width:"300px",height:"200px",fontSize:"30px",textAlign:"center"}} >
 Conteo del Ómer Semana #{weeks}<br/>
 Fecha #{my_date} <br/>
 Día #{display_days} <br/>
 </div>
-
+</div>
+</center>
 )
 }
 
