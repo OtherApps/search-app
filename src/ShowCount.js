@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import bgimage from './wheat.jpg'
 const  ShowCount = (props) => {
 
+// Display  count down to Shavuot
 
 function daysInMonth (month, year) {
     return new Date(year, month, 0).getDate();
