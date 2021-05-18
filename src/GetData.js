@@ -123,7 +123,7 @@ function handleChange(e){
 	
 	
 	seriesindex= e.target.selectedIndex;
-	const seriesList = <center><div className="divCenter" ><select  size="10"  className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center>
+	const seriesList = <><ShowBar/> <center><div className="divCenter" ><select  size="10"  className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center></>
 ;
 
 

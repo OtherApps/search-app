@@ -53,8 +53,8 @@ function hideintro(){
   var distance = countDownDate - now;
 
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var weeks = Math.ceil(((50-days)-1)/7);
-var display_days = (50-days)+1;
+var weeks = Math.ceil(((50-days)-2)/7);
+var display_days = (50-days);
 
 
 
@@ -67,7 +67,7 @@ return(
 <div style={{backgroundImage: `url(${bgimage})`,backgroundPosition:"cover",backgroundPosition: "center",color:"black",boxShadow: "10px 10px 8px #888888",borderRadius: "34px",width:"400px",height:"400px",fontSize:"40px",textAlign:"center",transform: "translate(120%, 20%)"}}>
 <font className="specialF">
 Conteo del Ómer Semana #{weeks}<br/>
-Fecha #{my_date} <br/>
+
 Día #{display_days} <br/>
 </font>
 </div>

@@ -246,10 +246,7 @@ align:center;
  
 }
 .specialTop{
-
-position:relative;
-
-left:0;
+align-items: center;
 
 background-color:transparent;
 
