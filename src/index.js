@@ -33,19 +33,8 @@ ReactDOM.render(
             <SearchF />
           </Route>
           <Route extact path="/">
-		
-		    
             <App/> 
           </Route>
-
-        <Route extact path="/count">
-		
-		    
-            
-          </Route>
-
-
-          
         </Switch>
 
 	
