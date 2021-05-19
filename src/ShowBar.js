@@ -1,5 +1,5 @@
 const  ShowBar = (props) => {
-
+// Display Menu
 return(
 <div className="specialTop">
 <table>
@@ -17,8 +17,8 @@ return(
 
 
 <td>
-<ul align="center">
-  <li><a class="active" href="./">Home</a></li>
+<ul >
+  <li><a className="active" href="./">Home</a></li>
   <li><a href="./Search">Búsqueda</a></li>
   <li><a href="./list">Conteo</a></li>
 

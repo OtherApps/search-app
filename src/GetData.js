@@ -38,13 +38,6 @@ https.get('data.json', (resp) => {
 });
 
 
-function listsubtitles(ids,strList){
-	
-	
-	
-}
-
-
 function SaveData(jsonStuff){
 // Work the  json data  and save it  to array 
 	var newstuff = JSON.parse(jsonStuff); 
@@ -103,7 +96,7 @@ function handleChange2(e){
 }
 function handleChange(e){
 	
-
+// On click will  display  subtitles  list
 	var strList= ListOfData[e.target.selectedIndex].getTitles()
 	var arrayofTitles = strList.split(",");
 	
@@ -113,14 +106,11 @@ function handleChange(e){
 	
 	while(y < arrayofTitles.length)
 	{
-		
-		
 		var single =  <option key ={y}> {arrayofTitles[y]}</option> 
 		outstuff_html = [...outstuff_html,single]
 		y++;
 		
 	}
-	
 	
 	seriesindex= e.target.selectedIndex;
 	const seriesList = <><ShowBar/> <center><div className="divCenter" ><select  size="10"  className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center></>
@@ -139,6 +129,8 @@ function handleChange(e){
 }
 
 function goB(){
+// Return to Serie list  
+
 	var subtitlesHide =document.getElementById('subtitles');
 	subtitlesHide.style.display="none"
 	var seriesShow =document.getElementById('series')
@@ -148,6 +140,8 @@ console.log("has been click")
 }
 		function showSeries()
 		{
+// Make the series list visible again
+
 			
 	var seriesShow =document.getElementById('series')
 	seriesShow.style.display="block"
@@ -157,6 +151,8 @@ console.log("has been click")
 	
 		}
 
+
+// Class  to save the information  from the json file. 
 class RowData{
 	
 	constructor(series,subTitles,links){
@@ -199,4 +195,6 @@ function showstart(){
 		rootsHide.style.display="none"
 	
 	}
+
+	
 export default GetData
