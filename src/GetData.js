@@ -58,11 +58,6 @@ function SaveData(jsonStuff){
 		
 		start++; 
 		
-		
-		
-		
-		
-		
 	}
 	
 	const seriesList = <center><div className="divCenter"><ShowBar/><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
@@ -177,7 +172,7 @@ class RowData{
 	}
 	
 	getLinks(){
-		//console.log(this.links)
+
 		
 	return this.links;
 	
@@ -196,5 +191,5 @@ function showstart(){
 	
 	}
 
-	
+
 export default GetData
