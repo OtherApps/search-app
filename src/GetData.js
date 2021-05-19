@@ -181,7 +181,7 @@ class RowData{
 	}
 	
 	getLinks(){
-		console.log(this.links)
+		//console.log(this.links)
 		
 	return this.links;
 	

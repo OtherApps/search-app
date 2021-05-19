@@ -52,9 +52,9 @@ function hideintro(){
 
   var distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var weeks = Math.ceil(((50-days)-2)/7);
-var display_days = (50-days);
+  	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var weeks = Math.ceil(((50-days)-2)/7);
+	var display_days = (50-days);
 
 
 
