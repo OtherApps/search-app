@@ -7,18 +7,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-
-
-color:blanchedalmond;
 display: inline-block;
 
 border-color: black;
 
-background-color:#6b00ed;
+background:#6b00ed ;
+
 
 border-radius: 24px;
 
   border-style: solid 3px;
+  
 
 }
 option:active{
@@ -81,7 +80,6 @@ option,button{
 	font-size:20px;
 
  color:white;
-
 
 }
 button{
