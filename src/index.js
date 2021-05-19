@@ -33,7 +33,7 @@ ReactDOM.render(
             <SearchF />
           </Route>
           <Route extact path="/">
-            <App/> 
+            <App /> 
           </Route>
         </Switch>
 
