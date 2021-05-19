@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import ShowBar from './ShowBar';
-import SearchF from './SearchF';
+
 
 var results; 
 var outstuff="";
@@ -183,7 +183,7 @@ class RowData{
 
   
 function showstart(){
-	console.log("Has been clicked")
+
 	var seriesShow =document.getElementById('series')
 		seriesShow.style.display="block"
 		var rootsHide =document.getElementById('root')

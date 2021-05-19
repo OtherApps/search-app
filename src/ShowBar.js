@@ -5,7 +5,7 @@ return(
 <table>
 <tr>
 
-<td colspan="1" style={{width:"300px"}}>
+<td colspan="2" style={{width:"auto"}}>
 <center>
 <font className="specialTitle">LVE 2021</font>
 </center>
@@ -13,8 +13,6 @@ return(
 </td>
 <td style={{padding:"0"}}>
 </td>
-
-
 
 <td>
 <ul >
