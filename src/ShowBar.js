@@ -1,13 +1,16 @@
 const  ShowBar = (props) => {
 // Display Menu
+
 return(
 <div className="specialTop">
 <table>
 <tr>
 
-<td colspan="2" style={{width:"auto"}}>
+<td colSpan="2" style={{width:"auto"}}>
 <center>
-<font className="specialTitle">LVE 2021</font>
+<font className="specialTitle"> LVE 2021 </font>
+<div id="status"></div>
+
 </center>
 
 </td>
