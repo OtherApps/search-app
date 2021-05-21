@@ -7,6 +7,7 @@ import SearchParts from './SearchParts'
 import Welcome from './Welcome'
 import ShowBar from './ShowBar'
 import ShowCount from './ShowCount'
+import Footer from './Footer'
 import {
   BrowserRouter as Router,
   Switch,
@@ -39,7 +40,7 @@ ReactDOM.render(
 
 	
     </Router>
-
+<Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );
