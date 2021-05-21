@@ -54,10 +54,9 @@ function SaveData(jsonStuff){
 
 //<option key={props.keys} value={props.itemName}>{props.itemName}</option>
 
-var parts = <CreateListItem key={start} value={newstuff.list[start].Series} />
+var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 
-			//var part=  <option key={start} value={newstuff.list[start].Series}> {newstuff.list[start].Series }   </option>
-			outstuff = [...outstuff,part]
+	outstuff = [...outstuff,part]
 
 		}; 
 		
@@ -106,7 +105,10 @@ function handleChange(e){
 	
 	while(y < arrayofTitles.length)
 	{
-		var single =  <option key ={y}> {arrayofTitles[y]}</option> 
+		
+
+var single = <CreateListItem keys = {y}itemName={arrayofTitles[y]}/>;
+
 		outstuff_html = [...outstuff_html,single]
 		y++;
 		
