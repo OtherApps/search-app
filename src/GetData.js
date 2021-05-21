@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-
+import CreateListItem from "./CreateListItem"
 import ShowBar from './ShowBar';
 
 
@@ -51,7 +51,12 @@ function SaveData(jsonStuff){
 	
 			let newItem  = new RowData(newstuff.list[start].Series,newstuff.list[start].titles,newstuff.list[start].links)
 			ListOfData[start]= newItem 
-			var part=  <option key={start} value={newstuff.list[start].Series}> {newstuff.list[start].Series }   </option>
+
+//<option key={props.keys} value={props.itemName}>{props.itemName}</option>
+
+var parts = <CreateListItem key={start} value={newstuff.list[start].Series} />
+
+			//var part=  <option key={start} value={newstuff.list[start].Series}> {newstuff.list[start].Series }   </option>
 			outstuff = [...outstuff,part]
 
 		}; 
