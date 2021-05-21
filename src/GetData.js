@@ -52,7 +52,6 @@ function SaveData(jsonStuff){
 			let newItem  = new RowData(newstuff.list[start].Series,newstuff.list[start].titles,newstuff.list[start].links)
 			ListOfData[start]= newItem 
 
-//<option key={props.keys} value={props.itemName}>{props.itemName}</option>
 
 var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 

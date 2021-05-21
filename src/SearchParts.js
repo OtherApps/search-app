@@ -140,8 +140,9 @@ var totalSize=Object.keys(textFiles).length;
  }
 }
 function goB(){
-	
-	window.location = "http://192.168.1.2:3000/search";
+	var path = window.location.origin + "/";
+
+	window.location = path+"/search";
 	
 }		
 
