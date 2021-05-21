@@ -17,15 +17,8 @@ import {
 ReactDOM.render(
   <React.StrictMode>
    
-
-	
    <Router>
-   
-      <ShowBar/>
-
-
-
-
+         <ShowBar/>
         <Switch>
             <Route extact path="/list">
 	
