@@ -141,7 +141,7 @@ var totalSize=Object.keys(textFiles).length;
 }
 function goB(){
 	
-	window.location = "http://localhost:3000/search";
+	window.location = "http://192.168.1.2:3000/search";
 	
 }		
 
