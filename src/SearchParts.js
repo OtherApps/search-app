@@ -48,7 +48,7 @@ function occurrences(string, subString,completeFileName) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
-const testline = <div style={{marginLeft:"10px"}}> <div>{string.substring(pos,pos+100)}</div><div> {completeFileName} </div></div>       	
+const testline = <div style={{marginLeft:"10px",width:"60%"}}> <div>{string.substring(pos,pos+100)}</div><div> {completeFileName} </div></div>       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
