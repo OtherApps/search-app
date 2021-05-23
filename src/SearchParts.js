@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import Welcome from './Welcome'
 import ShowBar from './ShowBar'
+let completeLines
 
 var runonces = false; 
 const cache = {};
@@ -46,6 +47,8 @@ function occurrences(string, subString, allowOverlapping) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
+completeLines =+ string.substring(pos,pos+1)
+
             ++n;
             pos += step;
         } else break;
