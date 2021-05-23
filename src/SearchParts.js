@@ -47,7 +47,7 @@ function occurrences(string, subString, allowOverlapping) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
- let  testline = <div> <b>{string.substring(pos,pos+20)}</b></div>;       	
+ let  testline = <div> <b>{string.substring(pos,pos+200)}</b></div>;       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
@@ -142,14 +142,21 @@ var totalSize=Object.keys(textFiles).length;
 }
 	
 	 function displayResults(){
- const displayResultsHTML= <span> <button onClick={goB}>Back</button><h1>Results are {howmany}</h1>{completeLines}  {outPut}</span>
+ const displayResultsHTML= <span> <button onClick={showComplete}>Full Results </button><div id='completR' style={{display:"none"}}>{completeLines}</div><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
 	 ReactDOM.render(displayResultsHTML, document.getElementById('series'))
  }
+}
+
+function showComplete(){
+
+var subtitlesHide =document.getElementById('completR');
+	subtitlesHide.style.display="block"
+
 }
 function goB(){
 	var path = window.location.origin ;
 
-	window.location = path+"search";
+	window.location = path+"/search";
 	
 }		
 
