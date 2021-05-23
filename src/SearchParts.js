@@ -143,7 +143,7 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"white"}}>{completeLines}</div>
+	const fullResults = <div id='completR' style={{display:"none",color:"white",backgroundColor:"black"}}>{completeLines}</div>
 	ReactDOM.render(fullResults, document.getElementById('root'))
 
 
