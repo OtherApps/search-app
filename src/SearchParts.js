@@ -34,10 +34,11 @@ importAll(require.context("../closeCaption", false, /\.(txt)$/));
 // end of getting a list of files
 
 
-function occurrences(string, subString, allowOverlapping) {
+function occurrences(string, subString,completeFileName) {
 
     string += "";
     subString += "";
+    let allowOverlapping=0;
     if (subString.length <= 0) return (string.length + 1);
 
     var n = 0,
@@ -47,7 +48,7 @@ function occurrences(string, subString, allowOverlapping) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
- let  testline = <div> <b>{string.substring(pos,pos+200)}</b></div>;       	
+const testline = <div> {string.substring(pos,pos+200)} En que tema: {completeFileName} </div>       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
@@ -70,12 +71,12 @@ var test1=0;
             }).then(function (data) {
       
 		
-		const onlythis = occurrences(data,findme)
-		howmany= howmany+ onlythis
 		const nameOnly= filename.split('/media/');
 		const removeEnd = nameOnly[1].split(".txt");
 		const finalfix = removeEnd[0].split("."); 
 		
+		const onlythis = occurrences(data,findme,finalfix[0])
+		howmany= howmany+ onlythis
 		if(onlythis >=1){
 
 
@@ -143,7 +144,7 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"white",backgroundColor:"black"}}>{completeLines}</div>
+	const fullResults = <div id='completR' style={{display:"none",color:"white",backgroundColor:"black", width:"50%"}}>{completeLines}</div>
 	ReactDOM.render(fullResults, document.getElementById('root'))
 
 
