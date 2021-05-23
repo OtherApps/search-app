@@ -142,15 +142,25 @@ var totalSize=Object.keys(textFiles).length;
 }
 	
 	 function displayResults(){
- const displayResultsHTML= <span> <button onClick={showComplete}>Full Results </button><div id='completR' style={{display:"none"}}>{completeLines}</div><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
-	 ReactDOM.render(displayResultsHTML, document.getElementById('series'))
+
+	const fullResults = <div id='completR' style={{display:"none",color:"white"}}>{completeLines}</div>
+	ReactDOM.render(fullResults, document.getElementById('root'))
+
+
+ 	const displayResultsHTML= <span> <button onClick={showComplete}>Full Results </button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
+	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
+
+
  }
 }
 
 function showComplete(){
 
-var subtitlesHide =document.getElementById('completR');
+	var subtitlesHide =document.getElementById('completR');
 	subtitlesHide.style.display="block"
+
+	var totals = document.getElementById('series')
+	totals.style.display="none"
 
 }
 function goB(){
