@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import Welcome from './Welcome'
 import ShowBar from './ShowBar'
-let completeLines
+var completeLines=""
 
 var runonces = false; 
 const cache = {};
@@ -47,7 +47,8 @@ function occurrences(string, subString, allowOverlapping) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
-completeLines =+ string.substring(pos,pos+1)
+ let  testline = <div> <b>{string.substring(pos,pos+20)}</b></div>;       	
+completeLines = [...completeLines,testline  ]  
 
             ++n;
             pos += step;
@@ -141,7 +142,7 @@ var totalSize=Object.keys(textFiles).length;
 }
 	
 	 function displayResults(){
- const displayResultsHTML= <span> <button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut}</span>
+ const displayResultsHTML= <span> <button onClick={goB}>Back</button><h1>Results are {howmany}</h1>{completeLines}  {outPut}</span>
 	 ReactDOM.render(displayResultsHTML, document.getElementById('series'))
  }
 }
