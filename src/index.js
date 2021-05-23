@@ -27,7 +27,10 @@ ReactDOM.render(
             <SearchF />
           </Route>
           <Route extact path="/">
+
+
             <App /> 
+
           </Route>
         </Switch>
 

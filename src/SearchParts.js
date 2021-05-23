@@ -75,7 +75,7 @@ var test1=0;
 		if(onlythis >=1){
 
 
-		let  examples= <span> finalfix[0]} <i><b>{onlythis}</b></i></span>
+		let  examples= <span> {finalfix[0]} <i><b>{onlythis}</b></i></span>
 		const currentFiles = <div>{examples}</div> 
 		
 		outPut =[...outPut, currentFiles]; 
@@ -143,7 +143,7 @@ var totalSize=Object.keys(textFiles).length;
  }
 }
 function goB(){
-	var path = window.location.origin + "/";
+	var path = window.location.origin ;
 
 	window.location = path+"search";
 	
