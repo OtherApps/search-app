@@ -27,7 +27,7 @@ option:active{
 button:hover {
 	opacity: 0.5;
   }
-button,input,textbox{
+input,textbox{
 	padding: 15px 100px;
 	margin: 10px 4px;
 	cursor: pointer;

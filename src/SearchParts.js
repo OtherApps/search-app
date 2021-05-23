@@ -147,7 +147,7 @@ var totalSize=Object.keys(textFiles).length;
 	ReactDOM.render(fullResults, document.getElementById('root'))
 
 
- 	const displayResultsHTML= <span> <button onClick={showComplete} style={{padding:"10px"}}>Full Results </button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
+ 	const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>Full Results </button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
 	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
 
 
