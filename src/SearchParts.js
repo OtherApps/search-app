@@ -48,7 +48,7 @@ function occurrences(string, subString,completeFileName) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
-const testline = <div> {string.substring(pos,pos+200)} En que tema: {completeFileName} </div>       	
+const testline = <div style={{marginLeft:"10px"}}> <div>{string.substring(pos,pos+100)}</div><div> {completeFileName} </div></div>       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
@@ -144,7 +144,7 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"white",backgroundColor:"black", width:"50%"}}>{completeLines}</div>
+	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white", width:"50%", boxShadow:"25px 10px 10px white;",margin:"20px"}}>{completeLines}</div>
 	ReactDOM.render(fullResults, document.getElementById('root'))
 
 
