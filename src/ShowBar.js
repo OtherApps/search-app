@@ -18,7 +18,7 @@ return(
 </td>
 
 <td>
-<ul >
+<ul style={{color:"black",backgroundColor:"white"}}>
   <li><a className="active" href="./">Home</a></li>
   <li><a href="./Search">Búsqueda</a></li>
   <li><a href="./list">Conteo</a></li>
