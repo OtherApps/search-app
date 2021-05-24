@@ -38,7 +38,7 @@ function occurrences(string, subString,completeFileName) {
 
     string += "";
     subString += "";
-    let allowOverlapping=0;
+    let allowOverlapping=1;
     if (subString.length <= 0) return (string.length + 1);
 
     var n = 0,
@@ -52,7 +52,9 @@ const testline = <div style={{marginLeft:"10px",width:"60%",borderRadius:"20px"}
 completeLines = [...completeLines,testline  ]  
 
             ++n;
-            pos += step;
+            //pos += step;
+  			pos +=100;
+
         } else break;
     }
 	 isloading= false
