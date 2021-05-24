@@ -48,12 +48,12 @@ function occurrences(string, subString,completeFileName) {
     while (true) {
         pos = string.indexOf(subString, pos);
         if (pos >= 0) {
-const testline = <div style={{marginLeft:"10px",width:"60%",borderRadius:"20px"}}> <div style={{color:"gold",backgroundColor:"gray",textAlign:"center",borderRadius:"20px"}}> {completeFileName} </div><div>{string.substring(pos-10,pos+100)}</div></div>       	
+const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{string.substring(pos-10,pos+100)}</div></div>       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
-            //pos += step;
-  			pos +=100;
+            pos += step;
+  		
 
         } else break;
     }
