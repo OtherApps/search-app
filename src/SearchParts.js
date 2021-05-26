@@ -34,6 +34,25 @@ importAll(require.context("../closeCaption", false, /\.(txt)$/));
 // end of getting a list of files
 
 
+function boldQuery  (str, query) {
+    const n = str.toUpperCase();
+    const q = query.toUpperCase();
+    const x = n.indexOf(q);
+    if (!q || x === -1) {
+        return str; // bail early
+    }
+    const l = q.length;
+    var stuff2= str.substr(0, x) + '<strong>' + str.substr(x, l) + '</strong>' + str.substr(x + l)
+    console.log(stuff2)
+
+    return stuff2 ;
+}
+
+function boldString(str, substr) {
+  var strRegExp = new RegExp(substr, 'g');
+  return str.replace(strRegExp, '<stong>'+substr+'</strong>');
+}
+
 function occurrences(string, subString,completeFileName) {
 
     string += "";
@@ -46,9 +65,15 @@ function occurrences(string, subString,completeFileName) {
         step = allowOverlapping ? 1 : subString.length;
 
     while (true) {
-        pos = string.indexOf(   subString , pos);
+        pos = string.indexOf( subString , pos);
         if (pos >= 0) {
-const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{string.substring(pos-10,pos+100)}</div></div>       	
+
+var subString = string.substring(pos-10,pos+100)
+var finalStr = subString
+
+
+
+const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{finalStr}</div></div>       	
 completeLines = [...completeLines,testline  ]  
 
             ++n;
@@ -146,7 +171,20 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white", width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}>{completeLines}</div>
+	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white",width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}>{completeLines}</div>
+
+
+
+/*
+
+const regexp = new RegExp(pattern, 'ig'); // ignore case (optional) and match all
+const replaceMask = `$1<strong>$2</strong>$3`;
+
+return text.replace(regexp, replaceMask);
+
+*/
+
+
 	ReactDOM.render(fullResults, document.getElementById('root'))
 
 
