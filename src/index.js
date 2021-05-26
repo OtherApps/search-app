@@ -17,7 +17,7 @@ import {
 } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
-   <Welcome/>
+
    
    <Router>
          <ShowBar/>
