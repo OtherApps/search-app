@@ -46,7 +46,7 @@ function occurrences(string, subString,completeFileName) {
         step = allowOverlapping ? 1 : subString.length;
 
     while (true) {
-        pos = string.indexOf(subString, pos);
+        pos = string.indexOf("/"+subString +"/", pos);
         if (pos >= 0) {
 const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{string.substring(pos-10,pos+100)}</div></div>       	
 completeLines = [...completeLines,testline  ]  
