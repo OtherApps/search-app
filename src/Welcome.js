@@ -15,11 +15,7 @@ setInterval(()=>{
 this.setState({
 counter:this.state.counter+1});
 
-if(this.state.count >90)
-{
-	clearInterval();
-	
-}
+
 }
 	
 	
@@ -34,7 +30,8 @@ if(this.state.count >90)
 
 render()
 {
-	
+
+
 return <div><h1> LVE 2021 APP. {this.state.counter}s</h1></div>
 }
 }
