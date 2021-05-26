@@ -69,8 +69,12 @@ function occurrences(string, subString,completeFileName) {
         if (pos >= 0) {
 
 var subString = string.substring(pos-10,pos+100)
-var finalStr = subString
 
+var strReplaceMatch = <b>${string} </b>
+
+
+let finalStr = subString.replaceAll(string, strReplaceMatch  )
+console.log(finalStr)
 
 
 const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{finalStr}</div></div>       	
