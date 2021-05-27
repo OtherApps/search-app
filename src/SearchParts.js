@@ -1,8 +1,13 @@
 
-import { useState, useEffect } from 'react'
+import {useState, useEffect } from 'react'
+import ReactDOMServer from 'react-dom/server';
+
+import React from 'react';
 import ReactDOM from 'react-dom'
 import Welcome from './Welcome'
 import ShowBar from './ShowBar'
+import BoldResult from './BoldResult'
+import CreateDiv from './CreateDiv'
 var completeLines=""
 
 var runonces = false; 
@@ -34,29 +39,9 @@ importAll(require.context("../closeCaption", false, /\.(txt)$/));
 // end of getting a list of files
 
 
-function boldQuery  (str, query) {
-    const n = str.toUpperCase();
-    const q = query.toUpperCase();
-    const x = n.indexOf(q);
-    if (!q || x === -1) {
-        return str; // bail early
-    }
-    const l = q.length;
-    var stuff2= str.substr(0, x) + '<strong>' + str.substr(x, l) + '</strong>' + str.substr(x + l)
-    console.log(stuff2)
-
-    return stuff2 ;
-}
-
-function boldString(str, substr) {
-  var strRegExp = new RegExp(substr, 'g');
-  return str.replace(strRegExp, '<stong>'+substr+'</strong>');
-}
 
 function occurrences(string, subString,completeFileName) {
 
-    string += "";
-    subString += "";
     let allowOverlapping=1;
     if (subString.length <= 0) return (string.length + 1);
 
@@ -68,17 +53,14 @@ function occurrences(string, subString,completeFileName) {
         pos = string.indexOf( subString , pos);
         if (pos >= 0) {
 
-var subString = string.substring(pos-10,pos+100)
-
-var strReplaceMatch = <b>${string} </b>
+var subString = string.substring(pos-40,pos+100)
 
 
-let finalStr = subString.replaceAll(string, strReplaceMatch  )
-console.log(finalStr)
+var finalStr = subString
 
+const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={subString} />
 
-const testline = <div style={{border:"10px 10px black",borderStyle:"inset",borderColor:"black"}}> <div style={{color:"gold",width:"60%",backgroundColor:"gray",textAlign:"center",borderStyle:"inset"}}> {completeFileName} </div><div style={{width:"50%"}}>{finalStr}</div></div>       	
-completeLines = [...completeLines,testline  ]  
+completeLines = [...completeLines,test2  ]  
 
             ++n;
             pos += step;
@@ -175,29 +157,20 @@ var totalSize=Object.keys(textFiles).length;
 	
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white",width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}>{completeLines}</div>
+	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white",width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}> {completeLines}
+	</div>
 
 
-
-/*
-
-const regexp = new RegExp(pattern, 'ig'); // ignore case (optional) and match all
-const replaceMask = `$1<strong>$2</strong>$3`;
-
-return text.replace(regexp, replaceMask);
-
-*/
 
 
 	ReactDOM.render(fullResults, document.getElementById('root'))
-
-
  	const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>Full Results </button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
 	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
 
-
  }
 }
+
+
 
 function showComplete(){
 

@@ -8,7 +8,7 @@ import Welcome from './Welcome'
 import ShowBar from './ShowBar'
 import ShowCount from './ShowCount'
 import Footer from './Footer'
-
+import BoldResult from "./BoldResult"
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +24,7 @@ ReactDOM.render(
         <Switch>
             <Route extact path="/list">
 
-          <ShowCount /></Route>
+         <BoldResult /> </Route>
           <Route extact path="/search">
             <SearchF />
           </Route>
