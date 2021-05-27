@@ -7,15 +7,16 @@ function BoldResult (props){
     var str =props.allofthetext
     var query = props.query
 
-var results= str.replaceAll(query, '<b>' +query+'</b>')
+var txtFinal = str
+
+var results= txtFinal.replaceAll(query, '<b>' +query+'</b>')
 
 
 return (
 
-<div>
-
+<>
 {results}
-</div> 
+</>
     )
 
 }

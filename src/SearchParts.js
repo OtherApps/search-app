@@ -10,9 +10,9 @@ import BoldResult from './BoldResult'
 import CreateDiv from './CreateDiv'
 var completeLines=""
 
-var runonces = false; 
+var runonces = false;
 const cache = {};
-var outPut =""; 
+var outPut ="";
 var isloading = true;
 var SearchForMe=""
 var  howmany=0 ;
@@ -20,22 +20,22 @@ const  SearchParts = (props) => {
     //listAllfiles()
 if(props.searchme >""){
 	SearchForMe=props.searchme
-	console.log("In the second stage "+ SearchForMe)
-	
-	
+
+
+
 }
 else{
 	SearchForMe="jacobo"
-	console.log("In the second stage!")
+
 }
 
 importAll(require.context("../closeCaption", false, /\.(txt)$/));
 		const textFiles = Object.entries(cache).map(module => module[1].default);
-		
+
 	function importAll(r) {
     r.keys().forEach((key) => (cache[key] = r(key)
 	));
-}	
+}
 // end of getting a list of files
 
 
@@ -58,13 +58,13 @@ var subString = string.substring(pos-40,pos+100)
 
 var finalStr = subString
 
-const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={subString} />
+const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} />
 
-completeLines = [...completeLines,test2  ]  
+completeLines = [...completeLines,test2  ]
 
             ++n;
             pos += step;
-  		
+
 
         } else break;
     }
@@ -72,7 +72,7 @@ completeLines = [...completeLines,test2  ]
     return n;
 }
 
-// function works fine  above  will search for  a string 
+// function works fine  above  will search for  a string
 
 function displayAFile(filename,findme){
 var test1=0;
@@ -82,66 +82,66 @@ var test1=0;
             .then(function(response){
                 return response.text();
             }).then(function (data) {
-      
-		
+
+
 		const nameOnly= filename.split('/media/');
 		const removeEnd = nameOnly[1].split(".txt");
-		const finalfix = removeEnd[0].split("."); 
-		
+		const finalfix = removeEnd[0].split(".");
+
 		const onlythis = occurrences(data,findme,finalfix[0])
 		howmany= howmany+ onlythis
 		if(onlythis >=1){
 
 
 		let  examples= <span> {finalfix[0]} <i><b>{onlythis}</b></i></span>
-		const currentFiles = <div>{examples}</div> 
-		
-		outPut =[...outPut, currentFiles]; 
+		const currentFiles = <div>{examples}</div>
+
+		outPut =[...outPut, currentFiles];
 		}
-		
+
 
         })
 
 
-		
+
 
 }
- 
+
 Finalstage(SearchForMe);
 
 	   delayState: {
         setTimeout(() => {
-       
+
 if(!isloading){
 
 			if(runonces ===false){
 	displayResults();
-	runonces=true; 
+	runonces=true;
 	clearInterval();
-	
+
 			}
 
-	
+
 		   }
         }, 1200);
     }
-	
+
  return (
         <div>
-	
-		
+
+
         </div>
     )
 
 
 
 function Finalstage(searchfor){
-	
+
 var totalSize=Object.keys(textFiles).length;
-	var done=false 	
+	var done=false
 	var start=0;
 	while(start<totalSize){
-		
+
 	displayAFile(textFiles[start],searchfor)
 		start++
 
@@ -150,11 +150,11 @@ var totalSize=Object.keys(textFiles).length;
 
 
 	}
-	isloading=false; 
-	
-	
+	isloading=false;
+
+
 }
-	
+
 	 function displayResults(){
 
 	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white",width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}> {completeLines}
@@ -185,7 +185,7 @@ function goB(){
 	var path = window.location.origin ;
 
 	window.location = path+"/search";
-	
-}		
+
+}
 
 export default SearchParts
