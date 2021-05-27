@@ -8,6 +8,7 @@ import Welcome from './Welcome'
 import ShowBar from './ShowBar'
 import BoldResult from './BoldResult'
 import CreateDiv from './CreateDiv'
+
 var completeLines=new Map
 
 
@@ -59,9 +60,12 @@ var subString = string.substring(pos -20 ,pos+100)
 
 var finalStr =  subString
 
+const testbold = subString.replaceAll(SearchForMe,"<span><strong>" + SearchForMe + "</strong></span>")
+
+const fillout = <div style={{backgroundColor:"green"}}> {unescape(testbold)}</div>
 const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} />
 
-completeLines = [...completeLines,test2  ]
+completeLines = [...completeLines,test2]
 
             ++n;
             pos += step;
@@ -158,23 +162,26 @@ var totalSize=Object.keys(textFiles).length;
 
 	 function displayResults(){
 
-	const fullResults = <div id="completR" > {completeLines}  </div>
+	const fullResults =<>  {completeLines}  </>
 
 
 
 
-	ReactDOM.render(fullResults, document.getElementById('root'))
+	//ReactDOM.render(fullResults, document.getElementById('root'))
+
+
  	const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>...</button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
-	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
+ReactDOM.render(displayResultsHTML, document.getElementById('series'))
 
  }
+
 }
 
 
 
 function showComplete(){
 
-	var subtitlesHide =document.getElementById('completR');
+	var subtitlesHide =document.getElementById('root');
 	subtitlesHide.style.display="block"
 
 	var totals = document.getElementById('series')

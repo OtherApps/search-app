@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Gloria+Hallelujah&display=swap');
 
 body {
- 
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,12 +17,17 @@ color:black;
 border-radius: 24px;
 
   border-style: solid 3px;
-  
+
+
+}
+b{
+
+
 
 }
 option:active{
 	opacity:.1
-	
+
 }
 button:hover {
 	opacity: 0.5;
@@ -41,15 +46,15 @@ background-color:white;
 }
 
 h1{
-color:gold; 
+color:gold;
 	font-family: 'Oleo Script', cursive;
 	font-size:50px;
-	
+
 	height:auto;
-	
-	
+
+
 }
-code {
+code,b {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
@@ -58,7 +63,7 @@ select{
 line-height: 1.8;
 text-align:center;
 
-color:black; 
+color:black;
 
 border:1px;
 
@@ -68,7 +73,7 @@ background-image:url(http://localhost:3000/logos.png);
 background-color:#6b00ed;
    background-repeat: no-repeat;
     box-shadow: 5px 10px 10px black;
-	
+
 }
 
 
@@ -76,7 +81,7 @@ option,button{
 	padding:10px;
 
 	margin:5px;
-	
+
 	font-size:20px;
 
  color:white;
@@ -85,23 +90,23 @@ option,button{
 button{
 	color:gold;
 	background-color:#6b00ed;
-	
+
 	box-shadow:1px 1px black;
-	
+
 }
 option:hover{
   background-color:white;
  color:black;
- 
-  
+
+
 }
 
 
 
 option:onClick{
 	padding:0px;
-	
-	
+
+
 }
 
 div{
@@ -110,7 +115,7 @@ div{
     margin-top: -50px;
     margin-left: -50px;
 	width:100%;
-	
+
 padding:10px;
 margin: 10px;
 
@@ -140,17 +145,17 @@ font-family: 'Pangolin', cursive;
 
   text-justify: inter-word;
  text-align:center;
-	
 
 
-	
+
+
 }
 textarea{
 	display:block;
 vertical-align: top;
-	
-	
-	
+
+
+
 }
 .logos,input{
 
@@ -158,14 +163,14 @@ vertical-align: top;
 display: inline;
 color:chocolate;
 text-align: center;
-  
+
   }
-  
+
   input{
 	  vertical-align: top;
 	    display: inline-block;
   }
-  
+
   input[type=textbox]{
   padding: 10px;
   font-size: 17px;
@@ -174,11 +179,11 @@ text-align: center;
   width: 30%;
   background: white;
   box-shadow:2px 4px 2px black;
-  
+
   }
-  
- 
- 
+
+
+
  .fadeOut{
      opacity:0;
      width:0;
@@ -191,14 +196,14 @@ select::-webkit-scrollbar,body::-webkit-scrollbar {
     width: 2em;
 	 opacity:.3;
 	color:white;
-	 
+
 }
- 
+
 select::-webkit-scrollbar-track, body::-webkit-scrollbar-track{
     -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.3);
 	 opacity:.5;
 }
- 
+
 select::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
   background-color: purple;
   outline: 2px solid white;
@@ -232,21 +237,21 @@ li a:hover {
 
 
 .specialF{
-	
-font-family: 'Gloria Hallelujah', cursive;	
+
+font-family: 'Gloria Hallelujah', cursive;
 color:white;
 text-shadow: 2px 2px 4px black;
 
 }
 .specialTitle{
-	
+
 	font-family: 'Chela One', cursive;
 	font-size:60px;
 	text-shadow: 2px 2px 4px white;
  text-align:center;
 align:center;
 
- 
+
 }
 .specialTop{
 align-items: center;

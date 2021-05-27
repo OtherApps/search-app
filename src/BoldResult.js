@@ -10,8 +10,15 @@ function BoldResult (props){
 
 var txtFinal = str
 
-var results= txtFinal.replaceAll(query ,"<i>"+query+"</i>" )
+var results= txtFinal.replaceAll(query ,query.bold())
 
-return(results)
+
+return(
+
+{results}
+
+
+)
+
 }
 export default BoldResult

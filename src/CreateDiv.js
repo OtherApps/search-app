@@ -6,7 +6,6 @@ function CreateDiv(props){
 	// props title, fulltext
 var findMe=props.searchMe;
 
-
 var styleTitle ={
 color: "black",
 width: "60%;",
@@ -36,23 +35,18 @@ var fullstuff = document.createElement("div")
 
 
 //console.log(findMe)
-
 var textfix = <BoldResult allofthetext={props.fulltext} query={findMe} />
 var showbutton = <button onClick={showMore}>Show more</button>
-const testcount= textfix.toString();
 
 
 
 return (
-<div>
+<div style={{color:"gold",width:"100%",padding:"40px"}} >
 <center><span style={{color:"gold"}}>{props.title}</span></center>
 
-
-<div id="test1" style={styleTitle}>
-{
-textfix
-
-}
+<div style={hiddenStyle}> {props.fulltext}<br/> </div>
+<div id="test1"style={styleTitle}>
+{textfix}
 </div>
 </div>
 )
