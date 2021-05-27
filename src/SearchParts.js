@@ -59,9 +59,10 @@ var subString = string.substring(pos -20 ,pos+100)
 
 var finalStr =  subString
 
-const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} />
+let test2 = <span><CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} /></span>
+let testfinal = <div> {test2}</div>
 
-completeLines = [...completeLines,test2  ]
+completeLines = [...completeLines,testfinal ]
 
             ++n;
             pos += step;
@@ -162,12 +163,8 @@ var totalSize=Object.keys(textFiles).length;
 
 
 
-
-	ReactDOM.render(fullResults, document.getElementById('root'))
-
-
  const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>...</button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
-	ReactDOM.render(fullResults, document.getElementById('series'))
+	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
  }
 
 }
