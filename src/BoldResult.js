@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 
@@ -9,15 +10,8 @@ function BoldResult (props){
 
 var txtFinal = str
 
-var results= txtFinal.replaceAll(query, '<b>' +query+'</b>')
+var results= txtFinal.replaceAll(query ,"<i>"+query+"</i>" )
 
-
-return (
-
-<>
-{results}
-</>
-    )
-
+return(results)
 }
 export default BoldResult

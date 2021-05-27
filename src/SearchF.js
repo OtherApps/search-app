@@ -5,12 +5,12 @@ import ReactDOM from 'react-dom'
 import SearchParts from './SearchParts';
 //import fs from 'fs'
 var searchText;
-var howmanytimes=0; 
+var howmanytimes=0;
 var outPut;
-const SearchF = () => { 
+const SearchF = () => {
 var SearchV
 
-var runonces=false; 
+var runonces=false;
 const handleChange = e =>{
 
 searchText = e.target.value;
@@ -20,13 +20,13 @@ searchText = e.target.value;
 
 
 }
- 
+
 
 
 
 delayState: {
         setTimeout(() => {
-       
+
 if(searchText !="" ){
 
 			if(runonces ===false){
@@ -35,12 +35,12 @@ if(searchText !="" ){
 <SearchParts />
 
 
-	runonces=true; 
+	runonces=true;
 	clearInterval();
-	
+
 			}
 
-	
+
 		   }
         }, 10);
     }
@@ -74,7 +74,7 @@ Formulario de búsqueda
 </td>
 <td style={{padding:"40px",align:"top"}}>
 
- <input name="TextboxSearch" id ="searchText" type="textbox"  onMouseOut={handleChange} /> 
+ <input name="TextboxSearch" id ="searchText" type="textbox"  onMouseOut={handleChange} />
 
 
 </td>
@@ -93,7 +93,7 @@ Formulario de búsqueda
 
 )
 function searchFun(){
-	
+
 console.log("Search for fun function!");
 if(searchText !="")
 {
@@ -101,7 +101,7 @@ ReactDOM.render(<SearchParts searchme={searchText}/>, document.getElementById('r
 }
 else{
 	alert("Must fill out everything.")
-	
+
 }
 
 }

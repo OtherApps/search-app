@@ -39,17 +39,17 @@ var fullstuff = document.createElement("div")
 
 var textfix = <BoldResult allofthetext={props.fulltext} query={findMe} />
 var showbutton = <button onClick={showMore}>Show more</button>
+const testcount= textfix.toString();
 
-  var fullText =props.fullText
+
 
 return (
-<div style={{color:"gold",width:"100%",padding:"40px"}} >
+<div>
 <center><span style={{color:"gold"}}>{props.title}</span></center>
 
-<div style={hiddenStyle}> {props.fulltext}<br/> </div>
-<div id="test1"style={styleTitle}>
-{
 
+<div id="test1" style={styleTitle}>
+{
 textfix
 
 }

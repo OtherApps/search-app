@@ -8,13 +8,14 @@ import Welcome from './Welcome'
 import ShowBar from './ShowBar'
 import BoldResult from './BoldResult'
 import CreateDiv from './CreateDiv'
-var completeLines=""
+var completeLines=new Map
+
 
 var runonces = false;
 const cache = {};
-var outPut ="";
+var outPut =new Map
 var isloading = true;
-var SearchForMe=""
+var SearchForMe = null
 var  howmany=0 ;
 const  SearchParts = (props) => {
     //listAllfiles()
@@ -53,10 +54,10 @@ function occurrences(string, subString,completeFileName) {
         pos = string.indexOf( subString , pos);
         if (pos >= 0) {
 
-var subString = string.substring(pos-40,pos+100)
+var subString = string.substring(pos -20 ,pos+100)
 
 
-var finalStr = subString
+var finalStr =  subString
 
 const test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} />
 
@@ -157,14 +158,13 @@ var totalSize=Object.keys(textFiles).length;
 
 	 function displayResults(){
 
-	const fullResults = <div id='completR' style={{display:"none",color:"black",backgroundColor:"white",width:"70%", boxShadow:"25px 10px 10px white;",margin:"20px"}}> {completeLines}
-	</div>
+	const fullResults = <div id="completR" > {completeLines}  </div>
 
 
 
 
 	ReactDOM.render(fullResults, document.getElementById('root'))
- 	const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>Full Results </button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
+ 	const displayResultsHTML= <span> <button onClick={showComplete} style={{paddingLeft:"10px"}}>...</button><button onClick={goB}>Back</button><h1>Results are {howmany}</h1> {outPut} </span>
 	ReactDOM.render(displayResultsHTML, document.getElementById('series'))
 
  }
