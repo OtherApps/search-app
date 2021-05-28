@@ -25,15 +25,13 @@ ReactDOM.render(
         <Switch>
             <Route extact path="/list">
 
-         <BoldResult /> </Route>
+         <ShowCount /> </Route>
           <Route extact path="/search">
             <SearchF />
           </Route>
           <Route extact path="/">
 
-
-    
-<Message msg='Something came up ' />
+<App/>
 
           </Route>
         </Switch>

@@ -7,19 +7,10 @@ function CreateDiv(props){
 var findMe=props.searchMe;
 
 var styleTitle ={
-color: "black",
-width: "60%;",
+color: "white",
+width: "50%;",
 height:"auto",
-backgroundColor: "#FAF2F1",
-textAlign: "center;",
-borderStyle: "outset",
-itemAlign:"center",
-width:"100%",
-
-padding:"10px",
-borderShadow:" 14px 15px 25px black",
-border: "1px solid black;",
-boxSizing:"content-box",
+backgroundColor: "purple",
 textOverflow: "----"
 }
 var hiddenStyle={
@@ -38,11 +29,11 @@ var showbutton = <button onClick={showMore}>Show more</button>
 
 
 return (
-<div style={{color:"gold",width:"100%",padding:"40px"}} >
-<center><span style={{color:"gold"}}>{props.title}</span></center>
+<div style={{backgroundColor:"purple", width:"50%",color:"gold",boxShadow:"2px 4px 2px black"}} >
+<center><span style={{color:"gold",width:"50%"}}>{props.title}</span></center>
 
 <div style={hiddenStyle}> {props.fulltext}<br/> </div>
- <div style={styleTitle}>{textfix}</div>
+<span>{textfix}</span>
 
 
 

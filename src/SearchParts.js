@@ -159,7 +159,7 @@ var totalSize=Object.keys(textFiles).length;
 
 	 function displayResults(){
 
-	const fullResults = <div id="completR" > {completeLines}  </div>
+	const fullResults =<div> <button onClick={goB}> Back</button><div id="completR" > {completeLines}  </div> <button onClick={goB}> Back</button></div>
 
 
 
