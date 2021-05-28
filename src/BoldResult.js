@@ -15,14 +15,16 @@ var txtFinal = str
 const testResults =<b>{query}</b>
 const options2 =testResults
 var results= txtFinal.replaceAll(query , '<b>'+query+'</b>');
+var regex = /(query)/
+var replaceme = '<b> =' + query + '</b>'
 
 
 let  fullstring= <span style={{backgroundColor:"green",color:"White"}}> {results} </span>
 
 return(
 <div>
-
-{str}
+{str.replace(regex,replaceme)}
+{fullstring}
 </div>
 
 )
