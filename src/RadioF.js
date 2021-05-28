@@ -95,7 +95,7 @@ else
 
 
 
-var current2 = <div> Current play time {dur}</div>
+var current2 = <> {dur}</>
 	ReactDOM.render(current2, document.getElementById('timeC'));
 
 }
@@ -104,79 +104,42 @@ var current2 = <div> Current play time {dur}</div>
 
 
 let stylesTest = {
+display:"flex",
 
-borderRadius:"30px",
-     backgroundRepeat: "no-repeat;",
-      boxShadow:" 5px 10px 10px black;",
-color:"white",
-backgroundColor:"purple",
-fontSize:"20px",
-padding:"30px"
+color:"purple",
+
+fontSize:"14px",
+padding:"10px",
+width:"auto",
+height:"auto"
+
+
 }
   return (
-    <div className='player-wrapper'>
-
-<div>
-
-
-
-
-</div>
-
+    <div style={stylesTest}>
 <audio src={audioURL} ref={audioRef} id="audio2"></audio>
-<div><div id="timeC">
 
 
-</div>
-    <div style={{width:"40px"}}  >
-<a onClick={togglePlaying}>
+
+
+
 
 {playing ? (
-            <svg style={stylesTest}
-              stroke="currentColor"
-              fill="none"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="6" y="4" width="4" height="16"></rect>
-              <rect x="14" y="4" width="4" height="16"></rect>
-            </svg>
+      <button onClick={togglePlaying} > Stop </button>
 
 
           ) : (
-            <svg
-            style={stylesTest}
-              stroke="currentColor"
-              fill="none"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+          <button onClick={togglePlaying}> Play</button>
+
           )}
-          </a>
 
 
-
-          </div>
-
-  {
+                    <div id="timeC" style={{color:"gold"}}>
 
 
+                    </div>
 
-  }
 
-</div>
 
 
 
@@ -184,11 +147,7 @@ padding:"30px"
     </div>
 
   );
-  var elem = document.getElementById("audio2");
 
-  elem.addEventListener('playing', (event) => {
-    console.log('Video is no longer paused');
-  });
 
 
 }
