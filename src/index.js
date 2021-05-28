@@ -18,7 +18,7 @@ import {
 ReactDOM.render(
   <React.StrictMode>
 
-   
+
    <Router>
          <ShowBar/>
         <Switch>
@@ -31,15 +31,14 @@ ReactDOM.render(
           <Route extact path="/">
 
 
-            <App /> 
+            <BoldResult /> 
 
           </Route>
         </Switch>
 
-	
+
     </Router>
 <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
