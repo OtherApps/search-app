@@ -3,7 +3,7 @@ import RadioF from './RadioF'
 function Footer(){
 
 
-return(<><RadioF/><span> This page was created using nodejs</span><br/></>)
+return(<><span> This page was created using nodejs</span><br/></>)
 
 
 
