@@ -45,9 +45,10 @@ return (
 <center><span style={{color:"gold"}}>{props.title}</span></center>
 
 <div style={hiddenStyle}> {props.fulltext}<br/> </div>
-<div id="test1"style={styleTitle}>
-{textfix}
-</div>
+ <div style={styleTitle}>{textfix}</div>
+
+
+
 </div>
 )
 

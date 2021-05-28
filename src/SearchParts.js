@@ -60,9 +60,9 @@ var subString = string.substring(pos -20 ,pos+100)
 var finalStr =  subString
 
 let test2 = <CreateDiv title={completeFileName} fulltext={finalStr} searchMe={SearchForMe} />
-let testfinal = <div> {test2}</div>
 
-completeLines = [...completeLines,testfinal ]
+
+completeLines = [...completeLines,test2 ]
 
             ++n;
             pos += step;

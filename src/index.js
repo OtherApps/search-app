@@ -31,7 +31,7 @@ ReactDOM.render(
           <Route extact path="/">
 
 
-            <BoldResult /> 
+            <App /> 
 
           </Route>
         </Switch>
