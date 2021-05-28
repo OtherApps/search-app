@@ -7,12 +7,12 @@ function Message (props){
 
 let stylesMsg = {
 backgroundColor:"purple",
-color:"white",
+Textcolor:"white",
 fontFamily: "Pangolin, cursive;",
 boxShadow:"10px 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);",
 borderShadow:"20px 20px black",
 borderRadius: "40px;",
-
+zIndex: "1",
 width:"300px",
 textAligh:"center",
 itemAlign:"center",
