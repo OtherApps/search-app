@@ -7,15 +7,12 @@ function BoldResult (props){
 
 
 
- var str =props.allofthetext
-  //var str= "hello world 123"
+  var str =props.allofthetext
   var query = props.query
-//var query = "123"
-var txtFinal = str
-const testResults =<b>{query}</b>
-const options2 =testResults
-
-var results= txtFinal.replaceAll(query , '<b>'+query+'</b>');
+  var txtFinal = str
+  const testResults =<b>{query}</b>
+  const options2 =testResults
+  var results= txtFinal.replaceAll(query , '<b>'+query+'</b>');
 
 
 
