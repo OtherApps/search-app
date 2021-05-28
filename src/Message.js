@@ -6,17 +6,22 @@ import ReactDOMServer from 'react-dom/server';
 function Message (props){
 
 let stylesMsg = {
-background:black,
-color:white;
-width:50%,
-heigh:100%,
+backgroundColor:"purple",
+color:"white",
+fontFamily: "Pangolin, cursive;",
+boxShadow:"10px 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);",
+borderShadow:"20px 20px black",
+borderRadius: "40px;",
 
-
+width:"300px",
+textAligh:"center",
+itemAlign:"center",
+padding:"10px"
 }
 return (
 <div style={stylesMsg}>
 <h1>Something went wrong!</h1>
-{props.msg}
+<span>{props.msg}</span>
 </div>
 
 

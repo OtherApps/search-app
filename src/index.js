@@ -9,6 +9,7 @@ import ShowBar from './ShowBar'
 import ShowCount from './ShowCount'
 import Footer from './Footer'
 import BoldResult from "./BoldResult"
+import Message from './Message'
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,7 +32,8 @@ ReactDOM.render(
           <Route extact path="/">
 
 
-            <App /> 
+    
+<Message msg='Something came up ' />
 
           </Route>
         </Switch>
