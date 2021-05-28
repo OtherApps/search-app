@@ -14,11 +14,9 @@ var query = "123"
 var txtFinal = str
 const testResults =<b>{query}</b>
 const options2 =testResults
-var results= txtFinal.replaceAll(query ,query);
+var results= txtFinal.replaceAll(query , '<b>'+query+'</b>');
 
-let pattern = /[query]$/
-let idx=str.search(pattern)
-console.log(idx)
+
 let  fullstring= <span style={{backgroundColor:"green",color:"White"}}> {results} </span>
 
 return(
