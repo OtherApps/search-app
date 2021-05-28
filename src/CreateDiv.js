@@ -32,9 +32,6 @@ display:"block"
 }
 
 var fullstuff = document.createElement("div")
-
-
-//console.log(findMe)
 var textfix = <BoldResult allofthetext={props.fulltext} query={findMe} />
 var showbutton = <button onClick={showMore}>Show more</button>
 
