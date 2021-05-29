@@ -132,17 +132,11 @@ height:"auto"
           <button onClick={togglePlaying}> Play</button>
 
           )}
+          <div id="timeC" style={{color:"gold"}} >
+          {
+          progress}
 
-
-                    <div id="timeC" style={{color:"gold"}}>
-{progress
-}
-                    </div>
-
-
-
-
-
+          </div>
 
     </div>
 
@@ -150,7 +144,8 @@ height:"auto"
 
 
 
-}
 
+
+}
 
 export default RadioF
