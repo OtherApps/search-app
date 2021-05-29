@@ -135,8 +135,8 @@ height:"auto"
 
 
                     <div id="timeC" style={{color:"gold"}}>
-
-
+{progress
+}
                     </div>
 
 
