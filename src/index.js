@@ -28,6 +28,7 @@ ReactDOM.render(
             <Route extact path="/list">
 
     <Information/>
+    <ShowCount />
      </Route>
           <Route extact path="/search">
             <SearchF />

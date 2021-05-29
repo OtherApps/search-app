@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 const https = require('https');
 var radioJsonURL = "https://radio.laverdadeterna.com/api/nowplaying/1"
 var isfinished = false;
-
+let audioURL = "https://radio.laverdadeterna.com/radio/8000/radio.mp3"
 function useInterval(callback, delay) {
   const savedCallback = React.useRef();
 
@@ -28,9 +28,15 @@ function useInterval(callback, delay) {
 }
 
 function Information(){
+const audioRef = React.useRef(null)
+
+const[playing,setPlaying,count,setSate] = React.useState(false)
  const [progress, setProgress] = React.useState(0);
  const [song, setSong] = React.useState(0);
   const [dur, setDur] = React.useState(0);
+
+
+  const togglePlaying=() =>setPlaying(prev => ! prev )
   var output
   var newstuff ="";
   var secondsLeft="";
@@ -57,6 +63,14 @@ isfinished=true;
      console.log("Error: " + err.message);
    });
 }
+
+
+
+useInterval(() => {
+   if (audioRef && audioRef.current) {
+   
+   }
+ });
 
 
 
@@ -97,15 +111,35 @@ function formatTime(s){
 return(
 
 <div className="radiobox">
-<span>{song}</span>
+<audio s rc={audioURL} ref={audioRef} id="audio2"></audio>
+
+<div style={{width:"300px"}}>
+<progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
+ {((progress/dur) *100).toFixed()} %
 <br/>
-<span>{formatTime(progress)} / {formatTime(dur)}</span> <br/>
-<progress  id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><span>{((progress/dur) *100).toFixed()} %</span>
 
-
-
+<span> <center style={{color:"white"}}> {song}</center></span> <br/>
+<span> <center style={{color:"white"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
 
 </div>
+ {playing ? (
+      <button onClick={togglePlaying}  > Stop </button>
+
+
+          ) : (
+          <button onClick={togglePlaying}> Play</button>
+
+          )}
+
+</div>
+
+
+
+
+
+
+
+
 
 )
 

@@ -12,7 +12,7 @@ return(
 
 <td colSpan="2" style={{width:"300px"}}>
 <center>
-<font className="specialTitle"> <RadioF/> </font>
+<font className="specialTitle">  </font>
 <div id="status"></div>
 
 </center>
