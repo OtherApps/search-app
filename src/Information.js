@@ -101,6 +101,10 @@ return(
 <br/>
 <span>{formatTime(progress)} / {formatTime(dur)}</span> <br/>
 <progress  id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><span>{((progress/dur) *100).toFixed()} %</span>
+
+
+
+
 </div>
 
 )
