@@ -27,11 +27,6 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-
-
-
-
-
 function Information(){
  const [progress, setProgress] = React.useState(0);
  const [song, setSong] = React.useState(0);
@@ -90,11 +85,6 @@ loadJson()
  });
 
 
-if(progress >60){
-
-  output = Math.floor((progress/60) - progress)
-}
-
 function formatTime(s){
   var e = parseInt(s, 10),
   				n = Math.floor(e / 3600),
@@ -107,11 +97,10 @@ function formatTime(s){
 return(
 
 <div className="radiobox">
-<span>Title {song}</span>
+<span>{song}</span>
 <br/>
-<span>{
-formatTime(progress)} / {formatTime(dur)}</span> <br/>
-<progress  id="progressBar" max="100" value={(progress/dur) *100}> </progress><span>{((progress/dur) *100).toFixed()} %</span>
+<span>{formatTime(progress)} / {formatTime(dur)}</span> <br/>
+<progress  id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><span>{((progress/dur) *100).toFixed()} %</span>
 </div>
 
 )
