@@ -132,11 +132,13 @@ height:"auto"
           <button onClick={togglePlaying}> Play</button>
 
           )}
-          <div id="timeC" style={{color:"gold"}} >
+
+          {playing? (<div id="timeC" style={{color:"gold"}} >
           {
           progress}
 
-          </div>
+          </div>):(<div id="timeC"></div>)}
+
 
     </div>
 
