@@ -11,6 +11,7 @@ import Footer from './Footer'
 import BoldResult from "./BoldResult"
 import Message from './Message'
 import RadioF from './RadioF'
+import Information from './Information'
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,13 +27,16 @@ ReactDOM.render(
         <Switch>
             <Route extact path="/list">
 
-         <ShowCount /> </Route>
+    <Information/>
+     </Route>
           <Route extact path="/search">
             <SearchF />
           </Route>
           <Route extact path="/">
 
+
 <App/>
+
 
           </Route>
         </Switch>
