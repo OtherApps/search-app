@@ -339,8 +339,12 @@ width:70%;
 
 }
 .radiobox{
-position: relative;
-background: purple;
+	
+	
+	
+	box-shadow:2px 4px 2px black;
+position: absolute;
+
 color:white;
 border: 1px 2px black;
 padding: 10px;
@@ -351,8 +355,9 @@ display: inline-flex;
 left: 0;
 top: 0;
 font-size: 15px;
-
 border-radius: 20px;
+
+
 
 }
 

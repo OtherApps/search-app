@@ -3,6 +3,7 @@ import React from 'react';
 import ReactPlayer from "react-player";
 import { PlayerIcon,Slider, Direction } from 'react-player-controls'
 import ReactDOM from 'react-dom'
+import bgImge from './Imagen122.jpg'
 const https = require('https');
 var radioJsonURL = "https://radio.laverdadeterna.com/api/nowplaying/1"
 var isfinished = false;
@@ -107,27 +108,32 @@ function formatTime(s){
   			return n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), i < 10 && (i = "0" + i), ("00" !== n ? n + ":" : "") + r + ":" + i;
 
 }
-
+function hideme(){
+	
+	var radioWindow =document.getElementById('radioW')
+	radioWindow.style.display="none"
+}
 return(
 
-<div className="radiobox">
-<audio s rc={audioURL} ref={audioRef} id="audio2"></audio>
+<div className="radiobox" style={{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}} id="radioW" >
+<audio src={audioURL} ref={audioRef} id="audio2"></audio>
 
-<div style={{width:"500px"}}>
+<div style={{width:"500px",color:"black"}}>
 <progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
  {((progress/dur) *100).toFixed()} %
 <br/>
 
-<span> <center style={{color:"white"}}> {song}</center></span> <br/>
-<span> <center style={{color:"white"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
+<span> <center style={{color:"black"}}> {song}</center></span> <br/>
+<span> <center style={{color:"black"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
 <span>
 <center style={{color:"white"}}>
+<button onClick={hideme}> Salir </button>
  {playing ? (
-      <button  style={{fontSize:"15px", width:"90px",height:"50px",color:"white",backgroundColor:"transparent"}} onClick={togglePlaying}  > Stop </button>
+      <button   onClick={togglePlaying}  > Stop </button>
 
 
           ) : (
-          <button style={{fontSize:"15px",width:"90px" ,height:"50px",color:"white",backgroundColor:"transparent"}} onClick={togglePlaying}> Play</button>
+          <button onClick={togglePlaying}> Play</button> 
 
           )}
       
