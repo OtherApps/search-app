@@ -123,11 +123,11 @@ return(
 <center style={{color:"white"}}>
 <button  style={{background:"transparent"}} onClick={hideme}> Salir </button>
  {playing ? (
-      <button  style={{background:"transparent"}} onClick={togglePlaying}  > Stop </button>
+      <button  style={{background:"transparent"}} onClick={togglePlaying}  > <i style={{color:"gold",fontSize:"30px"}}className="far fa-stop-circle" /> </button>
 
 
           ) : (
-          <button style={{background:"transparent"}} onClick={togglePlaying}> Play</button> 
+          <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"gold",fontSize:"30px"}}className="far fa-play-circle" /></button> 
 
           )}
       
