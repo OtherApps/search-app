@@ -111,6 +111,9 @@ function formatTime(s){
 function hideme(){
 	
 	var radioWindow =document.getElementById('radioW')
+	
+	radioWindow.addClass = "fadeOut"
+	
 	radioWindow.style.display="none"
 }
 return(
@@ -118,13 +121,13 @@ return(
 <div className="radiobox" style={{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}} id="radioW" >
 <audio src={audioURL} ref={audioRef} id="audio2"></audio>
 
-<div style={{width:"500px",color:"black"}}>
+<div style={{width:"500px",color:"white",textShadow: "2px 2px 8px black;"}}>
 <progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
- {((progress/dur) *100).toFixed()} %
+ <span>{((progress/dur) *100).toFixed()} %</span>
 <br/>
 
-<span> <center style={{color:"black"}}> {song}</center></span> <br/>
-<span> <center style={{color:"black"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
+<span> <center style={{color:"purple"}}> {song}</center></span> <br/>
+<span> <center style={{color:"purple"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
 <span>
 <center style={{color:"white"}}>
 <button onClick={hideme}> Salir </button>
