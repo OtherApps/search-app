@@ -37,7 +37,7 @@ border-radius: 15px;
 /* All good till now. Now we'll style the background */
 progress::-webkit-progress-bar {
 	 box-shadow: 15px 14px 10px black;
-
+	background:transparent;
 	border-radius: 50px;
 	padding: 2px;
 	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
@@ -53,7 +53,7 @@ progress::-webkit-progress-value {
 		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
 		-webkit-linear-gradient(left, #ba7448, #c4672d);
 
-background: white;
+background-color: blue;
 	/* Looks great, now animating it */
 
 
