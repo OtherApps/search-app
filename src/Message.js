@@ -13,7 +13,7 @@ boxShadow:"10px 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19
 borderShadow:"20px 20px black",
 borderRadius: "40px;",
 zIndex: "1",
-width:"300px",
+width:"100%",
 textAligh:"center",
 itemAlign:"center",
 padding:"10px",

@@ -113,21 +113,21 @@ return(
 <audio src={audioURL} ref={audioRef} id="audio2"></audio>
 <div style={{width:"500px",color:"white",textShadow: "2px 2px 8px black;"}}>
 <progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
-<span>{((progress/dur) *100).toFixed()} %</span>
+<span style={{color:"black",fontWeight:"bolder"}}>{((progress/dur) *100).toFixed()} %</span>
 
 <br/>
-<span> <center style={{color:"purple"}}> {song}</center></span> <br/>
-<span> <center style={{color:"purple"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
+<span> <center  style={{color:"black",fontWeight:"bolder"}}> {song}</center></span> <br/>
+<span> <center  style={{color:"black",fontWeight:"bolder"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
 
 <span>
 <center style={{color:"white"}}>
-<button onClick={hideme}> Salir </button>
+<button  style={{background:"transparent"}} onClick={hideme}> Salir </button>
  {playing ? (
-      <button   onClick={togglePlaying}  > Stop </button>
+      <button  style={{background:"transparent"}} onClick={togglePlaying}  > Stop </button>
 
 
           ) : (
-          <button onClick={togglePlaying}> Play</button> 
+          <button style={{background:"transparent"}} onClick={togglePlaying}> Play</button> 
 
           )}
       
