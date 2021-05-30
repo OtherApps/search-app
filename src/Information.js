@@ -113,23 +113,31 @@ return(
 <div className="radiobox">
 <audio s rc={audioURL} ref={audioRef} id="audio2"></audio>
 
-<div style={{width:"300px"}}>
+<div style={{width:"500px"}}>
 <progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
  {((progress/dur) *100).toFixed()} %
 <br/>
 
 <span> <center style={{color:"white"}}> {song}</center></span> <br/>
 <span> <center style={{color:"white"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
-
-</div>
+<span>
+<center style={{color:"white"}}>
  {playing ? (
-      <button onClick={togglePlaying}  > Stop </button>
+      <button  style={{fontSize:"15px", width:"90px",height:"50px",color:"white",backgroundColor:"transparent"}} onClick={togglePlaying}  > Stop </button>
 
 
           ) : (
-          <button onClick={togglePlaying}> Play</button>
+          <button style={{fontSize:"15px",width:"90px" ,height:"50px",color:"white",backgroundColor:"transparent"}} onClick={togglePlaying}> Play</button>
 
           )}
+      
+</center>
+          </span>
+
+</div><br/>
+
+
+
 
 </div>
 
