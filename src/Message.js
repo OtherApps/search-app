@@ -16,7 +16,8 @@ zIndex: "1",
 width:"300px",
 textAligh:"center",
 itemAlign:"center",
-padding:"10px"
+padding:"10px",
+position: "absolute"
 }
 return (
 <div style={stylesMsg}>

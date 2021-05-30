@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import CreateListItem from "./CreateListItem"
+import Message from './Message';
 import ShowBar from './ShowBar';
 
 
@@ -72,7 +73,7 @@ var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 return (
 <div>
 
-
+<Message msg="Testing 123" />
 <h1  className="logos">LVE APP </h1>
 <button onDoubleClick={showstart()}>Enter</button>
 
