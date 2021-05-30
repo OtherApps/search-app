@@ -17,6 +17,8 @@ width:"300px",
 textAligh:"center",
 itemAlign:"center",
 padding:"10px",
+top:"0",
+left:"0",
 position: "absolute"
 }
 return (

@@ -8,6 +8,8 @@ const https = require('https');
 var radioJsonURL = "https://radio.laverdadeterna.com/api/nowplaying/1"
 var isfinished = false;
 let audioURL = "https://radio.laverdadeterna.com/radio/8000/radio.mp3"
+
+
 function useInterval(callback, delay) {
   const savedCallback = React.useRef();
 
@@ -71,8 +73,6 @@ useInterval(() => {
 
 
 function FixData(jsonData){
-    var min = "0"
-    var seconds = "0"
     newstuff = JSON.parse(jsonData);
 
 

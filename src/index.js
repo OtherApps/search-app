@@ -32,6 +32,7 @@ ReactDOM.render(
      </Route>
           <Route extact path="/search">
             <SearchF />
+            <Message msg="Testing 123" />
           </Route>
           <Route extact path="/">
 
