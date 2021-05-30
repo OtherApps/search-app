@@ -29,30 +29,25 @@ function useInterval(callback, delay) {
 }
 
 function Information(){
-const audioRef = React.useRef(null)
-
-const[playing,setPlaying,count,setSate] = React.useState(false)
- const [progress, setProgress] = React.useState(0);
- const [song, setSong] = React.useState(0);
-  const [dur, setDur] = React.useState(0);
-
-
-  const togglePlaying=() =>setPlaying(prev => ! prev )
-  var output
-  var newstuff ="";
-  var secondsLeft="";
-  var songTitle = "";
-  var playnigNext ="";
+    const audioRef = React.useRef(null)
+    const[playing,setPlaying,count,setSate] = React.useState(false)
+    const [progress, setProgress] = React.useState(0);
+    const [song, setSong] = React.useState(0);
+    const [dur, setDur] = React.useState(0);
+    const togglePlaying=() =>setPlaying(prev => ! prev )
+    var output
+    var newstuff ="";
+    var secondsLeft="";
+    var songTitle = "";
+    var playnigNext ="";
+// gets the json data from the server 
 function loadJson(){
-   https.get(radioJsonURL, (resp) => {
+  https.get(radioJsonURL, (resp) => {
      let data = '';
-
-
      // A chunk of data has been received.
      resp.on('data', (chunk) => {
        data += chunk;
      });
-
      // The whole response has been received. Print out the result.
      resp.on('end', () => {
      FixData(data)
@@ -76,22 +71,18 @@ useInterval(() => {
 
 
 function FixData(jsonData){
-var min = "0"
-var seconds = "0"
- newstuff = JSON.parse(jsonData);
-
- var timepassed = Math.floor(newstuff.now_playing.elapsed /60)
-var totaltime = Math.floor(newstuff.now_playing.duration /60 )
-output = totaltime
+    var min = "0"
+    var seconds = "0"
+    newstuff = JSON.parse(jsonData);
 
 
-var newseconds = Math.floor((timepassed * 60) - newstuff.now_playing.elapsed);
-
- songTitle = newstuff.now_playing.song.title
+    songTitle = newstuff.now_playing.song.title
 //playingNext = newstuff.playing_next.song.text
-setSong(songTitle)
-   setProgress(newstuff.now_playing.elapsed  )
-setDur(newstuff.now_playing.duration)
+
+    setSong(songTitle)
+    setProgress(newstuff.now_playing.elapsed  )
+    setDur(newstuff.now_playing.duration)
+
 
 }
 useInterval(() => {
@@ -100,6 +91,7 @@ loadJson()
  });
 
 
+ // format seconds into a time   format 
 function formatTime(s){
   var e = parseInt(s, 10),
   				n = Math.floor(e / 3600),
@@ -109,25 +101,24 @@ function formatTime(s){
 
 }
 function hideme(){
-	
+ // hide the radio  window  
 	var radioWindow =document.getElementById('radioW')
-	
 	radioWindow.addClass = "fadeOut"
-	
 	radioWindow.style.display="none"
 }
 return(
 
 <div className="radiobox" style={{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}} id="radioW" >
-<audio src={audioURL} ref={audioRef} id="audio2"></audio>
 
+<audio src={audioURL} ref={audioRef} id="audio2"></audio>
 <div style={{width:"500px",color:"white",textShadow: "2px 2px 8px black;"}}>
 <progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
- <span>{((progress/dur) *100).toFixed()} %</span>
-<br/>
+<span>{((progress/dur) *100).toFixed()} %</span>
 
+<br/>
 <span> <center style={{color:"purple"}}> {song}</center></span> <br/>
 <span> <center style={{color:"purple"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
+
 <span>
 <center style={{color:"white"}}>
 <button onClick={hideme}> Salir </button>
@@ -141,22 +132,11 @@ return(
           )}
       
 </center>
-          </span>
+</span>
 
 </div><br/>
 
-
-
-
 </div>
-
-
-
-
-
-
-
-
 
 )
 
