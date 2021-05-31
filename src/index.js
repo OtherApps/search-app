@@ -28,14 +28,23 @@ ReactDOM.render(
         <Switch>
             <Route extact path="/list">
 
-    <Information/>
+
     <ShowCount />
      </Route>
           <Route extact path="/search">
           
-        <Player />
+        <SearchF />
 
           </Route>
+
+          <Route extact path="/Listen">
+          
+          <Player />
+  
+            </Route>
+
+
+
           <Route extact path="/">
 
 

@@ -3,7 +3,7 @@ const  ShowBar = (props) => {
 // Display Menu
 
 return(
-<div className="specialTop" style={{color:"black"}}>
+<div className="specialTop" style={{color:"white"}}>
 
 
 
@@ -23,7 +23,7 @@ return(
 </td>
 
 <td>
-<ul style={{color:"black",backgroundColor:"white"}}>
+<ul style={{color:"white",backgroundColor:"transparent"}}>
   <li><a className="active" href="./">Home</a></li>
   <li><a href="./Search">Búsqueda</a></li>
   <li><a href="./list">Conteo</a></li>

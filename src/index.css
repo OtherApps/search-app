@@ -3,16 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Gloria+Hallelujah&display=swap');
 
 body {
-
+background-image: url('./Imagen122.jpg');
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 display: inline-block;
 
 border-color: black;
+background-size: cover;
+background-position: center;
 
-background:transparent; ;
-color:black;
+color:white;
 
 border-radius: 24px;
 
@@ -269,12 +270,14 @@ ul {
 }
 
 li {
+  color:white;
+
   float: left;
 }
 
 li a {
   display: block;
-color:black;
+color:white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -340,30 +343,25 @@ width:70%;
 }
 
 .PlayerBox{
-display:grid;
-height:500px;
-width:360px;
 
-border-radius: 20px;
-
-grid-template-rows: 5;
-
+        display:grid;
+        height:500px;
+        width:360px;
+        border-radius: 20px;
+        grid-template-rows: 5;
         color:whitesmoke;
         grid-gap: 5px;
         font-family: 'Gloria Hallelujah', cursive;
-
-        box-shadow:2px 4px 2px black;
         color:whitesmoke;
-        box-shadow:2px 5px 6px rgb(233, 213, 213);
       }
 .SongTitle{
-  opacity: .9;
-  padding: 5px;
-  font-size: 30px;
-  font-weight: bolder;
-  text-align: center;
-grid-row: 1;
-text-shadow: 1px 2px black;
+      opacity: .9;
+      padding: 5px;
+      font-size: 30px;
+      font-weight: bolder;
+      text-align: center;
+      grid-row: 1;
+      text-shadow: 1px 2px black;
 }
 
 .SongTime{
@@ -400,7 +398,7 @@ text-shadow: 1px 2px black;
 	
 	
 	
-box-shadow:2px 4px 2px black;
+
 position: absolute;
 
 color:white;

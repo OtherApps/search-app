@@ -114,7 +114,7 @@ function hideme(){
 
 
     return (
-        <div className="PlayerBox" style= {{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}}>
+        <div className="PlayerBox" >
             <audio src={audioURL} ref={audioRef} id="audio2"></audio>
 
             <div className="SongTitle">{song}</div>
