@@ -23,6 +23,7 @@ position: "absolute"
 }
 function hidethis(){
 const messageB = document.getElementById("mymessage")
+messageB.classList.add= "fadeout"
 messageB.style.display= "none" 
 }
 return (

@@ -23,7 +23,7 @@ border-radius: 24px;
 
 progress {
    
-  align-content: c;
+
 width: 200px;
 height:10px;	
 	display: inline-flex;
@@ -42,6 +42,7 @@ progress::-webkit-progress-bar {
 	padding: 2px;
 	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
 width:300px;
+
 }
 
 /* Now the value part */
@@ -335,6 +336,64 @@ width:70%;
 
     width:100%;
   }
+
+}
+
+.PlayerBox{
+display:grid;
+height:500px;
+width:360px;
+
+border-radius: 20px;
+
+grid-template-rows: 5;
+
+        color:whitesmoke;
+        grid-gap: 5px;
+        font-family: 'Gloria Hallelujah', cursive;
+
+        box-shadow:2px 4px 2px black;
+        color:whitesmoke;
+        box-shadow:2px 5px 6px rgb(233, 213, 213);
+      }
+.SongTitle{
+  opacity: .9;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+grid-row: 1;
+text-shadow: 1px 2px black;
+}
+
+.SongTime{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-row: 2;
+font-size: 25px;
+color:white;
+font-stretch: extra-expanded;
+width:300px;
+padding:10px;
+align-content: center;
+text-align: center;
+left:50%;
+
+text-shadow: 1px 2px black;
+}
+.SongButton{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-row: 4;
+  text-align: left;
+}
+.SongBar{
+  
+left:0;
+
+  grid-row: 3;
+font-size: 25px;
+width:300px;
+text-shadow: 1px 2px black;
+
 
 }
 .radiobox{

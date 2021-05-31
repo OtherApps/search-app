@@ -1,7 +1,4 @@
-
-import React from 'react';
-import ReactPlayer from "react-player";
-import { PlayerIcon,Slider, Direction } from 'react-player-controls'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import bgImge from './Imagen122.jpg'
 const https = require('https');
@@ -9,6 +6,7 @@ var radioJsonURL = "https://radio.laverdadeterna.com/api/nowplaying/1"
 var isfinished = false;
 let audioURL = "https://radio.laverdadeterna.com/radio/8000/radio.mp3"
 
+var songArt="";
 
 function useInterval(callback, delay) {
   const savedCallback = React.useRef();
@@ -30,7 +28,9 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-function Information(){
+
+export default function Player() {
+
     const audioRef = React.useRef(null)
     const[playing,setPlaying,count,setSate] = React.useState(false)
     const [progress, setProgress] = React.useState(0);
@@ -75,6 +75,7 @@ useInterval(() => {
 function FixData(jsonData){
     newstuff = JSON.parse(jsonData);
 
+songArt = newstuff.now_playing.song.art
 
     songTitle = newstuff.now_playing.song.title
 //playingNext = newstuff.playing_next.song.text
@@ -106,41 +107,45 @@ function hideme(){
 	//radioWindow.style.className = "fadeOut"
 	radioWindow.style.display="none"
 }
-return(
 
-<div className="radiobox" style={{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}} id="radioW" >
 
-<audio src={audioURL} ref={audioRef} id="audio2"></audio>
-<div style={{width:"500px",color:"white",textShadow: "2px 2px 8px black;"}}>
-<progress id="progressBar" max="100" value={((progress/dur) *100).toFixed()}> </progress><br/>
-<span style={{color:"black",fontWeight:"bolder"}}>{((progress/dur) *100).toFixed()} %</span>
 
-<br/>
-<span> <center  style={{color:"black",fontWeight:"bolder"}}> {song}</center></span> <br/>
-<span> <center  style={{color:"black",fontWeight:"bolder"}}> {formatTime(progress)} / {formatTime(dur)}</center> </span>
 
-<span>
-<center style={{color:"white"}}>
-<button  style={{background:"transparent",color:"white",fontWeight:"bolder"}} onClick={hideme}> Salir </button>
- {playing ? (
+
+
+    return (
+        <div className="PlayerBox" style= {{backgroundImage: `url(${bgImge})`,backgroundPosition:"cover",backgroundPosition: "center"}}>
+            <audio src={audioURL} ref={audioRef} id="audio2"></audio>
+
+            <div className="SongTitle">{song}</div>
+          
+
+          
+            <div className="SongTime"> {formatTime(progress)} / {formatTime(dur)}</div>
+            <div className="SongBar">
+                
+            <progress max="100"  value={((progress/dur) *100).toFixed()}>
+             </progress> <br/>
+<center>
+
+<span style={{color:"white"}}>{((progress/dur) *100).toFixed()}%</span>
+
+</center>
+             
+             </div>
+            <div className="SongButton">
+<center>
+            {playing ? (
       <button  style={{background:"transparent"}} onClick={togglePlaying}  > <i style={{color:"gold",fontSize:"30px"}}className="far fa-stop-circle" /> </button>
 
 
           ) : (
-          <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"gold",fontSize:"30px"}}className="far fa-play-circle" /></button> 
+          <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"white",fontSize:"30px"}}className="far fa-play-circle" /></button> 
 
           )}
-      
 </center>
-</span>
+            </div>
 
-</div><br/>
-
-</div>
-
-)
-
-
+        </div>
+    )
 }
-
-export default Information

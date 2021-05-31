@@ -18,6 +18,7 @@ import {
   Route,
   Link,Componente
 } from "react-router-dom";
+import Player from './Player';
 ReactDOM.render(
   <React.StrictMode>
 
@@ -31,8 +32,9 @@ ReactDOM.render(
     <ShowCount />
      </Route>
           <Route extact path="/search">
-            <SearchF />
-            <Message msg="Testing 123" />
+          
+        <Player />
+
           </Route>
           <Route extact path="/">
 
