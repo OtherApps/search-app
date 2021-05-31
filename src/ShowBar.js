@@ -1,10 +1,10 @@
-import RadioF from './RadioF'
+
 var isVisible = false; 
 const  ShowBar = (props) => {
 // Display Menu
 
 function hideBar(){
-var menuB = document.getElementById("2")
+var menuB = document.getElementById("menuBs")
 var current = menuB.style.visibility
 if(isVisible ===false ){
   menuB.style.visibility ="visible"
@@ -13,7 +13,7 @@ if(isVisible ===false ){
 else{
   menuB.style.visibility ="hidden"
   isVisible=false;
-  
+
 }
 
 console.log("has been clicked")
@@ -21,30 +21,16 @@ console.log("has been clicked")
 }
 
 return(
-<div className="specialTop" style={{color:"white"}}>
+<div style={{top:"40px",left:"0",color:"white"}}>
 
-
-
-<table>
-<tr>
-
-<td colSpan="2" style={{width:"300px"}}>
-<center>
-<font className="specialTitle"> 
-<button onClick={hideBar}>
+<div style={{alignItems:"left"}}>
+<button onClick={hideBar} >
 <i class="fa fa-bars" aria-hidden="true"></i>
-</button> </font>
-<div id="status"></div>
+</button>
+ </div>
 
-</center>
 
-</td>
-<td style={{padding:"0"}}>
-
-</td>
-
-<td>
-<div id="2"  style={{color:"white",backgroundColor:"transparent",visibility:"hidden"}} >
+<div id="menuBs"  style={{position:"absolute", top:"45px",left:"100px",color:"white",backgroundColor:"transparent",visibility:"hidden"}} >
 <ul >
   <li><a className="active" href="./">Home</a></li>
   <li><a href="./Search">Búsqueda</a></li>
@@ -54,9 +40,7 @@ return(
 
 
 </div>
-</td>
-</tr>
-</table>
+
 
 </div>
 

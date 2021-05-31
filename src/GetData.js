@@ -64,18 +64,16 @@ var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 		
 	}
 	
-	const seriesList = <center><div className="divCenter"><ShowBar/><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
+	const seriesList = <center><div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
 	ReactDOM.render(seriesList, document.getElementById('series'));
 }
 
 	
 	
 return (
-<div>
+<div style={{visibility:"none"}}>
 
 
-<h1  className="logos">LVE APP </h1>
-<button onDoubleClick={showstart()}>Enter</button>
 
 </div>
 
@@ -115,7 +113,7 @@ var single = <CreateListItem keys = {y}itemName={arrayofTitles[y]}/>;
 	}
 	
 	seriesindex= e.target.selectedIndex;
-	const seriesList = <><ShowBar/> <center><div className="divCenter" ><select  size="10"  className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center></>
+	const seriesList = <> <center><div className="divCenter" ><select  size="10"  className='seriesList' onChange={handleChange2} > {outstuff_html}</select><h1></h1><br/><button onClick={goB}>Back</button></div></center></>
 ;
 
 
@@ -123,7 +121,6 @@ var single = <CreateListItem keys = {y}itemName={arrayofTitles[y]}/>;
 	ReactDOM.render(seriesList, document.getElementById('subtitles'));
 	var seriesShow =document.getElementById('series')
 	
-	seriesShow.classList.add="fadeout"
 	seriesShow.style.display="none"
 	var subtitlesHide =document.getElementById('subtitles');
 	subtitlesHide.style.display="block"
