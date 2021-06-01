@@ -69,12 +69,12 @@ Formulario de búsqueda
 <td>
 
 
-<button  onClick={searchFun}>
+<button style={{left:"30px",position:"absolute",height:"50px", width:"50px"}} onClick={searchFun}>
 <i class="fa fa-search"></i></button>
 </td>
-<td style={{padding:"40px",align:"top"}}>
+<td style={{padding:"10px",top:"300px",left:"70px",width:"500px",position:"absolute"}}>
 
- <input name="TextboxSearch" id ="searchText" type="textbox"  onMouseOut={handleChange} />
+ <input  style={{width:"100%"}} name="TextboxSearch" id ="searchText" type="textbox"  onMouseOut={handleChange} />
 
 
 </td>

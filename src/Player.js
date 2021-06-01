@@ -66,7 +66,12 @@ isfinished=true;
 
 useInterval(() => {
    if (audioRef && audioRef.current) {
-   
+    if(playing){
+      audioRef.current.play();
+      }
+      else{
+      audioRef.current.pause();
+      }
    }
  });
 

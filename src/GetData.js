@@ -71,11 +71,11 @@ var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 	
 	
 return (
-<div style={{visibility:"none"}}>
+<>
 
 
 
-</div>
+</>
 
 )
 
