@@ -10,7 +10,7 @@ import ShowCount from './ShowCount'
 import Footer from './Footer'
 import BoldResult from "./BoldResult"
 import Message from './Message'
-import RadioF from './RadioF'
+
 import Information from './Information'
 import {
   BrowserRouter as Router,

@@ -83,7 +83,6 @@ function FixData(jsonData){
 songArt = newstuff.now_playing.song.art
 
     songTitle = newstuff.now_playing.song.title
-//playingNext = newstuff.playing_next.song.text
 
     setSong(songTitle)
     setProgress(newstuff.now_playing.elapsed  )
