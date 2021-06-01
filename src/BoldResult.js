@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom'
 import ReactDOMServer from 'react-dom/server';
 
 function BoldResult (props){
-
-
-
   var str =props.allofthetext
   var query = props.query
   var txtFinal = str
@@ -18,8 +15,11 @@ function BoldResult (props){
 
 return(
 <p dangerouslySetInnerHTML={{__html:results}} />
-
+// must return something  with clean html 
 )
 
 }
 export default BoldResult
+
+
+// Just bold  and highlights   words  that are found
