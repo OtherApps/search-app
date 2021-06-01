@@ -1,12 +1,14 @@
 #contant linuxnerd123@gmail.com
 
 # Series display 
-![image](https://user-images.githubusercontent.com/30159017/118528123-d663b200-b6f6-11eb-9b48-7094c8004699.png)
+![image](https://user-images.githubusercontent.com/30159017/120259107-2c347000-c248-11eb-93bc-2fbdf163ef2a.png)
 
 #Search part 
-![image](https://user-images.githubusercontent.com/30159017/118528305-0743e700-b6f7-11eb-8e92-487b9e31fa53.png)
+![image](https://user-images.githubusercontent.com/30159017/120259148-41a99a00-c248-11eb-8d8f-0b485edf3365.png)
 
 Showing full results
 
-![image](https://user-images.githubusercontent.com/30159017/119282724-95383a00-bbef-11eb-9559-b895d9cc19d0.png)
+![image](https://user-images.githubusercontent.com/30159017/120259184-538b3d00-c248-11eb-89bb-751dc15813e5.png)
 
+Radio 
+![image](https://user-images.githubusercontent.com/30159017/120259246-73bafc00-c248-11eb-9ae3-800425da2111.png)
