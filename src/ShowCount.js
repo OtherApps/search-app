@@ -64,7 +64,7 @@ function hideintro(){
 return(
 <center>
 
-<div style={{backgroundImage: `url(${bgimage})`,backgroundPosition:"cover",backgroundPosition: "center",color:"black",boxShadow: "10px 10px 8px #888888",borderRadius: "34px",width:"400px",height:"400px",fontSize:"40px",textAlign:"center",transform: "translate(120%, 20%)"}}>
+<div style={{color:"black",boxShadow: "10px 10px 8px #888888",borderRadius: "34px",width:"400px",height:"400px",fontSize:"40px",textAlign:"center",transform: "translate(120%, 20%)"}}>
 <font className="specialF">
 Conteo del Ómer Semana #{weeks}<br/>
 
