@@ -16,7 +16,7 @@ else{
 
 }
 
-console.log("has been clicked")
+
 
 }
 

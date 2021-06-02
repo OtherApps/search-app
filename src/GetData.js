@@ -8,6 +8,7 @@ import ShowBar from './ShowBar';
 
 var results; 
 var outstuff="";
+var mobileOption ="";
 var seriesindex;
 var isFinished= false; 
 var ListOfData = {};
@@ -54,8 +55,11 @@ function SaveData(jsonStuff){
 			ListOfData[start]= newItem 
 
 
-var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
+	var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
+	var option2 = CreateButton(start,newstuff.list[start].Series)
 
+
+	mobileOption = [...mobileOption,option2]
 	outstuff = [...outstuff,part]
 
 		}; 
@@ -65,7 +69,10 @@ var part = <CreateListItem key={start} itemName={newstuff.list[start].Series} />
 	}
 	
 	const seriesList = <center><div className="divCenter"><select size="8" style={{overflow:"hidden"}} className='seriesList' onChange={handleChange} > {outstuff}</select><h1></h1></div></center>;
+	const buttonSeries = <center>{mobileOption} </center>
 	ReactDOM.render(seriesList, document.getElementById('series'));
+ReactDOM.render(buttonSeries,document.getElementById("mobileview"))
+
 }
 
 	
@@ -91,6 +98,21 @@ function handleChange2(e){
 		window.location= arrayoflinks[e.target.selectedIndex]
 	
 }
+
+
+function CreateButton(ids,linkname) {
+    
+    
+	return (
+
+		<button> {linkname} </button>
+
+
+
+	   
+	)
+}
+
 function handleChange(e){
 	
 // On click will  display  subtitles  list
@@ -137,7 +159,12 @@ function goB(){
 console.log("has been click")
 
 }
-		function showSeries()
+
+function mobileHandeChange(ids){
+
+	alert(ListOfData[ids].getSeries.toString() + "clicked ")
+	}
+function showSeries()
 		{
 // Make the series list visible again
 
@@ -181,7 +208,10 @@ class RowData{
 	return this.links;
 	
 }
-	
+
+
+
+
 }	
 
 
@@ -195,5 +225,8 @@ function showstart(){
 	
 	}
 
+
+
+	
 
 export default GetData
