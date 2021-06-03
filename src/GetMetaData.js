@@ -26,7 +26,7 @@ fs.writeFile("./cover/"+metadata.common.title+".jpg", fileContents, (err) => {
 
 
   } catch (error) {
-    console.error(error.message);
+    console.log(error.message);
   }
 })();}
 
