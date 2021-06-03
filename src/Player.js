@@ -6,7 +6,7 @@ var radioJsonURL = "https://radio.laverdadeterna.com/api/nowplaying/1"
 var isfinished = false;
 let audioURL = "https://radio.laverdadeterna.com/radio/8000/radio.mp3"
 
-var songArt="";
+
 
 function useInterval(callback, delay) {
   const savedCallback = React.useRef();
@@ -80,7 +80,6 @@ useInterval(() => {
 function FixData(jsonData){
     newstuff = JSON.parse(jsonData);
 
-songArt = newstuff.now_playing.song.art
 
     songTitle = newstuff.now_playing.song.title
 
@@ -116,10 +115,9 @@ function hideme(){
 
 
 
-
     return (
         <div className="PlayerBox" >
-            <audio src={audioURL} ref={audioRef} id="audio2"></audio>
+            <audio src={audioURL} ref={audioRef} id="audio2" preload="metadata"></audio>
 
             <div className="SongTitle">{song}</div>
           

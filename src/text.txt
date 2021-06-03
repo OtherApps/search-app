@@ -1,0 +1,52 @@
+  node GetMetaData.js Amor Completo-Mon Laferte (Letra)-(p).mp3
+
+  node GetMetaData.js Cami - Querida Rosa-(p).mp3
+
+  node GetMetaData.js Camila Gallardo - Abrázame-(p).mp3
+
+  node GetMetaData.js Camila Gallardo - Volver a los 17-(p).mp3
+
+  node GetMetaData.js Camila Gallardo, Antonio José - No Es Real-(p).mp3
+
+  node GetMetaData.js Denise Rosenthal - Cambio De Piel-(p).mp3
+
+  node GetMetaData.js Denise Rosenthal - Encadená-(p).mp3
+
+  node GetMetaData.js Denise Rosenthal - Lucha En Equilibrio-(p).mp3
+
+  node GetMetaData.js Denisse Malebrán - A veces tú (los40.cl)-(p).mp3
+
+  node GetMetaData.js Francisca Valenzuela - Afortunada-(p).mp3
+
+  node GetMetaData.js Francisca Valenzuela - Muérdete La Lengua (Official Audio)-(p).mp3
+
+  node GetMetaData.js Fredi Leis - Quiero Darte ft. Cami-(p).mp3
+
+  node GetMetaData.js Her Private Life - EP8 _ Dirty Romantic Thoughts-(p).mp3
+
+  node GetMetaData.js Javiera & Los Imposibles - Te Amo Tanto-(p).mp3
+
+  node GetMetaData.js JAVIERA Y LOS IMPOSIBLES - SINCERIDAD-(p).mp3
+
+  node GetMetaData.js Los autenticos decadentes ft. Julieta Venegas - No me importa el dinero (video oficial) 1080 HD-(p).mp3
+
+  node GetMetaData.js María José Quintanilla Fue Difícil.-(p).mp3
+
+  node GetMetaData.js Mon Laferte - Si Tú Me Quisieras (Video Oficial)-(p).mp3
+
+  node GetMetaData.js Nicole - Dame Luz (Amor A Domicilio)-(p).mp3
+
+  node GetMetaData.js Nicole - Maldigo del Alto Cielo (La Cumbre del Rock, 2007)-(p).mp3
+
+  node GetMetaData.js Nicole Feat. Javiera Mena - Tal Vez Me Estoy Enamorando (Club Amanda)-(p).mp3
+
+  node GetMetaData.js NO - JAVIERA PARRA-(p).mp3
+
+  node GetMetaData.js Procuro Olvidarte - Javiera y Los Imposibles-(p).mp3
+
+  node GetMetaData.js Saiko - Cuando Miro En Tus Ojos-(p).mp3
+
+  node GetMetaData.js Saiko - Debilidad 2.0-(p).mp3
+
+  node GetMetaData.js Thumbs.db
+
