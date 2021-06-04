@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import bgimage from './wheat.jpg'
+
+
 const  ShowCount = (props) => {
 
 // Display  count down to Shavuot

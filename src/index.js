@@ -19,6 +19,7 @@ import {
   Link,Componente
 } from "react-router-dom";
 import Player from './Player';
+import Temas from './Temas';
 ReactDOM.render(
   <React.StrictMode>
 
@@ -38,8 +39,9 @@ ReactDOM.render(
           </Route>
 
           <Route extact path="/Listen">
-          
-          <Player />
+          <Temas/>
+
+         
   
             </Route>
 
