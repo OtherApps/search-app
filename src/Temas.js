@@ -36,14 +36,13 @@ function Temas()  {
 
 
 
- const [progress, setProgress] = React.useState(0);
-   const audioRef = React.useRef(null)
+const[playing,setPlaying,count,setSate] = React.useState(false)
+const [progress, setProgress] = React.useState(0);
+const [maxdur, setMaxdur] = React.useState(0);
+const audioRef = React.useRef(null)
+var check = null;
 
-useInterval(() => {
-loadinfo();
-
-
-});
+ const togglePlaying=() =>setPlaying(prev => ! prev )
 
 
 function loadinfo(){
@@ -54,11 +53,11 @@ while(i < Temainfo.length)
 
 var temaTitle= Temainfo[i].title 
 var n = temaTitle.indexOf(fixname3)
+
 if(n!=-1)
 {
-console.log("Found it")
-//setProgress(Temainfo[i].Tema_length);
-
+setMaxdur(Temainfo[i].Tema_length)
+//console.log(Temainfo[i].Tema_length)
 
 break;
 
@@ -66,7 +65,6 @@ break;
 else
 {
 
-    //console.log("Is not equal " + temaTitle);
 }
     i++;
 }
@@ -84,24 +82,61 @@ importAll(require.context("J:/cc_projects/temasAudio/", false, /\.(mp3)$/));
 
  const fixname=audioFiles[0].split("/media/")
  const fixname2= fixname[1].split(".mp3")
- const fixname3= fixname2[0].split(0)
+var fixname3= fixname2[0].split(".")
+fixname3 = fixname3[0]
+function formatTime(s){
+  var e = parseInt(s, 10),
+                n = Math.floor(e / 3600),
+                r = Math.floor((e - 3600 * n) / 60),
+                i = e - 3600 * n - 60 * r;
+            return n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), i < 10 && (i = "0" + i), ("00" !== n ? n + ":" : "") + r + ":" + i;
+
+} 
+
+useInterval(() => {
+loadinfo();
 
 
-if(fixname3.indexOf(".") >-1){
-var newname =   fixname3.split(".");
-fixname3= newname[0]
+});
+
+useInterval(() => {
+
+
+   if (audioRef && audioRef.current) {
+    if(playing){
+      audioRef.current.play();
+     startCount()
+
+     console.log("Has started playing.")
+      }
+      else{
+      audioRef.current.pause();
+      stopTimer();
+
+      }
+   }
+ });
+
+
+function startCount(){
+if(check==null){
+
+  check = setInterval(function(){
+
+console.log(progress)
+    progress = progress+1
+    setProgress(progress)
+
+  },1000)
+}
 
 }
 
- const audioP = document.getElementById("tema1")
 
-function getDuration(src) {
-    var audio = new Audio();
-    var texthere = document.getElementById("temalength")
- 
-  return audio.duration
+function stopTimer(){
+
+  clearInterval(check)
 }
-
 
 
 
@@ -109,12 +144,22 @@ function getDuration(src) {
  
 
  <div className="temaPlayer">
-      <audio src={audioFiles[0]} id="tema1" href={audioRef} preload="metadata"/>
-<div classname="temaArt">...</div>
-   <div className="temaTitle">{audioFiles[0]}</div>
-   <div className="temaLenght" id="data2">{progress}</div>   
-<div className="temaBar">Tema Bars </div> 
-<div className="temaControls"><button>Play</button><button>Stop</button></div>
+      <audio src={audioFiles[0]} id="tema1" href={audioRef} controls/>
+   <div className="temaTitle" style={{fontSize:"20px"}}>{fixname3}</div>
+   <div className="temaLenght" id="data2">{formatTime(maxdur)}</div>   
+<div className="temaBar">{progress}</div> 
+<div className="temaControls">
+
+     {playing ? (
+      <button  style={{background:"transparent"}} onClick={togglePlaying}  > <i style={{color:"gold",fontSize:"30px"}}className="far fa-stop-circle" /> </button>
+
+
+          ) : (
+          <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"white",fontSize:"30px"}}className="far fa-play-circle" /></button> 
+
+          )}
+
+</div>
 
 
 

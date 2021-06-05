@@ -42,6 +42,8 @@ export default function Player() {
     var secondsLeft="";
     var songTitle = "";
     var playnigNext ="";
+    var check = null 
+
 // gets the json data from the server 
 function loadJson(){
   https.get(radioJsonURL, (resp) => {
@@ -68,14 +70,16 @@ useInterval(() => {
    if (audioRef && audioRef.current) {
     if(playing){
       audioRef.current.play();
+
+
       }
       else{
       audioRef.current.pause();
+
+
       }
    }
  });
-
-
 
 function FixData(jsonData){
     newstuff = JSON.parse(jsonData);
