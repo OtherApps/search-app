@@ -105,38 +105,23 @@ useInterval(() => {
    if (audioRef && audioRef.current) {
     if(playing){
       audioRef.current.play();
-     startCount()
+ 
+var oldprogress = progress+1 
+setProgress(oldprogress)
 
-     console.log("Has started playing.")
       }
       else{
       audioRef.current.pause();
-      stopTimer();
+
 
       }
    }
  });
 
 
-function startCount(){
-if(check==null){
-
-  check = setInterval(function(){
-
-console.log(progress)
-    progress = progress+1
-    setProgress(progress)
-
-  },1000)
-}
-
-}
 
 
-function stopTimer(){
 
-  clearInterval(check)
-}
 
 
 
@@ -144,10 +129,10 @@ function stopTimer(){
  
 
  <div className="temaPlayer">
-      <audio src={audioFiles[0]} id="tema1" href={audioRef} controls/>
+      <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
    <div className="temaTitle" style={{fontSize:"20px"}}>{fixname3}</div>
    <div className="temaLenght" id="data2">{formatTime(maxdur)}</div>   
-<div className="temaBar">{progress}</div> 
+<div className="temaBar">{formatTime(progress)}</div> 
 <div className="temaControls">
 
      {playing ? (
