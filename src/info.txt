@@ -1,0 +1,55 @@
+
+{
+  '0': temas {
+    title: 'Ellen White 11 - El Cuerpo de Yeshúa 42.mp3',
+    Tema_length: 13591.01387755102
+  },
+  '1': temas {
+    title: 'Ellen White (10) - El Cuerpo de Yeshúa 41.mp3',
+    Tema_length: 11953.176
+  },
+  '2': temas {
+    title: '1844 (2) - El Cuerpo de Yeshúa 30.mp3',
+    Tema_length: 17832.816
+  },
+  '3': temas {
+    title: '1844 - El Cuerpo de Yeshúa 29.mp3',
+    Tema_length: 11897.991836734695
+  },
+  '4': temas {
+    title: 'AZAZEL - El Cuerpo de Yeshúa 31.mp3',
+    Tema_length: 16817.4
+  },
+  '5': temas {
+    title: 'Ellen White (1) - El Cuerpo de Yeshúa 32.mp3',
+    Tema_length: 17736.698775510205
+  },
+  '6': temas {
+    title: 'Ellen White (3) - El Cuerpo de Yeshúa 34.mp3',
+    Tema_length: 14236.848
+  },
+  '7': temas {
+    title: 'Ellen White (5) - El Cuerpo de Yeshúa 36.mp3',
+    Tema_length: 12662.352
+  },
+  '8': temas {
+    title: 'Ellen White (8) - El Cuerpo de Yeshúa 39.mp3',
+    Tema_length: 12228.528
+  },
+  '9': temas {
+    title: 'Ellen White (9) - El Cuerpo de Yeshúa 40.mp3',
+    Tema_length: 14065.084081632653
+  },
+  '10': temas {
+    title: 'Ellen White 2 - El Cuerpo de Yeshúa 33.mp3',
+    Tema_length: 15014.616
+  },
+  '11': temas {
+    title: 'El_Cuerpo_de_Yeshua_25-Januca_y_Navidad_2020-La_purificacion_del_Templo_10.mp3',
+    Tema_length: 16824.816326530614
+  },
+  '12': temas {
+    title: 'HELLo 2021 - El Cuerpo de Yeshúa 28.mp3',
+    Tema_length: 10061.113469387756
+  }
+}

@@ -3,7 +3,8 @@ const mm = require('music-metadata');
 const util = require('util');
 const fs = require('fs');
 var fileName="";
-let jsonData= [""];
+let jsonData=  new Array;
+
 
 var xedin=0; 
 
@@ -31,6 +32,12 @@ xedin ++
 }
 
 
+setTimeout(function(){ 
+
+var jsondata2= JSON.stringify(jsonData)
+//var jsonS=Object.assign({},jsonData)
+console.log(jsondata2);
+ }, 1000);
 
 
 
@@ -46,7 +53,7 @@ function  SongInfo(sIndex,filename,title){
 	//console.log(title, lengthOfTopic);
 	var newSong = new temas(title,lengthOfTopic);
 	
-	jsonData = jsonData+newSong;
+	jsonData.push( newSong);
 	
 	
   } catch (error) {
@@ -61,8 +68,8 @@ class temas{
 	
 constructor(title,temaLength){
 	this.title= title; 
-	this.temaLength = temaLength
-	console.log("{ title :" + this.title  + ", length:" + temaLength + " }\r");
+	this.Tema_length = temaLength
+//	console.log("{ title :" + this.title  + ", length:" + temaLength + " }\r");
 	
 	
 }	
