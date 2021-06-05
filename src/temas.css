@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Gloria+Hallelujah&display=swap');
+
+
+.temaPlayer{
+ display:grid;
+        height:500px;
+        width:360px;
+        border-radius: 20px;
+        grid-template-rows: 5;
+        color:whitesmoke;
+        grid-gap: 5px;
+        font-family: 'Gloria Hallelujah', cursive;
+        color:whitesmoke;
+
+
+}
+.temaTitle{
+opacity: .9;
+      padding: 5px;
+      font-size: 30px;
+      font-weight: bolder;
+      text-align: center;
+      grid-row: 1;
+      text-shadow: 1px 2px black;
+}
+.temaLength{
+	
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-row: 2;
+font-size: 25px;
+color:white;
+font-stretch: extra-expanded;
+width:300px;
+padding:10px;
+align-content: center;
+text-align: center;
+left:50%;
+
+text-shadow: 1px 2px black;
+}
+.temaBar{
+
+}
+.teamControls{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-row: 4;
+  text-align: left;
+
+}
