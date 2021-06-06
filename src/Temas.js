@@ -105,9 +105,8 @@ useInterval(() => {
    if (audioRef && audioRef.current) {
     if(playing){
       audioRef.current.play();
- 
-var oldprogress = progress+1 
-setProgress(oldprogress)
+
+setProgress(audioRef.current.currentTime )
 
       }
       else{
@@ -132,7 +131,10 @@ setProgress(oldprogress)
       <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
    <div className="temaTitle" style={{fontSize:"20px"}}>{fixname3}</div>
    <div className="temaLenght" id="data2">{formatTime(maxdur)}</div>   
-<div className="temaBar"><progress id='prgbar' max="100"></progress>{(progress/1000).toFixed()} </div> 
+<div className="temaBar"><progress id='prgbar' max="100"></progress>{(progress/1000).toFixed()}
+{progress}
+ </div> 
+}
 <div className="temaControls">
 
      {playing ? (
