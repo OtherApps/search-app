@@ -1,10 +1,11 @@
 
 import {useState, useEffect } from 'react'
 import ReactDOMServer from 'react-dom/server';
-import './temas.css'
+
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Temainfo from './info.json'
+import SpecialDiv from './SpecialDiv'
 const fs = require('fs');
 const cache = {};
 var infoData =""
@@ -56,8 +57,9 @@ var n = temaTitle.indexOf(fixname3)
 
 if(n!=-1)
 {
+
 setMaxdur(Temainfo[i].Tema_length)
-//console.log(Temainfo[i].Tema_length)
+
 
 break;
 
@@ -96,13 +98,7 @@ function formatTime(s){
 useInterval(() => {
 loadinfo();
 
-
-});
-
-useInterval(() => {
-
-
-   if (audioRef && audioRef.current) {
+if (audioRef && audioRef.current) {
     if(playing){
       audioRef.current.play();
 
@@ -111,31 +107,50 @@ setProgress(audioRef.current.currentTime )
       }
       else{
       audioRef.current.pause();
+//finishCount();
 
 
       }
    }
- });
+   else{
+
+    console.log("Something wrong")
+   }
+});
+
+var mytimer=null; 
 
 
+function startCount(){
 
 
+setProgress(audioRef.current.currentTime)
+
+
+}
+
+function finishCount(){
+
+clearInterval(mytimer);
+}
 
 
 
 
     return (
- 
 
  <div className="temaPlayer">
       <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
-   <div className="temaTitle" style={{fontSize:"20px"}}>{fixname3}</div>
-   <div className="temaLenght" id="data2">{formatTime(maxdur)}</div>   
-<div className="temaBar"><progress id='prgbar' max="100"></progress></prgress>
 
-{progress}
- </div> 
-}
+  <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/> <hr/>
+
+  <SpecialDiv nameofstyle="temaLength"  displayText={formatTime(maxdur)  } />  <hr/>
+
+
+  <SpecialDiv nameofstyle="temaBar"  displayText={formatTime((maxdur - progress).toFixed())}/>
+
+ 
+
 <div className="temaControls">
 
      {playing ? (

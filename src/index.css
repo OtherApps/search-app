@@ -413,6 +413,53 @@ border-radius: 20px;
 
 }
 
+
+.temaPlayer{
+ display:inline;
+        border-radius: 20px;
+    width: 50%;
+        color:whitesmoke;
+        grid-gap: 15px;
+        font-family: 'Gloria Hallelujah', cursive;
+     color: whitesmoke;
+align-items: center;
+text-align: center;
+border: 1px 2px black;
+padding: 10px;
+}
+.temaTitle{
+
+display: inline;    
+      font-size: 30px;
+      font-weight: bolder;
+
+ 
+      text-shadow: 1px 2px black;
+}
+.temaLength{
+display: inline;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+font-size: 25px;
+
+color: white;
+
+}
+.temaBar{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+font-size: 25px;
+  color: white;
+ 
+  text-shadow: 1px 2px black;
+}
+.teamControls{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-row: 4;
+  text-align: center;
+
+}
+
 @media only screen and (max-width: 500px) {
   body,.App {
     width: 100%;
