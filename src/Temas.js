@@ -132,7 +132,7 @@ setProgress(oldprogress)
       <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
    <div className="temaTitle" style={{fontSize:"20px"}}>{fixname3}</div>
    <div className="temaLenght" id="data2">{formatTime(maxdur)}</div>   
-<div className="temaBar">{formatTime(progress)}</div> 
+<div className="temaBar"><progress id='prgbar' max="100"></progress>{(progress/1000).toFixed()} </div> 
 <div className="temaControls">
 
      {playing ? (
