@@ -25,12 +25,12 @@ overflow:-moz-hidden-unscrollable;
 progress {
    
 
-width: 200px;
-height:10px;	
+width: 500px;
+height:20px;	
 	display: inline-flex;
 	/* Important Thing */
 	-webkit-appearance: none;
-	
+	background:white;
 border-radius: 15px;
 
 }
@@ -38,7 +38,7 @@ border-radius: 15px;
 /* All good till now. Now we'll style the background */
 progress::-webkit-progress-bar {
 	 box-shadow: 15px 14px 10px black;
-	background:transparent;
+	background: transparent;
 	border-radius: 50px;
 	padding: 2px;
 	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);

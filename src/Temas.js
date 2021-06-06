@@ -148,6 +148,7 @@ clearInterval(mytimer);
 
 <div className="temaBar"> 
 <progress max={maxdur} value={progress.toFixed()/100} />
+{progress.toFixed() /100 }
 </div>
 
 
