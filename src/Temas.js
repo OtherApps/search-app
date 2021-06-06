@@ -147,8 +147,9 @@ clearInterval(mytimer);
   <SpecialDiv nameofstyle="temaLength"  displayText={formatTime(maxdur)  } />  <hr/>
 
 <div className="temaBar"> 
-<progress max={maxdur} value={progress.toFixed()/100} />
-{progress.toFixed() /100 }
+<progress max={maxdur} value={(progress/100).toFixed()} /><hr/>
+
+{formatTime(progress.toFixed()/100)} 
 </div>
 
 
