@@ -127,7 +127,7 @@ setProgress(audioRef.current.currentTime )
       }
       else{
       audioRef.current.pause();
-//finishCount();
+
 
 
       }
@@ -137,6 +137,13 @@ setProgress(audioRef.current.currentTime )
     console.log("Something wrong")
    }
 });
+function showLista(){
+var listadetemas=document.getElementById("radiod");
+listadetemas.style.display="none"
+var hidelista = document.getElementById("listaDeTemas")
+hidelista.style.display="inline"
+
+}
 function handle2(e){
 
 
@@ -148,15 +155,17 @@ main(e.target.selectedIndex)
 <div id="listaDeTemas" ><SongList onhasbeenclicked={handle2}/></div> 
  <div  id="radiod" className="temaPlayer" style={{display:"none"}}>
       <audio src={selectC} id="tema1" ref={audioRef} />
-
+<center>
   <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/>
+  </center>
+<br/>
 
-  <div className="temaLength">{maxdur}</div>
+  <div className="temaLength"><center>{formatTime(maxdur)} </center> </div>
   <div className="temaBar"> 
   <progress max="100" value={((progress/maxdur) *100).toFixed()} />
 <br/>
 
-  {((progress/maxdur) *100).toFixed()} %
+  {(progress/100).toFixed()} 
   </div>
 
 
@@ -177,7 +186,7 @@ main(e.target.selectedIndex)
 
 
 
-
+<div> <button onClick={showLista}> Lista de temas </button></div>
 
           </div>
           </div>
