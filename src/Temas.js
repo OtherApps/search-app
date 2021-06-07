@@ -1,18 +1,19 @@
 
 import {useState, useEffect } from 'react'
 import ReactDOMServer from 'react-dom/server';
-import covers from 'J:/cc_projects/search-app/src/cover'
+
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Temainfo from './info.json'
 import SpecialDiv from './SpecialDiv'
 import SongList from './SongList'
 const fs = require('fs');
-const cache = {};
+var cache = {};
 var infoData =""
 var TemaLength=0;
 var selectC; 
 var fixname3;
+var imagesoftemas=0;
 
 
             
@@ -76,7 +77,9 @@ else
 }
 }
 
-        
+function importAll2(r) {
+  return r.keys().map(r);
+}        
 
 
         function importAll(r) {
@@ -113,7 +116,13 @@ radioDiv.style.display="inline"
 
 var temalist = document.getElementById("listaDeTemas")
 temalist.style.display="none"
+
+
+imagesoftemas = importAll2(require.context('J:/cc_projects/search-app/src/cover/', false, /\.(png|jpe?g|svg)$/));
+
 loadinfo();
+
+
 }
 useInterval(() => {
 loadinfo();
@@ -187,7 +196,12 @@ main(e.target.selectedIndex)
 
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
-<img src={covers[0]}/>
+
+{
+
+  <img src={imagesoftemas['1844 - El Cuerpo de Yeshúa 29.jpg']}/>
+}
+
           </div>
           </div>
     )
