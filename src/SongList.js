@@ -19,7 +19,7 @@ songs.push(singleSong)
 i++;
 
 }
-return(<select size="5"> {output}</select>)
+return(<select size="5" onChange={props.onhasbeenclicked}> {output}</select>)
 
 
 

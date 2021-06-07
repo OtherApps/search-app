@@ -11,6 +11,9 @@ const fs = require('fs');
 const cache = {};
 var infoData =""
 var TemaLength=0;
+var selectC; 
+var fixname3;
+
 
             
 function useInterval(callback, delay) {
@@ -75,18 +78,12 @@ else
 
         
 
-  importAll(require.context("J:/cc_projects/temasAudio/", false, /\.(mp3)$/));
-  const audioFiles = Object.entries(cache).map(module => module[1].default);
 
         function importAll(r) {
             r.keys().forEach((key) => (cache[key] = r(key)
             ));
         }
 
-    const fixname=audioFiles[0].split("/media/")
-    const fixname2= fixname[1].split(".mp3")
-    var fixname3= fixname2[0].split(".")
-    fixname3 = fixname3[0]
 
   function formatTime(s){
               var e = parseInt(s, 10),
@@ -98,6 +95,26 @@ else
 
 } 
 
+
+
+
+ 
+function main(selectTema){
+ importAll(require.context("J:/cc_projects/temasAudio/", false, /\.(mp3)$/));
+ const audioFiles = Object.entries(cache).map(module => module[1].default);
+   const fixname=audioFiles[selectTema].split("/media/")
+    const fixname2= fixname[1].split(".mp3")
+     fixname3= fixname2[0].split(".")
+    fixname3 = fixname3[0]
+  selectC= audioFiles[selectTema]
+
+var radioDiv = document.getElementById("radiod");
+radioDiv.style.display="inline"
+
+var temalist = document.getElementById("listaDeTemas")
+temalist.style.display="none"
+loadinfo();
+}
 useInterval(() => {
 loadinfo();
 
@@ -120,18 +137,21 @@ setProgress(audioRef.current.currentTime )
     console.log("Something wrong")
    }
 });
+function handle2(e){
 
 
-
-
+main(e.target.selectedIndex)
+}
 
     return (
 <div>
-<div id="listaDeTemas" style={{display:"none"}}><SongList/></div> 
- <div className="temaPlayer">
-      <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
+<div id="listaDeTemas" ><SongList onhasbeenclicked={handle2}/></div> 
+ <div  id="radiod" className="temaPlayer" style={{display:"none"}}>
+      <audio src={selectC} id="tema1" ref={audioRef} />
 
   <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/>
+
+  <div className="temaLength">{maxdur}</div>
   <div className="temaBar"> 
   <progress max="100" value={((progress/maxdur) *100).toFixed()} />
 <br/>
