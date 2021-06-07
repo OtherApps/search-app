@@ -1,7 +1,7 @@
 
 import {useState, useEffect } from 'react'
 import ReactDOMServer from 'react-dom/server';
-
+import covers from 'J:/cc_projects/search-app/src/cover'
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Temainfo from './info.json'

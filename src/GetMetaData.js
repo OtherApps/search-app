@@ -6,12 +6,7 @@ const util = require('util');
 const fs = require('fs');
 
 function GetMetaData(newfilename){
-
-if(fs.existsSync("./cover/"+metadata.common.title+".jpg"))
-{
-console.log("File already exist")
-}
-else{(async () => {
+(async () => {
   try {
     const metadata = await mm.parseFile(newfilename);
 const data2 = (util.inspect(metadata, { showHidden: true, depth: null }));
@@ -34,17 +29,17 @@ fs.writeFile("./cover/"+metadata.common.title+".jpg", fileContents, (err) => {
 
 
 
-}
+
 
 readFileList();
 
 function readFileList(){
 
 
-fs.readdirSync("J:/cc_projects/mp3").forEach(file => {
+fs.readdirSync("J:/cc_projects/temasAudio").forEach(file => {
 if(file.indexOf(".mp3") <0 )return;
 
-GetMetaData( "J:/cc_projects/mp3/"+file)
+GetMetaData( "J:/cc_projects/temasAudio/"+file)
 
 
 });
