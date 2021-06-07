@@ -79,7 +79,8 @@ else
 
 function importAll2(r) {
   return r.keys().map(r);
-}        
+
+   }        
 
 
         function importAll(r) {
@@ -197,10 +198,7 @@ main(e.target.selectedIndex)
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
 
-{
 
-  <img src={imagesoftemas['1844 - El Cuerpo de Yeshúa 29.jpg']}/>
-}
 
           </div>
           </div>
