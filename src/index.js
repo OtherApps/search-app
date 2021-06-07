@@ -4,13 +4,10 @@ import './index.css';
 import App from './App';
 import SearchF from './SearchF'
 import SearchParts from './SearchParts'
-import Welcome from './Welcome'
 import ShowBar from './ShowBar'
 import ShowCount from './ShowCount'
 import Footer from './Footer'
-import BoldResult from "./BoldResult"
 import Message from './Message'
-
 import Information from './Information'
 import {
   BrowserRouter as Router,
@@ -46,6 +43,13 @@ ReactDOM.render(
             </Route>
 
 
+          <Route extact path="/Live">
+
+
+<Player/>
+
+
+          </Route>
 
           <Route extact path="/">
 
