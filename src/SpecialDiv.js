@@ -5,7 +5,7 @@ function SpecialDiv(props){
 
 
 
-return(<div className={props.nameofstyle} > {props.displayText}</div>)
+return(<div className={props.nameofstyle} ><center> {props.displayText}</center></div>)
 
 
 
@@ -13,6 +13,10 @@ return(<div className={props.nameofstyle} > {props.displayText}</div>)
 
 
 }
+class SongInfo{
 
+
+
+}
 
 export default SpecialDiv

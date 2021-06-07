@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import Temainfo from './info.json'
 import SpecialDiv from './SpecialDiv'
+import SongList from './SongList'
 const fs = require('fs');
 const cache = {};
 var infoData =""
@@ -74,24 +75,26 @@ else
 
         
 
-importAll(require.context("J:/cc_projects/temasAudio/", false, /\.(mp3)$/));
- const audioFiles = Object.entries(cache).map(module => module[1].default);
+  importAll(require.context("J:/cc_projects/temasAudio/", false, /\.(mp3)$/));
+  const audioFiles = Object.entries(cache).map(module => module[1].default);
 
         function importAll(r) {
             r.keys().forEach((key) => (cache[key] = r(key)
             ));
         }
 
- const fixname=audioFiles[0].split("/media/")
- const fixname2= fixname[1].split(".mp3")
-var fixname3= fixname2[0].split(".")
-fixname3 = fixname3[0]
-function formatTime(s){
-  var e = parseInt(s, 10),
+    const fixname=audioFiles[0].split("/media/")
+    const fixname2= fixname[1].split(".mp3")
+    var fixname3= fixname2[0].split(".")
+    fixname3 = fixname3[0]
+
+  function formatTime(s){
+              var e = parseInt(s, 10),
                 n = Math.floor(e / 3600),
                 r = Math.floor((e - 3600 * n) / 60),
                 i = e - 3600 * n - 60 * r;
-            return n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), i < 10 && (i = "0" + i), ("00" !== n ? n + ":" : "") + r + ":" + i;
+                
+                return n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), i < 10 && (i = "0" + i), ("00" !== n ? n + ":" : "") + r + ":" + i;
 
 } 
 
@@ -118,58 +121,46 @@ setProgress(audioRef.current.currentTime )
    }
 });
 
-var mytimer=null; 
-
-
-function startCount(){
-
-
-setProgress(audioRef.current.currentTime)
-
-
-}
-
-function finishCount(){
-
-clearInterval(mytimer);
-}
 
 
 
 
     return (
-
+<div>
+<div id="listaDeTemas" style={{display:"none"}}><SongList/></div> 
  <div className="temaPlayer">
       <audio src={audioFiles[0]} id="tema1" ref={audioRef} />
 
-  <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/> <hr/>
+  <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/>
+  <div className="temaBar"> 
+  <progress max="100" value={((progress/maxdur) *100).toFixed()} />
+<br/>
 
-  <SpecialDiv nameofstyle="temaLength"  displayText={formatTime(maxdur)  } />  <hr/>
-
-<div className="temaBar"> 
-<progress max={maxdur} value={(progress/100).toFixed()} /><hr/>
-
-{formatTime(maxdur-progress)} 
-</div>
-
-
-<div className="temaControls">
-
-     {playing ? (
-      <button  style={{background:"transparent"}} onClick={togglePlaying}  > <i style={{color:"gold",fontSize:"30px"}}className="far fa-stop-circle" /> </button>
-
-
-          ) : (
-          <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"white",fontSize:"30px"}}className="far fa-play-circle" /></button> 
-
-          )}
-
-</div>
+  {((progress/maxdur) *100).toFixed()} %
+  </div>
 
 
 
 
-      </div>
+    <div className="temaControls">
+
+         {playing ? (
+          <button  style={{background:"transparent"}} onClick={togglePlaying}  > <i style={{color:"gold",fontSize:"30px"}}className="far fa-stop-circle" /> </button>
+
+
+              ) : (
+              <button style={{background:"transparent"}} onClick={togglePlaying}> <i style={{color:"white",fontSize:"30px"}}className="far fa-play-circle" /></button> 
+
+              )}
+
+    </div>
+
+
+
+
+
+          </div>
+          </div>
     )
   }
 
