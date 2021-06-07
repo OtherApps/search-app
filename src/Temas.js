@@ -187,7 +187,7 @@ main(e.target.selectedIndex)
 
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
-
+<img src={covers[0]}/>
           </div>
           </div>
     )
