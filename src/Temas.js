@@ -162,7 +162,7 @@ main(e.target.selectedIndex)
 
     return (
 <div>
-<div id="listaDeTemas" ><SongList onhasbeenclicked={handle2}/></div> 
+<div id="listaDeTemas" ><center><SongList onhasbeenclicked={handle2}/></center></div> 
  <div  id="radiod" className="temaPlayer" style={{display:"none"}}>
       <audio src={selectC} id="tema1" ref={audioRef} />
 <center>
