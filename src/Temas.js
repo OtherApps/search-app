@@ -8,6 +8,7 @@ import Temainfo from './info.json'
 import SpecialDiv from './SpecialDiv'
 import SongList from './SongList'
 const fs = require('fs');
+const path = require('path')
 var cache = {};
 var infoData =""
 var TemaLength=0;
@@ -198,7 +199,9 @@ main(e.target.selectedIndex)
 
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
-
+ <audio id="liveradio" controls>
+      <source src="http://localhost:3003/livenow" type="audio/mpeg" />
+    </audio>
           </div>
           </div>
     )
