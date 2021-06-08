@@ -118,8 +118,8 @@ radioDiv.style.display="inline"
 var temalist = document.getElementById("listaDeTemas")
 temalist.style.display="none"
 
-
-imagesoftemas = importAll2(require.context('J:/cc_projects/search-app/src/cover/', false, /\.(png|jpe?g|svg)$/));
+imagesoftemas = "./cover/"+ fixname3 +".jpg"
+//imagesoftemas = importAll2(require.context('J:/cc_projects/search-app/src/cover/', false, /\.(png|jpe?g|svg)$/));
 
 loadinfo();
 
@@ -166,7 +166,8 @@ main(e.target.selectedIndex)
  <div  id="radiod" className="temaPlayer" style={{display:"none"}}>
       <audio src={selectC} id="tema1" ref={audioRef} />
 <center>
-  <SpecialDiv nameofstyle="temaTitle" displayText={fixname3}/>
+  <SpecialDiv nameofstyle="temaTitle" displayText=".."/> <br/>
+<img src={imagesoftemas} />
   </center>
 <br/>
 
@@ -175,7 +176,7 @@ main(e.target.selectedIndex)
   <progress max="100" value={((progress/maxdur) *100).toFixed()} />
 <br/>
 
-  {(progress/100).toFixed()} 
+  {((progress/maxdur)*100).toFixed()} 
   </div>
 
 
@@ -197,8 +198,6 @@ main(e.target.selectedIndex)
 
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
-
-
 
           </div>
           </div>

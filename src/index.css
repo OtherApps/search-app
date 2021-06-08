@@ -139,6 +139,16 @@ align-items: left;
 box-shadow:"10px 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);",
 
 }
+
+img{
+box-shadow:10px 11px 81px 01 rgba(0, 0, 13,0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-position: center;
+background-repeat: none;
+
+border-radius: 25px;
+box-shadow:2px 2px black;
+
+}
 option:hover{
   background-color:gold;
 
