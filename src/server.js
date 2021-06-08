@@ -9,7 +9,7 @@ const api = express();
 
 api.get('/track', (req, res, err) => {
   // generate file path
-  const filePath = path.resolve(__dirname, './private', './track.wav');
+  const filePath = path.resolve(__dirname, './../../temasAudio', './HELLo 2021 - El Cuerpo de Yeshúa 28.mp3');
   // get file size info
   const stat = fileSystem.statSync(filePath);
 
@@ -37,7 +37,10 @@ app.get('*', (req, res) => {
 
 */ 
 const server = http.createServer(app);
-const io = require('socket.io').listen(server, {
+const io = require('socket.io')
+
+
+io.listen(server, {
   log: false,
   agent: false,
   origins: '*:*',
@@ -49,7 +52,7 @@ io.on('connection', client => {
   const stream = ss.createStream();
 
   client.on('track', () => {
-    const filePath = path.resolve(__dirname, './private', './track.wav');
+    const filePath = path.resolve(__dirname, './../../temasAudio', './HELLo 2021 - El Cuerpo de Yeshúa 28.mp3');
     const stat = fileSystem.statSync(filePath);
     const readStream = fileSystem.createReadStream(filePath);
     // pipe stream with response stream
@@ -60,6 +63,6 @@ io.on('connection', client => {
   client.on('disconnect', () => {});
 });
 
-server.listen(process.env.PORT || '3001', function () {
-  console.log('Server app listening on port 3001!');
+server.listen('3001', function () {
+  console.log('Server app listening on port 3002!');
 });
