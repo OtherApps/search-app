@@ -17,6 +17,7 @@ var startofplay = Date.now();
 var currentSong = [];
 var saveonces = false;
 
+var currentPlay=0;
 
 
 var playingnow = './HELLo 2021 - El Cuerpo de Yeshúa 28.mp3';
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 app.get('/api',(req, res) => {
 
 res.setHeader('Content-Type', 'application/json')
-
+currentSong[0].setCurrent(currentPlay)
 var output = JSON.stringify(currentSong )
 
  res.write(output)
@@ -238,8 +239,10 @@ function keeptrack (){
 setInterval(function(){ 
  currentrun=  Date.now() - startofplay
  var temp = ((currentrun/1000).toFixed())
- console.log(formatTime(temp));
- 
+
+currentPlay = formatTime(temp);
+return console.log(formatTime(temp));
+
 }, 30000);//run this thang every 2 seconds
 
 }
