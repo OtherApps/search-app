@@ -250,10 +250,10 @@ function keeptrack (){
 setInterval(function(){ 
 currentPlay++;
 
-console.log(currentPlay)
+//console.log(currentPlay)
 //return (formatTime(temp));
 
-}, 60000);//run this thang every 2 seconds
+}, 1000);//run this thang every 2 seconds
 
 }
 
