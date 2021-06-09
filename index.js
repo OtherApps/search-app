@@ -31,13 +31,22 @@ app.get('/', (req, res) => {
   
 })
 app.get('/api',(req, res) => {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
 
-res.setHeader('Content-Type', 'application/json')
+//res.Head(200, {'Content-Type': 'text/html'});
+res.writeHead(200,'Content-Type', 'application/json');
+//res.writeHead
 currentSong[0].setCurrent(currentPlay)
+
+
 var output = JSON.stringify(currentSong )
 
  res.write(output)
-  
+res.end();
+
 })
 
 
@@ -53,6 +62,7 @@ function playnow(req,res)
   res.writeHead(200, {
     'Content-Type': 'audio/mpeg',
     'Content-Length': stat.size
+
   });
   //create read stream
   const readStream = fileSystem.createReadStream(filePath);
@@ -241,7 +251,7 @@ setInterval(function(){
  var temp = ((currentrun/1000).toFixed())
 
 currentPlay = formatTime(temp);
-return console.log(formatTime(temp));
+//return (formatTime(temp));
 
 }, 30000);//run this thang every 2 seconds
 

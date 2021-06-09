@@ -1,10 +1,11 @@
 
 import {useState, useEffect } from 'react'
 import ReactDOMServer from 'react-dom/server';
-
+import RecieveJson from './RecieveJson'
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Temainfo from './info.json'
+
 import SpecialDiv from './SpecialDiv'
 import SongList from './SongList'
 const fs = require('fs');
@@ -203,6 +204,9 @@ main(e.target.selectedIndex)
       <source src="http://localhost:3003/livenow" type="audio/mpeg" />
     </audio>
           </div>
+
+          <RecieveJson urlJson="http://localhost:3003/api"/>
+
           </div>
     )
   }
