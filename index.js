@@ -68,7 +68,8 @@ function playnow(req,res)
   const readStream = fileSystem.createReadStream(filePath);
   // attach this stream with response stream
   readStream.pipe(res);
-if(saveonces !=true){var timeofEnd=startofplay + loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
+if(saveonces !=true){var
+ timeofEnd=loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
 //console.log( "Started at " + startofplay + " \n Will end at " +timeofEnd )
 
 var temp = new songinfo(playingnow,startofplay - Date.now(),timeofEnd)
@@ -248,12 +249,12 @@ function keeptrack (){
 
 setInterval(function(){ 
  currentrun=  Date.now() - startofplay
- var temp = ((currentrun/1000).toFixed())
+ var temp = currentrun
 
-currentPlay = formatTime(temp);
+currentPlay = temp;
 //return (formatTime(temp));
 
-}, 30000);//run this thang every 2 seconds
+}, 60000);//run this thang every 2 seconds
 
 }
 
@@ -266,8 +267,8 @@ this.song = songTitle;
 
 this.cTime =  currentrun
 
-this.eTime = maxTime
-
+var temptime = formatTime(maxTime)
+this.maxTime= temptime
 }
 
 setCurrent(cNow){
