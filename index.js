@@ -14,20 +14,37 @@ var outPut="<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><head><ti
 var howmanytimes=0; 
 const api =express();
 var startofplay = Date.now();
+var currentSong = [];
+var saveonces = false;
 
 
+
+var playingnow = './HELLo 2021 - El Cuerpo de Yeshúa 28.mp3';
  
 app.use(express.urlencoded({
   extended: true
 }))
 app.get('/', (req, res) => {
- loadFile(res,"./public/index.html"); 
+ loadFile(res,"./public2/index.html"); 
  
   
 })
-app.get('/livenow',(req,res)=>{
+app.get('/api',(req, res) => {
 
-     const filePath = path.resolve(__dirname, './../temasAudio', './HELLo 2021 - El Cuerpo de Yeshúa 28.mp3');
+res.setHeader('Content-Type', 'application/json')
+
+var output = JSON.stringify(currentSong )
+
+ res.write(output)
+  
+})
+
+
+
+function playnow(req,res)
+{
+
+     const filePath = path.resolve(__dirname, './../temasAudio',playingnow);
   // get file size info
   const stat = fileSystem.statSync(filePath);
 
@@ -40,8 +57,27 @@ app.get('/livenow',(req,res)=>{
   const readStream = fileSystem.createReadStream(filePath);
   // attach this stream with response stream
   readStream.pipe(res);
-var timeofEnd=startofplay + loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
-console.log( "Started at " + startofplay + " \n Will end at " +timeofEnd )
+if(saveonces !=true){var timeofEnd=startofplay + loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
+//console.log( "Started at " + startofplay + " \n Will end at " +timeofEnd )
+
+var temp = new songinfo(playingnow,startofplay - Date.now(),timeofEnd)
+currentSong.push(temp)
+saveonces=true; 
+
+}
+
+else{
+currentSong[0].setCurrent(startofplay -Date.now)
+
+}
+
+
+}
+app.get('/livenow',(req,res)=>{
+
+playnow(req,res)
+
+
 })
 
 const server = http.createServer(app);
@@ -192,3 +228,48 @@ else{
 
 
 app.listen(3003, () => console.log('🚀 is on port 3003...'))
+keeptrack();
+
+
+function keeptrack (){
+
+
+
+setInterval(function(){ 
+ currentrun=  Date.now() - startofplay
+ console.log((currentrun/1000).toFixed())
+}, 30000);//run this thang every 2 seconds
+
+}
+
+class songinfo {
+
+constructor(songTitle,currentrun,maxTime){
+
+this.song = songTitle;
+
+
+this.cTime =  currentrun
+
+this.eTime = maxTime
+
+}
+
+setCurrent(cNow){
+    this.cTime= cNow
+}
+getSong(){
+
+    return this.song
+}
+
+getCurrentTime(){
+
+    return this.cTime;
+}
+getMaxTime(){
+
+    return this.maxTime
+}
+
+}
