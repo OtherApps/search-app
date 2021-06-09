@@ -13,7 +13,7 @@ const ss = require('socket.io-stream');
 var outPut="<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><head><title></title></head><body>"; 
 var howmanytimes=0; 
 const api =express();
-var startofplay = Date.now();
+var startofplay = 0;
 var currentSong = [];
 var saveonces = false;
 
@@ -72,14 +72,14 @@ if(saveonces !=true){var
  timeofEnd=loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
 //console.log( "Started at " + startofplay + " \n Will end at " +timeofEnd )
 
-var temp = new songinfo(playingnow,startofplay - Date.now(),timeofEnd)
+var temp = new songinfo(playingnow,startofplay,timeofEnd)
 currentSong.push(temp)
 saveonces=true; 
 
 }
 
 else{
-currentSong[0].setCurrent(startofplay -Date.now)
+currentSong[0].setCurrent(startofplay)
 
 }
 
@@ -248,10 +248,9 @@ function keeptrack (){
 
 
 setInterval(function(){ 
- currentrun=  Date.now() - startofplay
- var temp = currentrun
+currentPlay++;
 
-currentPlay = temp;
+console.log(currentPlay)
 //return (formatTime(temp));
 
 }, 60000);//run this thang every 2 seconds
