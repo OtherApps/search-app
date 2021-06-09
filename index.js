@@ -237,7 +237,9 @@ function keeptrack (){
 
 setInterval(function(){ 
  currentrun=  Date.now() - startofplay
- console.log((currentrun/1000).toFixed())
+ var temp = ((currentrun/1000).toFixed())
+ console.log(formatTime(temp));
+ 
 }, 30000);//run this thang every 2 seconds
 
 }
