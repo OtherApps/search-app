@@ -112,9 +112,6 @@ var searchfor= req.body.searchforme
   res.writeHead(202); 
   	var style_single= "aligh:center;color:gold;background-color:green;width:80%;height:50px;font-stretch: expanded;box-shadow: 5px 10px black; font-size: 40px;padding:10px;border: 5px outset red;";
   
-
- 
-
 var newout = "<div style='"+style_single+"'><center> "+searchfor+"\t ocurrir #"+howmanytimes+"  veces o vece promido # <b> " + howmanytimes /108 + "</b></center></div>"; 
  res.write(newout);  
  res.write("<div id='detials'>" + outPut + "</div></body></html>"); 
@@ -170,11 +167,7 @@ const data = fs.readFileSync("./closeCaption/"+file_name,
 //indexOf(find_string)>0
 if(data.indexOf(find_string)>0)
 {
-
-
-	
-	var style_single= "aligh:center;color:gold;background-color:green;width:80%;height:20px;border-radius: 25px;font-stretch: expanded;box-shadow: 5px 10px black; font-size: 30px;padding-bottom:50px;border: 2px outset red;";
-	
+var style_single= "aligh:center;color:gold;background-color:green;width:80%;height:20px;border-radius: 25px;font-stretch: expanded;box-shadow: 5px 10px black; font-size: 30px;padding-bottom:50px;border: 2px outset red;";
 outPut += "<div style= '" + style_single  +"'><center>" +file_name +  "\t ocurrir  # " +occurrences(data,find_string)+ "</center></div>\n\n" ; 
 howmanytimes=howmanytimes+ occurrences(data,find_string) ;
 
@@ -185,10 +178,6 @@ howmanytimes=howmanytimes+ occurrences(data,find_string) ;
 
 
 function loadFile(response,filename){
-
-
-
-
 response.writeHead(200, {'Content-Type': 'text/html'});
 	fs.readFile('./'+filename, null, function (error, data) {
         if (error) {
@@ -260,54 +249,27 @@ if(currentPlay >songinfo[0].maxTime){
 
     randomPlay();
 }
-//console.log(currentPlay)
-//return (formatTime(temp));
 
 }, 1000);//run this thang every 2 seconds
 
 }
 
 function randomPlay(){
-
-
+// will play  random songs  
 var max=jsondata.length;
-
-
 var randomNum = Math.floor(Math.random() * max)
 playingnow = jsondata[randomNum].title;
-
-console.log( "Playing now"+" :"+playingnow)    
+//console.log( "Playing now"+" :"+playingnow)    
 keeptrack();
 }
 
-class songinfo {
+class songinfo { 
+constructor(songTitle,currentrun,maxTime){ this.song = songTitle; this.cTime =  currentrun;
+var temptime = formatTime(maxTime);this.maxTime= temptime;}
 
-constructor(songTitle,currentrun,maxTime){
-
-this.song = songTitle;
-
-
-this.cTime =  currentrun
-
-var temptime = formatTime(maxTime)
-this.maxTime= temptime
-}
-
-setCurrent(cNow){
-    this.cTime= cNow
-}
-getSong(){
-
-    return this.song
-}
-
-getCurrentTime(){
-
-    return this.cTime;
-}
-getMaxTime(){
-
-    return this.maxTime
-}
+setCurrent(cNow){ this.cTime= cNow}
+getSong(){ return this.song }
+getCurrentTime(){ return this.cTime; }
+getMaxTime(){ return this.maxTime }
 
 }
