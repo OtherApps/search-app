@@ -63,12 +63,11 @@ function playnow(req,res)
   // get file size info
   const stat = fileSystem.statSync(filePath);
 
-  // set response header info
-  res.writeHead(200, {
-    'Content-Type': 'application/octet-stream',
-'Content-Length': stat.size
-
-  });
+  
+res.set({
+      'Content-Type': 'audio/mpeg3',
+      'Transfer-Encoding': 'chunked'
+    });
 //    'Content-Length': stat.size
   //create read stream
   const readStream = fileSystem.createReadStream(filePath);

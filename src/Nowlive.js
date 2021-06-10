@@ -37,11 +37,11 @@ var check = null;
 
 useInterval(() => {
 
- //getJson('http://localhost:3003/api')
+ getJson('http://localhost:3003/api')
 //funsocket();
 
 });
-funsocket();
+//funsocket();
 function funsocket(){
  
     const socket = socketIOClient("http://127.0.0.1:4001/");
@@ -154,7 +154,7 @@ return (
 
     </div>
 
-<div style={{color:"white"}}>{console.log(response)}</div>
+
 
 
           </div>
