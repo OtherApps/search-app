@@ -52,6 +52,7 @@ res.end();
 
 
 
+
 function playnow(req,res)
 {
 
@@ -61,10 +62,11 @@ function playnow(req,res)
 
   // set response header info
   res.writeHead(200, {
-    'Content-Type': 'audio/mpeg',
-    'Content-Length': stat.size
+    'Content-Type': 'audio/mp3'
+
 
   });
+//    'Content-Length': stat.size
   //create read stream
   const readStream = fileSystem.createReadStream(filePath);
   // attach this stream with response stream
@@ -86,6 +88,7 @@ currentSong[0].setCurrent(startofplay)
 
 
 }
+
 app.get('/livenow',(req,res)=>{
 
 playnow(req,res)
@@ -242,13 +245,6 @@ function keeptrack (){
 setInterval(function(){ 
 
 currentPlay++;
-if(currentPlay >songinfo[0].maxTime){
-
-
-    current=0;
-
-    randomPlay();
-}
 
 }, 1000);//run this thang every 2 seconds
 
@@ -261,6 +257,7 @@ var randomNum = Math.floor(Math.random() * max)
 playingnow = jsondata[randomNum].title;
 //console.log( "Playing now"+" :"+playingnow)    
 keeptrack();
+
 }
 
 class songinfo { 
