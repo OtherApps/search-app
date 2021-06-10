@@ -200,12 +200,10 @@ main(e.target.selectedIndex)
 
 
 <div> <button onClick={showLista}> Lista de temas </button></div>
- <audio id="liveradio" controls>
-      <source src="http://localhost:3003/livenow" type="audio/mpeg" />
-    </audio>
+ 
           </div>
 
-          <RecieveJson urlJson="http://localhost:3003/api"/>
+
 
           </div>
     )

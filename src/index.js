@@ -9,6 +9,7 @@ import ShowCount from './ShowCount'
 import Footer from './Footer'
 import Message from './Message'
 import Information from './Information'
+import Nowlive from './Nowlive'
 import {
   BrowserRouter as Router,
   Switch,
@@ -46,7 +47,7 @@ ReactDOM.render(
           <Route extact path="/Live">
 
 
-<Player/>
+<Nowlive/>
 
 
           </Route>

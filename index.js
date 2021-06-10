@@ -82,7 +82,7 @@ saveonces=true;
 }
 
 else{
-currentSong[0].setCurrent(startofplay)
+//currentSong[0].setCurrent(startofplay)
 
 }
 
@@ -113,7 +113,7 @@ var searchfor= req.body.searchforme
 
  search_forme(searchfor); 
   res.writeHead(202); 
-  	var style_single= "aligh:center;color:gold;background-color:green;width:80%;height:50px;font-stretch: expanded;box-shadow: 5px 10px black; font-size: 40px;padding:10px;border: 5px outset red;";
+    var style_single= "aligh:center;color:gold;background-color:green;width:80%;height:50px;font-stretch: expanded;box-shadow: 5px 10px black; font-size: 40px;padding:10px;border: 5px outset red;";
   
 var newout = "<div style='"+style_single+"'><center> "+searchfor+"\t ocurrir #"+howmanytimes+"  veces o vece promido # <b> " + howmanytimes /108 + "</b></center></div>"; 
  res.write(newout);  
@@ -123,22 +123,22 @@ var newout = "<div style='"+style_single+"'><center> "+searchfor+"\t ocurrir #"+
 })
 
 function search_forme(searchfor1){
-	
-	//console.log("With in function \r");
-	var results=0; 
-	// open dir
-	fs.readdirSync("./closeCaption/").forEach(file => {
+    
+    //console.log("With in function \r");
+    var results=0; 
+    // open dir
+    fs.readdirSync("./closeCaption/").forEach(file => {
  
 
 findme(file,searchfor1);
 
-	
+    
 
-	});
-	
-	
-	
-	return results; 
+    });
+    
+    
+    
+    return results; 
 }
 
 function occurrences(string, subString, allowOverlapping) {
@@ -176,13 +176,13 @@ howmanytimes=howmanytimes+ occurrences(data,find_string) ;
 
 }
 
-	
+    
 }
 
 
 function loadFile(response,filename){
 response.writeHead(200, {'Content-Type': 'text/html'});
-	fs.readFile('./'+filename, null, function (error, data) {
+    fs.readFile('./'+filename, null, function (error, data) {
         if (error) {
             response.writeHead(404);
             respone.write('Whoops! File not found!');
@@ -190,9 +190,9 @@ response.writeHead(200, {'Content-Type': 'text/html'});
             response.write(data);
         }
       response.end();
-	  
-	  
-	  
+      
+      
+      
     });
 
 
@@ -261,12 +261,15 @@ keeptrack();
 }
 
 class songinfo { 
-constructor(songTitle,currentrun,maxTime){ this.song = songTitle; this.cTime =  currentrun;
-var temptime = formatTime(maxTime);this.maxTime= temptime;}
+constructor(songTitle,currentrun,maxTime){ 
+    this.song = songTitle; 
+    this.cTime =  currentrun;
+var temptime = formatTime(maxTime);
+this.maxTime= temptime;}
 
 setCurrent(cNow){ this.cTime= cNow}
 getSong(){ return this.song }
-getCurrentTime(){ return this.cTime; }
+getcurrent(){ return this.cTime; }
 getMaxTime(){ return this.maxTime }
 
 }
