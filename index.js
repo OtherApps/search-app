@@ -16,6 +16,7 @@ const api =express();
 var startofplay = 0;
 var currentSong = [];
 var saveonces = false;
+let jsondata = require("./src/info.json");
 
 var currentPlay=0;
 
@@ -69,7 +70,7 @@ function playnow(req,res)
   // attach this stream with response stream
   readStream.pipe(res);
 if(saveonces !=true){var
- timeofEnd=loadJson("HELLo 2021 - El Cuerpo de Yeshúa 28.mp3");
+ timeofEnd=loadJson(playingnow);
 //console.log( "Started at " + startofplay + " \n Will end at " +timeofEnd )
 
 var temp = new songinfo(playingnow,startofplay,timeofEnd)
@@ -207,7 +208,7 @@ response.writeHead(200, {'Content-Type': 'text/html'});
 }
 
 function loadJson(filename) {
-let jsondata = require("./src/info.json");
+
 var i =0;
 
 while(i <jsondata.length){
@@ -240,7 +241,9 @@ else{
 
 
 app.listen(3003, () => console.log('🚀 is on port 3003...'))
-keeptrack();
+randomPlay();
+
+
 
 
 function keeptrack (){
@@ -248,13 +251,33 @@ function keeptrack (){
 
 
 setInterval(function(){ 
-currentPlay++;
 
+currentPlay++;
+if(currentPlay >songinfo[0].maxTime){
+
+
+    current=0;
+
+    randomPlay();
+}
 //console.log(currentPlay)
 //return (formatTime(temp));
 
 }, 1000);//run this thang every 2 seconds
 
+}
+
+function randomPlay(){
+
+
+var max=jsondata.length;
+
+
+var randomNum = Math.floor(Math.random() * max)
+playingnow = jsondata[randomNum].title;
+
+console.log( "Playing now"+" :"+playingnow)    
+keeptrack();
 }
 
 class songinfo {
