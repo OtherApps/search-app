@@ -31,6 +31,7 @@
     "react-scripts": "4.0.3",
     "reactjs-components": "^5.0.3",
     "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
     "socket.io-stream": "^0.9.1",
     "styled-content-loader": "^1.2.2",
     "web-vitals": "^1.1.2"

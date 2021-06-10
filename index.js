@@ -9,7 +9,7 @@ const path = require('path');
 const uuid = require('uuid').v4;
 const app = express();
 const fileSystem = require('fs');
-const ss = require('socket.io-stream');
+
 var outPut="<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><head><title></title></head><body>"; 
 var howmanytimes=0; 
 const api =express();
@@ -17,6 +17,9 @@ var startofplay = 0;
 var currentSong = [];
 var saveonces = false;
 let jsondata = require("./src/info.json");
+
+socketIo=require("socket.io")
+
 
 var currentPlay=0;
 
@@ -62,8 +65,8 @@ function playnow(req,res)
 
   // set response header info
   res.writeHead(200, {
-    'Content-Type': 'audio/mp3'
-
+    'Content-Type': 'application/octet-stream',
+'Content-Length': stat.size
 
   });
 //    'Content-Length': stat.size
@@ -95,14 +98,6 @@ playnow(req,res)
 
 
 })
-
-const server = http.createServer(app);
-const io = require('socket.io')('3000').listen(server, {
-  log: false,
-  agent: false,
-  origins: '*:*',
-  transports: ['websocket', 'htmlfile', 'xhr-polling', 'jsonp-polling', 'polling']
-});
 
 
 

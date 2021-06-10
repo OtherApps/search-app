@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import RecieveJson from './RecieveJson'
 import React from 'react';
 
-
+import socketIOClient from "socket.io-client";
             
 function useInterval(callback, delay) {
   const savedCallback = React.useRef();
@@ -26,7 +26,7 @@ function useInterval(callback, delay) {
 }
 
 function Nowlive(){
-
+  const [response, setResponse] = useState("");
 const[playing,setPlaying,count,setSate] = React.useState(false)
 const [progress, setProgress] = React.useState(0);
 const [maxdur, setMaxdur] = React.useState(0);
@@ -37,10 +37,20 @@ var check = null;
 
 useInterval(() => {
 
- getJson('http://localhost:3003/api')
+ //getJson('http://localhost:3003/api')
+//funsocket();
 
 });
+funsocket();
+function funsocket(){
+ 
+    const socket = socketIOClient("http://127.0.0.1:4001/");
+    socket.on("FromAPI", data => {
+      setResponse(data);
+    });
 
+
+}
 useInterval(() => {
 //loadinfo();
 
@@ -49,15 +59,15 @@ if (audioRef && audioRef.current) {
       
 
 
-
 audioRef.current.play();
-audioRef.current.currentTime=10;
+
 
 //setProgress(audioRef.current.currentTime )
 
       }
       else{
     audioRef.current.pause();
+
 
 
 
@@ -125,10 +135,10 @@ setProgress(finalData[0].cTime)
 return (
 	<div>
 
-	<audio id="liveradio" src="http://localhost:3003/livenow" type="audio/mp3" ref={audioRef} controls /> 
+	<audio id="liveradio" src="http://localhost:3003/livenow" type="audio/mp3" ref={audioRef} controls preload="auto"/> 
     
    <div className="temaLength">
-<progress  max="100" /> {formatTime(progress)}
+<progress  max="100" /> 
    </div>       
 
     <div className="temaControls">
@@ -144,7 +154,7 @@ return (
 
     </div>
 
-
+<div style={{color:"white"}}>{console.log(response)}</div>
 
 
           </div>
