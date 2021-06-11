@@ -43,14 +43,22 @@ app.get('/api',(req, res) => {
 //res.Head(200, {'Content-Type': 'text/html'});
 res.writeHead(200,'Content-Type', 'application/json');
 //res.writeHead
-currentSong[0].setCurrent(currentPlay)
+
 
 
 var output = JSON.stringify(currentSong )
 
  res.write(output)
 res.end();
+if (typeof currentSong[0] !== 'undefined') {
+    
+currentSong[0].setCurrent(currentPlay)
+}
+else
+{
+//playnow(req,res)
 
+}
 })
 
 
@@ -65,13 +73,12 @@ function playnow(req,res)
 
   
 res.set({
-      'Content-Type': 'audio/mpeg3',
-      'Transfer-Encoding': 'chunked',
+      'Content-Type': 'audio/mp3',
       'Content-Length': stat.size
 
     });
 //    'Content-Length': stat.size
-  //create read stream
+  //create read stream    'Transfer-Encoding': 'chunked',
   const readStream = fileSystem.createReadStream(filePath);
   // attach this stream with response stream
   readStream.pipe(res);

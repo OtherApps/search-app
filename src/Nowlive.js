@@ -135,7 +135,7 @@ setProgress(finalData[0].cTime)
 return (
 	<div>
 
-	<audio id="liveradio" src="http://localhost:3003/livenow" type="audio/mp3" ref={audioRef} controls preload="auto"/> 
+	<audio id="my-audio" src="http://localhost:3003/livenow" type="audio/mp3" ref={audioRef} controls preload="auto"/> 
     
    <div className="temaLength">
 <progress  max="100" /> 
@@ -155,6 +155,15 @@ return (
     </div>
 
 
+<script src="http://localhost:3000/js/buffer.js" />
+     
+
+<div className="buffered">
+  <span id="buffered-amount"></span>
+</div>
+<div className="progress">
+  <span id="progress-amount"></span>
+</div>
 
 
           </div>

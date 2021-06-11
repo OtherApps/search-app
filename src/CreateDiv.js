@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 // This is needed   by the search function 
 //  This also sends words  to  get bolded 
-var styleTitle ={
+var stylesTitle ={
 
 color:"white"
 

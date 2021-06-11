@@ -1,5 +1,10 @@
+<html>
+<head>
+<script language="javascript">
+<!--
+
 window.onload = function(){
-console.log("With in buffer")
+
 var myAudio = document.getElementById('my-audio');
 
   myAudio.addEventListener('progress', function() {
@@ -18,6 +23,58 @@ var myAudio = document.getElementById('my-audio');
     var duration =  myAudio.duration;
     if (duration > 0) {
       document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+    console.log(duration)
     }
   });
 }
+//-->
+</script>
+
+
+<style>
+*{
+background-color: gray;
+color: black;
+}
+.buffered {
+  height: 20px;
+  position: relative;
+  background: blue;
+  width: 300px;
+}
+
+#buffered-amount {
+  display: block;
+  height: 100%;
+  background-color:white;
+  width: 0;
+}
+
+.progress {
+  margin-top: -20px;
+  height: 20px;
+  position: relative;
+  width: 300px;
+  background-color: green;
+}
+
+#progress-amount {
+  display: block;
+  height: 100%;
+  background-color: #595;
+  width: 0;
+}
+</style>
+</head>
+
+<body>
+<audio id="my-audio" src="http://localhost:3003/livenow"/>
+<div className="buffered">
+  <span id="buffered-amount"></span>
+</div>
+<div className="progress">
+  <span id="progress-amount"></span>
+</div>
+
+</body>
+</html>
