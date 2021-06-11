@@ -66,7 +66,9 @@ function playnow(req,res)
   
 res.set({
       'Content-Type': 'audio/mpeg3',
-      'Transfer-Encoding': 'chunked'
+      'Transfer-Encoding': 'chunked',
+      'Content-Length': stat.size
+
     });
 //    'Content-Length': stat.size
   //create read stream

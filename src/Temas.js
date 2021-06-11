@@ -203,7 +203,12 @@ main(e.target.selectedIndex)
  
           </div>
 
-
+<div class="buffered">
+  <span id="buffered-amount"></span>
+</div>
+<div class="progress">
+  <span id="progress-amount"></span>
+</div>
 
           </div>
     )
