@@ -198,7 +198,7 @@ main(e.target.selectedIndex)
     </div>
 
 
-
+<script src="http://localhost:3000/js/buffer.js" />
 <div> <button onClick={showLista}> Lista de temas </button></div>
  
           </div>
