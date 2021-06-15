@@ -2,7 +2,7 @@ import {useState, useEffect } from 'react'
 import ReactDOMServer from 'react-dom/server';
 import RecieveJson from './RecieveJson'
 import React from 'react';
-
+import {Howl, Howler} from 'howler';
 import socketIOClient from "socket.io-client";
             
 function useInterval(callback, delay) {
@@ -32,6 +32,10 @@ const [progress, setProgress] = React.useState(0);
 const [maxdur, setMaxdur] = React.useState(0);
 const audioRef = React.useRef(null)
 var check = null;
+var sound = new Howl({
+  src: ['http://localhost:3003/livenow'],
+  html5: true
+});
 
  const togglePlaying=() =>setPlaying(prev => ! prev )
 
@@ -130,8 +134,16 @@ setProgress(finalData[0].cTime)
 } 
 
 
+function playwithHow(){
+sound.play();
 
+sound.seek(progress,1000)
+}
+function stopPlay(){
 
+  sound.stop();
+
+}
 return (
 	<div>
 
@@ -155,16 +167,12 @@ return (
     </div>
 
 
-<script src="http://localhost:3000/js/buffer.js" />
+<script src="http://localhost:3000/howler.js" />
      
+{progress}
 
-<div className="buffered">
-  <span id="buffered-amount"></span>
-</div>
-<div className="progress">
-  <span id="progress-amount"></span>
-</div>
-
+<button onClick={playwithHow}>Play</button>
+<button onClick={stopPlay}>Stop</button>
 
           </div>
 )

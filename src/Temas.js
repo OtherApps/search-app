@@ -178,7 +178,7 @@ main(e.target.selectedIndex)
   <progress max="100" value={((progress/maxdur) *100).toFixed()} />
 <br/>
 
-  {((progress/maxdur)*100).toFixed()} 
+  {((progress)).toFixed()} 
   </div>
 
 
