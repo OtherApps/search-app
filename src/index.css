@@ -273,6 +273,9 @@ ul {
   padding: 0;
   overflow: hidden;
   color:black;
+
+  transition-timing-function: ease-in-out;
+  transition: all .05s ;
 }
 
 li {
