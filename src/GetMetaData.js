@@ -12,11 +12,21 @@ function GetMetaData(newfilename){
 const data2 = (util.inspect(metadata, { showHidden: true, depth: null }));
 
 const fileContents = new Buffer(metadata.common.picture[0].data, 'base64')
-fs.writeFile("./cover/"+metadata.common.title+".jpg", fileContents, (err) => {
+ fs.writeFile("F:/covers/"+metadata.common.title+".jpg", fileContents, (err) => {
   if (err) return console.error(err)
-  console.log('file saved to ', "./cover/"+metadata.common.title+".jpg")
+  console.log('file saved to ', "./covers/"+encodeURI(metadata.common.title)+".jpg")
+
 })
 
+//console.log(metadata.common.picture[0].data)
+/*
+const fileContents = new Buffer(metadata.common.picture[0].data, 'base64')
+ fs.writeFile("./covers/"+metadata.common.title+".jpg", fileContents, (err) => {
+  if (err) return console.error(err)
+  console.log('file saved to ', "./covers/"+metadata.common.title+".jpg")
+
+
+*/
 
 
 
@@ -36,10 +46,10 @@ readFileList();
 function readFileList(){
 
 
-fs.readdirSync("J:/cc_projects/temasAudio").forEach(file => {
+fs.readdirSync("F:/mp3/").forEach(file => {
 if(file.indexOf(".mp3") <0 )return;
 
-GetMetaData( "J:/cc_projects/temasAudio/"+file)
+GetMetaData( "F:/mp3/"+file)
 
 
 });

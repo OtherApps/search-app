@@ -1,0 +1,500 @@
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 160000,
+    codecProfile: 'CBR',
+    duration: 3918.696
+  },
+  native: {
+    'ID3v2.4': [
+      {
+        id: 'TIT2',
+        value: '1 Hora de Música Cristiana con Daniel Calveti | Nueva produción: Anclado a tus promesas'
+      },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 0a 0a 0b 0a 0b 0d 0d 0d 0d 0d 0d 10 0f 10 10 10 10 10 10 10 10 10 10 10 ... 6751 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: '1 Hora de Música Cristiana con Daniel Calveti | Nueva produción: Anclado a tus promesas',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 0a 0a 0b 0a 0b 0d 0d 0d 0d 0d 0d 10 0f 10 10 10 10 10 10 10 10 10 10 10 ... 6751 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 216.624
+  },
+  native: {
+    'ID3v2.4': [
+      { id: 'TPE1', value: 'Chapa C' },
+      { id: 'TIT2', value: 'Me Enamoré' },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6302 more bytes>
+        }
+      },
+      [length]: 4
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    artists: [ 'Chapa C', [length]: 1 ],
+    artist: 'Chapa C',
+    title: 'Me Enamoré',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6302 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 434.4
+  },
+  native: {
+    'ID3v2.4': [
+      {
+        id: 'TIT2',
+        value: 'Daniel Calveti - Tú Estás Aquí | Nueva Canción | Música Cristiana 2019'
+      },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 10074 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Daniel Calveti - Tú Estás Aquí | Nueva Canción | Música Cristiana 2019',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 10074 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 226.872,
+    tool: 'LAME 3.100U'
+  },
+  native: {
+    'ID3v2.4': [
+      {
+        id: 'TIT2',
+        value: 'Daniela Calveti - Padre Eres mi Consuelo - Música Cristiana Nueva 2020'
+      },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 11049 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Daniela Calveti - Padre Eres mi Consuelo - Música Cristiana Nueva 2020',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 11049 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 331.464,
+    tool: 'LAME 3.100U'
+  },
+  native: {
+    'ID3v2.4': [
+      { id: 'TPE1', value: 'Sol y Lluvia' },
+      { id: 'TIT2', value: 'Espiritu santo' },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 5017 more bytes>
+        }
+      },
+      [length]: 4
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    artists: [ 'Sol y Lluvia', [length]: 1 ],
+    artist: 'Sol y Lluvia',
+    title: 'Espiritu santo',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 5017 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 181.32,
+    tool: 'LAME 3.100U'
+  },
+  native: {
+    'ID3v2.4': [
+      { id: 'TIT2', value: 'Listo Para Nuestro Encuentro' },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6543 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Listo Para Nuestro Encuentro',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6543 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 170.28,
+    tool: 'LAME 3.100U'
+  },
+  native: {
+    'ID3v2.4': [
+      { id: 'TIT2', value: 'Lo Único Que Quiero' },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6543 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Lo Único Que Quiero',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 08 08 09 08 09 0b 0b 0b 0b 0b 0b 0d 0c 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d 0d ... 6543 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 249.96,
+    tool: 'LAME 3.100U'
+  },
+  native: {
+    'ID3v2.4': [
+      { id: 'TIT2', value: 'Nancy Amancio - Tu Voz' },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 0a 0a 0b 0a 0b 0d 0d 0d 0d 0d 0d 10 0f 10 10 10 10 10 10 10 10 10 10 10 ... 7913 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Nancy Amancio - Tu Voz',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 0a 0a 0b 0a 0b 0d 0d 0d 0d 0d 0d 10 0f 10 10 10 10 10 10 10 10 10 10 10 ... 7913 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
+{
+  format: {
+    tagTypes: [ 'ID3v2.4', [length]: 1 ],
+    trackInfo: [ [length]: 0 ],
+    lossless: false,
+    container: 'MPEG',
+    codec: 'MPEG 1 Layer 3',
+    sampleRate: 48000,
+    numberOfChannels: 2,
+    bitrate: 128000,
+    codecProfile: 'CBR',
+    duration: 389.4
+  },
+  native: {
+    'ID3v2.4': [
+      {
+        id: 'TIT2',
+        value: 'Padre Bienvenido - Una Voz (Video Oficial)'
+      },
+      { id: 'TSSE', value: 'Lavf58.29.100' },
+      {
+        id: 'APIC',
+        value: {
+          format: 'image/jpeg',
+          type: 'Other',
+          description: '',
+          data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 9293 more bytes>
+        }
+      },
+      [length]: 3
+    ]
+  },
+  quality: {
+    warnings: [
+      { message: 'Invalid ID3v2.4 frame-header-ID: \x00\x00\x00\x00' },
+      { message: 'id3v2.4 header has empty tag type=\x00\x00\x00\x00' },
+      [length]: 2
+    ]
+  },
+  common: {
+    track: { no: null, of: null },
+    disk: { no: null, of: null },
+    movementIndex: {},
+    title: 'Padre Bienvenido - Una Voz (Video Oficial)',
+    encodersettings: 'Lavf58.29.100',
+    picture: [
+      {
+        format: 'image/jpeg',
+        type: 'Other',
+        description: '',
+        data: <Buffer ff d8 ff fe 00 10 4c 61 76 63 35 38 2e 35 34 2e 31 30 30 00 ff db 00 43 00 08 06 06 07 06 07 08 08 08 08 08 08 09 09 09 0a 0a 0a 09 09 09 09 0a 0a 0a ... 9293 more bytes>
+      },
+      [length]: 1
+    ]
+  }
+}
