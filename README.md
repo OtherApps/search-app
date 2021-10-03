@@ -1,4 +1,4 @@
-#contant linuxnerd123@gmail.com
+#contact linuxnerd123@gmail.com
 
 # Series display 
 ![image](https://user-images.githubusercontent.com/30159017/120259107-2c347000-c248-11eb-93bc-2fbdf163ef2a.png)
